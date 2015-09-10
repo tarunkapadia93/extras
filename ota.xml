@@ -36,8 +36,3176 @@
   <!-- Put the changelog here... Use Markdown to format it -->
   <!-- Again, surround special characters with the CDATA tags or your XML will NOT parse -->
   <Changelog>### Changelog 20150910
-  - Updated sources 
-  - alucard hotplug
-  - overall stability
+Project name: android_hardware_broadcom_libbt
+  *Dheeraj CVR - libbt-vendor: add support for samsung bluetooth
+
+Project name: android_hardware_qcom_bt
+  *pramod kotreshappa - Bluetooth: Fix for BT crashes during preload timeout
+  *pramod kotreshappa - Bluetooth: Fix for ANT standalone turn on failure
+  *pramod kotreshappa - Bluetooth: Send controller logging VS cmd after wcnss filter init
+  *pramod kotreshappa - Bluetooth: Fix to handle invalid VS event during patch download
+  *Bhakthavatsala Raghavendra - Bluetooth: Get FW build label information from VS command
+  *Scott Mertz - Bluetooth: load btaddr from NV if QCOM_BT_USE_BTNV is set
+  *Srinu Jella - Bluetooth: Don't return in case external ldo is not present
+
+Project name: android_hardware_qcom_media
+  *Srinu Gorle - Revert "mm-video-v4l2: vidc: venc: Update color conversion decision"
+  *Ashray Kulkarni - mm-video-v4l2: vidc: update thread names
+  *Ashray Kulkarni - mm-video-v4l2: venc: fix all I frame encoding usecase
+  *c_sisanj - libc2dcolorconvert: Modified stride and size calculation
+  *Fred Oh - mm-core: Limit number of NT mode audio decoders
+  *Ashray Kulkarni - mm-video-v4l2: venc: encoder cleanup during error handling
+  *Ashray Kulkarni - mm-video-v4l2: handle flush done as buffer_done and not as cmd_done
+  *Ashray Kulkarni - Revert "mm-video-v4l2: Add error handling in component_open"
+  *Balamurugan Alagarsamy - mm-video-v4l2: vdec: change prefered color format default order
+
+Project name: android_hardware_qcom_media
+  *Surajit Podder - mm-video: Calculate average fps to update refresh rate
+  *Ashray Kulkarni - mm-video-v4l2: handle flush done as buffer_done and not as cmd_done
+  *Praveen Chavan - mm-video-v4l2: vdec: insert timestamps qeued by client in TS queue
+  *Deepak Verma - mm-video: venc: Correct a typo in variable name
+  *Michael Bestas - mm-video-v4l2: Remove useless build warning
+
+Project name: android_hardware_qcom_audio
+  *Thomas Wendt - hal: Tell Huawei acdb loader which files to load
+  *Bruno Martins - hal: Genericize dual-SIM voice_extn implementation
+  *Weiyin Jiang - post_proc: explicitly disable virtualizer module if strength is 0
+  *Dhananjay Kumar - post_proc: fix crash in offload effect bundle during stop output
+  *Dan Pasanen - hal: only open the amplifier once
+  *Dan Pasanen - hal: enable amplifier earlier
+  *ljzyal - hal: Add support for Samsung dual-SIM implementation
+  *Eric Laurent - compress offload: use new sample rate representation.
+  *Ethan Chen - hal: Notify amplifier of device enable/disable
+  *Vidyakumar Athota - hal: update input source type during open input stream
+  *Avinash Vaish - hal: Prevent de-routing in case the usecase doesn't share codec backend
+  *Venkata Narendra Kumar Gutta - hal: Fix ANR if In-Call recording is started at end of voice call
+  *Pavan Chikkala - hal: Update pcm_open flag for VOIP
+  *Pavan Chikkala - audio: Modified atoi to atoll to convert large Numeric values
+  *Ethan Chen - hal: Convert libaudioamp to audio_amplifier HAL
+
+Project name: android_hardware_qcom_audio
+  *Dhananjay Kumar - post_proc: fix crash in offload effect bundle during stop output
+  *Dhananjay Kumar - post_proc: fix reverb processing issue when preset is set to NONE
+  *Weiyin Jiang - post_proc: explicitly disable virtualizer module if strength is 0
+  *Dan Pasanen - hal: only open the amplifier once
+  *Dan Pasanen - hal: enable amplifier earlier
+  *Venkata Narendra Kumar Gutta - hal: Fix voice session setup failure
+  *Narsinga Rao Chella - hal: reroute active capture usecases which share same backend
+  *alanht_wu - Add special case for stereo camcorder
+  *Ethan Chen - hal: Notify amplifier of device enable/disable
+  *Ravi Kumar Alamanda - hal: pass samplerate as is to tiny compress
+  *Ethan Chen - audio: Extend platform parser to allow device name aliasing
+  *Steve Kondik - msm8994: Remove bogus metadata
+  *Steve Kondik - hal: Add option to use low latency as primary output
+  *Rashed Abdel-Tawab - hal: Invert more build flags
+  *solk2 - hal: Fix voice call recording for msm8974
+  *Steve Kondik - hal: Invert standard build flags
+  *Steve Kondik - hal: Fix digital USB headset combo device
+  *Steve Kondik - hal: Add support for dedicated VoIP devices
+  *Bhalchandra Gajare - hal: Fix sidetone sequence during voice call
+  *Steve Kondik - hal: Clean up compilation warnings
+  *Ethan Chen - hal: Convert libaudioamp to audio_amplifier HAL
+  *Scott Mertz - audio: add amplifier stream start/standby operations
+  *Daniel Hillenbrand - hal: Support the audio amplifier hook
+  *Ravi Kumar Alamanda - hal: pass samplerate as is to tiny compress
+
+Project name: android_hardware_qcom_audio
+  *Thomas Wendt - hal: Tell Huawei acdb loader which files to load
+  *Eric Laurent - compress offload: use new sample rate representation.
+  *Venkata Narendra Kumar Gutta - hal: Fix voice session setup failure
+  *Zhou Song - hal: allow to get render position for non-offload use cases
+  *Ravi Kumar Alamanda - hal: ensure EC reference is disabled before enabling
+  *Zhou Song - audio_hal: increase written frames size when HAL is in SSR
+  *Weiyin Jiang - post_proc: remove unnecessary command size check
+  *Ethan Chen - audio: Only allow non-legacy HAL
+  *Ethan Chen - hal: Correctly set backend to best available parameters
+
+Project name: android_hardware_qcom_audio
+  *Ethan Chen - audio: Notify amplifier of device enable/disable
+  *Ethan Chen - audio: Refactor amplifier_set_device logic
+  *Ethan Chen - audio: Convert libaudioamp to audio_amplifier HAL
+  *Ethan Chen - audio: Make audio device accessible to HAL functions
+
+Project name: android_hardware_qcom_keymaster
+  *Scott Mertz - keymaster: fix build for msm8994
+  *Rashed Abdel-Tawab - keystore: Enable building on msm8992 and msm8994
+
+Project name: android_hardware_qcom_display
+  *Naseer Ahmed - hwc: Handle DOZE_SUSPEND properly
+  *Baldev Sahu - hwc: Ensure pipe unset is called before wfd commit
+  *Steve Kondik - Revert "hwc: Skip load based composition for video playback."
+
+Project name: android_hardware_qcom_display
+  *Naseer Ahmed - hwc: Handle DOZE_SUSPEND properly
+  *Baldev Sahu - hwc: Ensure pipe unset is called before wfd commit
+  *Steve Kondik - Revert "hwc: Skip load based composition for video playback."
+
+Project name: android_hardware_qcom_display
+  *Rama Vaddula - Revert "libmemtrack: Properly account for memory usage"
+  *Saurabh Shah - hwc/hdmi: Return FB attributes to f/w for active config
+  *Ranjith Kagathi Ananda - gralloc: Fix RAW10 stride
+  *Saurabh Shah - hwc: Limit BWC to content with height within 4092
+  *Arun Kumar K.R - hwc: Handle layers marked as PROTECTED flag as secure
+  *Scott Mertz - Revert "hqd: Use MSM_VIDC_TARGET_LIST for Venus color format"
+  *Arun Kumar K.R - hwc: Fix incorrect compType for HWCursor
+  *Arun Kumar K.R - display: Add support for HW Cursor
+  *Saurabh Shah - hwc: Reset mode tracking in MDPComp constructor
+
+Project name: android_hardware_qcom_display
+  *Saurabh Shah - hwc: Reserve pipes for video layers first
+  *radhakrishna - hwc: Avoid MDP comp for RGB downscaled layer
+  *radhakrishna - hwc: Handle multiple YUV layer use case in low end targets
+  *Raj Kamal - hwc: Avoid updating refresh-rate if already done
+  *Saurabh Shah - hwc: Use GPU to compose for smaller updates
+  *Raj Kamal - hwc: Set refresh rate during idlefallback for unhandled cases
+  *Raj Kamal - hwc: Donot rely on previous comp type to trigger idlefallback
+  *Raj Kamal - hwc: Roundoff the input fps to nearest standard fps
+  *Raj Kamal - hwc: Trigger dynamic refresh-rate change for more usecases
+  *Praveena Pachipulusu - hwc: Reset the refresh rate alone to avoid stack corruption.
+  *Shimrit Malichi - liblight: Add support for bluetooth LED
+
+Project name: android_hardware_qcom_display
+  *Saurabh Shah - hwc: Bump up version to 1.4
+
+Project name: android_hardware_qcom_fm
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Danesh M - FMRadio : Keep track of scanned frequencies in service
+  *Michael Bestas - Automatic translation import
+  *Danesh M - FMRadio : Ensure scan state is kept in sync
+  *AdrianDC - QComFM : Allow the FM Transmitter to be reactivated
+  *Michael Bestas - Automatic translation import
+  *Ricardo Cerqueira - FMRecord: Grant REAL_GET_TASKS
+  *Michael Bestas - Automatic translation import
+  *lijun.xie - FM: The collect channel disappear when quit FM
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Martin Brabham - Fix status text to reflect when FM is enabled.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Hamster Tian - FM: fix mRadioTextScroller usage in transmitter activity
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_hardware_ti_wpan
+  *Michael Gernoth - libbt-vendor-ti: add ssr_cleanup
+
+Project name: android_hardware_ti_wlan
+  *Michael Bestas - wl12xx: Fix compilation warnings
+  *Dmitry Shmidt - ti: Add interface_mtu request
+
+Project name: android_hardware_ti_omap4
+  *Ziyan - camera: add support for espresso
+
+Project name: android_hardware_libhardware
+  *Steve Kondik - libhardware: Add POWER_HINT_LAUNCH_BOOST for PowerHAL
+  *Ethan Chen - audio: Notify amplifier HAL of device enable/disable
+  *Andy Mast - Fingerprint: Add getNumEnrollmentSteps [2/2]
+  *Andy Mast - Fingerprint [2/2]: Numerous Fingerprint Improvements
+  *Scott Mertz - Fingerprint: add explicit authenticate actions
+  *Ethan Chen - audio: Add audio amplifier HAL
+
+Project name: x86_64-linux-android-4.9
+  *Dan Albert - Update gold to build #2098274.
+
+Project name: arm-eabi-4.9
+  *Chet Kener - 9-1-2015 - 4.9.4 UBERTC Snapshot
+
+Project name: arm-linux-androideabi-4.9
+  *Chet Kener - 9-1-2015 - 4.9.4 UBERTC Snapshot
+
+Project name: android_prebuilts_cmsdk
+  *Adnan Begovic - prebuilts/cmsdk: Update api level 2 for PersistentStorage.
+  *Adnan Begovic - prebuilts/cmsdk: Update latest api text file.
+  *Yvonne Wong - prebuilts/cmsdk: Update api text for CMSettings
+  *Yvonne Wong - prebuilts/cmsdk: Update api text for Hardware
+  *Adnan Begovic - prebuilts/cmsdk: Always do release deploy for current.
+  *Adnan Begovic - prebuilts/cmsdk: Update development platform sdk jar.
+  *Adnan Begovic - prebuilts/cmsdk: Update for CMTelephonyManager.
+  *Adnan Begovic - prebuilts/cmsdk: Provide maven deployment modules.
+  *Matt Garnes - Add SettingsManager and CyanogenModAlarmClock APIs to API level 2.
+  *Adnan Begovic - prebuilts/cmsdk: Update api text for ProfileTrigger.
+  *Adnan Begovic - prebuilts/cmsdk: Publish new version of future-release cmsdk.
+  *Adnan Begovic - cmsdk: @hide PARCELEABLE_VERSION.
+  *Adnan Begovic - prebuilts/cmsdk: Update api level 1 for hotfix.
+  *Adnan Begovic - cmsdk: Update bleeding edge sdk for recent changes.
+  *Adnan Begovic - cmsdk: Update latest api text for recent changes.
+  *Adnan Begovic - prebuilts/cmsdk: Rewrite current cmsdk version (API level 1) for hotfix.
+  *Adnan Begovic - cmsdk: Update for future* cmsdk changes.
+  *Adnan Begovic - prebuilts/cmsdk: Make sure readme is markdown format.
+  *Adnan Begovic - cmsdk: Fix spelling error.
+  *Adnan Begovic - prebuilts/cmsdk: Update for API level naming.
+  *Adnan Begovic - prebuilts/cmsdk: Create and update 2nd api level text files.
+  *Adnan Begovic - prebuilts/cmsdk: Update perms file for API level 2.
+  *Adnan Begovic - prebuilts/cmsdk: Update readme for perms.
+  *Adnan Begovic - prebuilts/cmsdk: Update readme.
+  *Adnan Begovic - prebuilts/cmsdk: Create new future-release blobs.
+  *Adnan Begovic - prebuilts/cmsdk: Update API text for API level 1.
+  *Adnan Begovic - prebuilts/cmsdk: Add prebuilt jars for cmsdk.
+  *Adnan Begovic - prebuilts/cmsdk: Add api text files for API level 1.
+  *Adnan Begovic - prebuilts/cmsdk: Add declared permission info for API level 1.
+  *Abhisek Devkota - Initial empty repository
+
+Project name: git-repo
+  *Dan Willemsen - Revert "GITC: Always update the gitc manifest from the repo manifest"
+  *Dan Willemsen - GITC: Always update the gitc manifest from the repo manifest
+  *Dan Willemsen - _CopyAndLinkFiles even if the sources haven't changed
+  *Simran Basi - GITC: Fix repo sync.
+  *Dan Willemsen - gitc: Improve help visibility
+  *Dan Willemsen - Fix gitc check if gitc isn't installed
+  *Simran Basi - GITC: Pull GITC Manifest Dir from the config.
+  *Simran Basi - GITC: Expand relative remote URLs.
+  *Simran Basi - GITC: Add repo start support.
+  *David Pursehouse - project.py: Improve message shown when hook is not replaced
+  *David Pursehouse - project.py: Consistently use the _error method to print error messages
+  *Dan Willemsen - Smartsync: Don't fail if there isn't a cookiefile
+  *David Pursehouse - Sync: Refactor netrc parsing
+  *David Pursehouse - gitc_init: Remove unused import
+  *David Pursehouse - gitc_utils: Fix incorrect string format argument
+  *David Pursehouse - gitc_utils: Remove unused variable
+  *David Pursehouse - gitc_utils: Remove unused import; add missing import
+  *Dan Willemsen - Support smart-sync through persistent-http[s]
+  *David Pursehouse - Fix formatting of message when retrying clone
+  *Simran Basi - GITC: Add repo sync support.
+  *Dan Willemsen - Copy clone-depth in `repo manifest`
+  *Simran Basi - GITC: Add gitc-init subcommand to repo.
+  *Simon Ruggier - Include project path in --force-sync error message
+  *Dan Willemsen - Fix shallow clone behavior
+  *Simon Ruggier - Include dest-branch attribute in the 'manifest' subcommand's output
+  *Dan Sandler - Emit project info in case of sync exception.
+  *Dan Willemsen - Fix _ReferenceGitDir symlinking
+  *Graham Christensen - Support filtering by group on forall and list subcmd
+  *Kevin Degi - Add option to correct gitdir when syncing
+  *Cassidy Burden - Prevent repo info from crashing when default element doesn't exist.
+  *Kevin Degi - InitGitDir: Clean up created directories
+  *David Pursehouse - Revert "Add --prune option to fetch when syncing a mirror repo"
+  *Kevin Degi - project.RemoteFetch: Handle depth cases more robustly
+  *Conley Owens - Always output upstream if specified
+  *David Pursehouse - forall: use smart sync override manifest if it exists
+  *David Pursehouse - sync: Remove smart sync override manifest when not in smart sync mode
+  *David Pursehouse - forall: Don't try to get lrev of projects in mirror workspace
+  *David Pursehouse - sync: Improve error message when writing smart sync manifest fails
+  *Than McIntosh - Fix 'repo cherry-pick' to avoid hanging on commit-msg update.
+  *Jarkko Pöyry - Improve error message when syncing a project with invalid groups.
+  *Anthony King - forall: setenv, only encode val if encode exists
+  *Anthony King - init: don't call urllib.parse
+  *Anthony King - git_config: fix _SaveJson typo
+  *Anthony King - error: fix typos
+  *Anthony King - git_command: only decode when needed
+  *Anthony King - decode the buffer before appending
+  *Wink Saville - Teach _LinkFile._Link to handle globs.
+  *Colin Cross - Make linkfile symlinks relative
+
+Project name: android
+  *Ethan Chen - manifest: Remove separate paths for 8610/8226 HALs
+  *Myself5 - manifest: add CarbonWallpapers
+  *weldoncyngn - adding android-support-test for espresso test
+  *Arnav Gupta - manifest: move mips prebuilts into notdefault
+  *Myself5 - You are not a CM repo
+  *Myself5 - manifest: rewrite to be able to pick from CM gerrit
+  *Abhisek Devkota - Fixup Freetype project & revision
+  *Myself5 - update readme for lp5.1
+  *Joey Hewitt - CVE Fix, track higher rev of conscrypt
+  *PhaseBurn - Adding qcom sepolicy globally
+  *Ryan N. Norris - Fix cmsdk repo path.
+  *Patrick Campanale - Added our fork of cmsdk
+  *Brint E. Kriebel - manifest: Update to freetype 2.6.0
+  *Myself5 - Revert "Changed a few repos"
+  *Patrick Campanale - Changed a few repos that we are resetting a few weeks back to fix some bugs
+  *Myself5 - Fix Derp
+  *Brandon McAnsh - cm: Use fork of aarch64 gcc for darwin as well
+  *Steve Kondik - cm: Use fork of aarch64 gcc
+  *Ricardo Cerqueira - 5.1.1_r3 -> 5.1.1_r6
+  *José Adolfo Galdámez - manifest: remove final > extra
+  *Adnan Begovic - Add cmsdk prebuilts repo.
+  *Abhisek Devkota - Add Android Support Library prebuilts
+  *STELIX - Manifest - Fix another stupid derp
+  *Steve Kondik - Manifest - Switch to cm fork of external/lzma
+  *Sean Hoyt - Remove device specfic exynos repo
+  *STELIX - Manifest - Fix a stupid derp
+  *STELIX - Manifest - track our own...
+  *Myself5 - manifest: change the way to handle our repos
+  *Michael Bestas - Manifest - Remove external/srec
+  *STELIX - Manifest - use some our own telephony stuff
+
+Project name: android_vendor_xiaomi
+  *fefifofum - Use prebuilt libOmxVdecHevc
+  *tarun93 - skip mpdecision n thermal blobs
+
+Project name: cm_platform_sdk
+  *Matt Garnes - Allow whitelist for MODIFY_NETWORK_SETTINGS permission.
+  *Matt Garnes - Add Hotword audio capture constants.
+  *Adnan Begovic - cmsdk: Update documentation for Boysenberry release.
+  *Adnan Begovic - cmsdk: Update documentation for HAF permission.
+  *Adnan Begovic - cmsdk: Update tests for new ALARM permissions.
+  *Adnan Begovic - cmsdk: Update cm-api for hasSensitiveData() and new permissions.
+  *Adnan Begovic - cmsdk: Add permissions for ALARMS.
+  *Adnan Begovic - cmsdk: Enforce cyanogenmod.permission.MODIFY_PROFILES for profiles.
+  *Adnan Begovic - cmsdk: Fix toast in CMHardwareTest.
+  *Adnan Begovic - cmsdk: Add preliminary hardware manager tests.
+  *Adnan Begovic - cmsdk: Change parceling for DisplayMode.
+  *Adnan Begovic - cmsdk: Fix spelling error in CMSettingsProvider makefile.
+  *BadDaemon - BugFix: Fix potential NPEs with getService()
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - cmsdk: allow custom tiles to set the new qstile's sensitive data flag
+  *Yvonne Wong - Add CMSettingsProvider and CMDatabaseHelper
+  *Adnan Begovic - cmsdk: Build in the Manifest and R classes for the sdk.
+  *Yvonne Wong - cmsdk: Update cm api text files
+  *Steve Kondik - cmhw: Add makeDefault arg to setDisplayMode
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Steve Kondik - cmsdk: Add initial DisplayMode and AutoContrast support to CMHW
+  *Steve Kondik - cmsdk: Transplant CMHW into CMSDK
+  *Steve Kondik - profiles: Don't bind the keyguard until ActivityManager is up
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - cmsdk: Rename gradle-sample package namespace.
+  *Adnan Begovic - cmsdk: Add gradle sample project.
+  *Jon Dinneen - cmsdk: Fix README. (Add period).
+  *Roman Birg - cmsdk: fix enabling/disabling keyguard
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Adnan Begovic - cmsdk: Update readme for maven central deploy.
+  *Patrick Campanale - Changed to Carbon vendor
+  *Adnan Begovic - cmsdk: Update README
+  *Adnan Begovic - cmsdk: Provide quick manual functional telephony api tests.
+  *Joao Figueiredo - cmsdk: Dual SIM support on CM SDK
+  *Matt Garnes - Update APIs for new settings and DeskClock support.
+  *Matt Garnes - Add API to SettingsManager to set zen mode.
+  *Matt Garnes - Add AlarmClock support for CM DeskClock manipulation.
+  *Matt Garnes - Add SettingsManager.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - cmsdk: Add sample Profiles application.
+  *Adnan Begovic - cmsdk: Expose ProfileTrigger constructor for third parties.
+  *Adnan Begovic - cmsdk: Update custom tile sample for shouldCollapsePanel.
+  *Adnan Begovic - cmsdk: Clean up documentation.
+  *Adnan Begovic - cmsdk: Update current api text files.
+  *Adnan Begovic - cmsdk: Support deleteIntent and remove tiles when packages change.
+  *Roman Birg - Profiles: add LockModeSettings
+  *Adnan Begovic - cmsdk: Add support for remote views in expanded styles
+  *Adnan Begovic - cmsdk: Add functional manual and unit tests for new setIcon
+  *Adnan Begovic - cmsdk: Create new setIcon method for utilizing bitmaps
+  *Adnan Begovic - cmsdk: Make sure we're writing ProfileTrigger values as typed array.
+  *Adnan Begovic - cmsdk: Fix Profile parceling for custom objects.
+  *Adnan Begovic - cmsdk: Update tests for recent builder changes.
+  *Adnan Begovic - cmsdk: Make sure we're defauling shouldCollapsePanel to true.
+  *Adnan Begovic - cmsdk: Update manual functional tests for shouldCollapsePanel.
+  *Adnan Begovic - cmsdk: Add unit tests for shouldCollapsePanel
+  *Adnan Begovic - cmsdk: Add method for shouldCollapsePanel.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - cmsdk: Hide PARCELABLE_VERSION constant which varies between releases.
+  *Adnan Begovic - cmsdk: Update api text for recent changes.
+  *Adnan Begovic - cmsdk: Add tests for StatusBarPanelCustomTile parceling.
+  *Adnan Begovic - cmsdk: Declare a parcelable header.
+  *Adnan Begovic - cmsdk: Make sure we're not including source from internal package.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - cmsdk: Update intent action extras to match new namespace.
+  *Adnan Begovic - cmsdk: Fix javadoc comment for CM_VERSION_CODES.
+  *Adnan Begovic - cmsdk: Update api files for intent action change.
+  *Adnan Begovic - cmsdk: Update PROFILE_PICKER intent action.
+  *Adnan Begovic - cmsdk: Clean up constant linking for javadoc.
+  *Adnan Begovic - cmsdk: Return UNKNOWN for impossible sdk ints.
+  *Adnan Begovic - cmsdk: Add documentation for validating API level.
+  *Adnan Begovic - cmsdk: Add copyright header for ProfileManagerTest.
+  *Adnan Begovic - cmsdk: Add functional manual test for custom uri publish tile.
+  *Adnan Begovic - cmsdk: Add unit tests for CustomTile parceling.
+  *Adnan Begovic - cmsdk: Add simple profile manager tests.
+  *Adnan Begovic - cmsdk: Add unit tests for Profile parceling.
+  *Adnan Begovic - cmsdk: Add unit tests for versioning with os.Build
+  *Adnan Begovic - cmsdk: Fix Profile parceling.
+  *Adnan Begovic - cmsdk: Add CMStatusBarManager and CustomTile.Builder tests.
+  *Adnan Begovic - cmsdk: Update profiles functional tests.
+  *Adnan Begovic - cmsdk: Clear calling identity when resetAll is called.
+  *Adnan Begovic - cmsdk: Add boysenberry to api text.
+  *Adnan Begovic - cmsdk: Name api level 2 as boysenberry.
+  *Jorge Ruesga - cmsdk: fix cannot create handler
+  *Adnan Begovic - cmsdk: Update api text files.
+  *Adnan Begovic - cmsdk: Target 2nd API level on documentation generation.
+  *Adnan Begovic - cmsdk: @hide everything relating to ProfileGroups, until complete.
+  *Adnan Begovic - cmsdk: Update profile settings documentation.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - CMSDK: Begin documentation and testing for profiles.
+  *Adnan Begovic - CMSDK: Utilize CMSDK_PACKAGE_ID.
+  *Adnan Begovic - CMSDK: Introduce factored out resources from framework.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - CMSDK: Make sure to initialize ProfileTriggerHelper.
+  *Adnan Begovic - CMSDK: Introduce Profiles API from frameworks.
+  *Adnan Begovic - CMSDK: Update iconography for resource package.
+  *Adnan Begovic - CMSDK: Only target specific packages for checkapi.
+  *Adnan Begovic - CMSDK: Add SINCE API level for docs.
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - cmsdk: notify new listeners all registered custom tiles
+  *Jorge Ruesga - cmsdk: customtiles: allow load resources from external packages
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - cmsdk: fix customtile listener service registering logic
+  *Jorge Ruesga - cmsdk: do not crash system if CustomTileListenerService isn't present
+  *Adnan Begovic - CMSDK: Update current and system api texts.
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - CMSDK: Utilize a SparseArray instead of Map, avoid autoboxing.
+  *Adnan Begovic - CMSDK: Update for versioning tests.
+  *Adnan Begovic - CMSDK: Create versioning for platform SDK.
+  *Adnan Begovic - CMSDK: Update tests for ExpandedStyles
+  *Adnan Begovic - CMSDK: Document the capabilities of ExpandedStyles for CustomTile.
+  *Adnan Begovic - CMSDK: Update samples for expanded styles.
+  *Adnan Begovic - CMSDK: Create support for ExpandedStyles in CustomTiles.
+  *Adnan Begovic - CMSDK: Actually hide ThemeVersion.
+  *Adnan Begovic - CMSDK: Add check-api generated texts.
+  *Adnan Begovic - CMSDK: Setup initial check-api mechanism.
+  *Andy Mast - Introduce Theme Versioning [2/2]
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - CMSDK: Hide CMContextConstants from docs.
+
+Project name: android_vendor_carbon
+  *Myself5 - vendor: compile CarbonWallpapers
+  *Kra1o5 - Update Spain APNs
+  *Abhisek Devkota - Update India APNs to YU list
+  *Luca Stefani - vendor/cm: add curl to build
+  *Adnan Begovic - vendor/cm: Start building in CMSettingsProvider.
+  *Abhisek Devkota - Fix Airtel APN Selection
+  *Davis Mosenkovs - Updated APN settings for Latvian operators
+  *Abhisek Devkota - Rogers LTE apn fix?
+  *Marcos Marado - Fix Movistar APNs.
+  *Steve Kondik - cm: Moving CMHW to CMSDK
+  *Adnan Begovic - vendor/cm: Don't be so noisy.
+  *Adnan Begovic - vendor/cm: Expose internal revision for platform.
+  *Kra1o5 - Add new Tuenti MNC SPN override name
+  *Arvin Quilao - APN: Update configurations for Philippine networks
+  *PhaseBurn - Adding cert, renaming builds...
+  *Myself5 - replace wrong vendor path
+  *Adnan Begovic - vendor/cm: Always use gpg sign-and-deploy for deployments.
+  *Adnan Begovic - vendor/cm: Provide means of uploading an artifact to maven.
+  *Joao Figueiredo - cmsdk: Dual SIM support on CM SDK
+  *Matt Garnes - Add SettingsManagerService from cmsdk as a system service.
+  *Ricardo Cerqueira - apns: zero-length items are evil and break auto-selection
+  *Marcos Marado - Clean up MEO/TMN APNs
+  *Abhisek Devkota - Remove 'preferred' no-op
+  *dianlujitao - Update APN for China Telecom
+  *zh0122 - Add a bash completion "--force-sync" for repo sync
+  *ginnungagap - Update #comment to reflect removal of /data/local/userinit.d/ support
+  *Chris Sarbora - Specify the maven-dependency-plugin version directly so as to force Maven 3.0.5 to use the correct version.
+  *Adnan Begovic - vendor/cm: Clean up paths to known files.
+  *Patrick - Fix Rogers APN
+  *Abhisek Devkota - APN fine tuning
+  *Chris Sarbora - Hack in support for the old version of Maven that Ubuntu apparently ships with
+  *Lin Ma - rendang: Remove unwanted APNs
+  *Abhisek Devkota - CYNGNOS-454 - Fix config_preferred_apn Overrides
+  *Brandon McAnsh - sepolicy: system_app: Remove performace setting related entries
+  *Abhisek Devkota - Yet another massive APN list
+  *Steve Kondik - cm: Update properties and libs for stagefright-plugins
+  *Zyg0te - Updated APN for Austrian Carrier Yesss.
+  *Chris Sarbora - Prevent Maven target from grabbing transitive dependencies
+  *Abhisek Devkota - Additional APN cleanup and modifications
+  *NBruderman - Vendor: Fix "mts" carrier password
+  *Abhisek Devkota - Additional European MVNOs
+  *Abhisek Devkota - Massive APN Update
+  *Adnan Begovic - vendor/cm: overlay start for ProfileService in external framework.
+  *Michael Bestas - Remove obsolete /cache/dalvik-cache stuff from init.local.rc
+  *Jake Jackson - Fix Sprint 3G
+  *Adnan Begovic - vendor/cm: Represent as CyanogenMod API's
+  *Adnan Begovic - vendor/cm: Remove search widget from developer docs.
+  *Adnan Begovic - vendor/cm: Point to proper prebuilts/cmsdk directories.
+  *Chris Sarbora - Support downloading from Maven
+  *Steve Kondik - cm: Update stagefright-plugins depdendencies
+  *Ethan Chen - Revert "cm: Add import for prebundled APKs"
+  *Steve Kondik - cm: Add backup API key for Trebuchet
+  *Konsta - Update Sonera APNs
+  *Chenxi Mao - apn: Add China Telecomm 4G APN support
+  *Adnan Begovic - cm: Point to the right files for checkapi-cm.
+  *Adnan Begovic - CM: Provide apicheck and cm-specific config inheritance.
+  *Dan Pasanen - init: stop ril daemons if ro.radio.noril is set
+  *Matt Mower - Update Ting GSM APNs
+  *c457 - add MetroPCS's IPv6 APN
+  *Abhisek Devkota - Deprecate epc.tmobile.com APN
+  *Phil Eichinger - APNs: Correct MMSC for HoT Austria
+  *Zyg0te - apns: Removed APN configuration for Noverca.
+  *Brandon McAnsh - config: Create TV targets (full and mini)
+  *Evan Widger - Temp fix for Bouygues telecom issues
+  *Lin Ma - FOTA: Create /cache/recovery in init.rc for FOTA
+  *Christian Oder - invite i9100 to the party
+  *Patrick Campanale - Add w7
+  *Patrick Campanale - Working on shamu
+  *Adnan Begovic - CM: Make sure we're parsing api versions for cmsdk docs.
+  *Matt Mower - Fix invalid roaming_protocol for telenor.smart APN
+  *Abhisek Devkota - Drop hipri,supl from Smartfren4G
+
+Project name: testing
+  *Juan Pereira - Add view matcher for input type on an edittext
+  *Juan Pereira - Add view matcher for matching error text on an edittext
+  *Jake Wharton - Add drawer layout open/close action factories.
+  *Damián Arrillaga - Add IntentTestRule three parameters constructor to be fully compatible with ActivityTestRule.
+  *Damián Arrillaga - Fix RecyclerViewActions actionOnItem doc
+  *Eric Denman - Specify gravity on the "is the drawer open/closed" checks
+
+Project name: android_frameworks_base
+  *Myself5 - Convert Slim Float drawables to vectors and add Dark Version
+  *Myself5 - [2/2] Base: Add Button to Recents to open App as Floating
+  *rogersb11 - Slim action float tile Graphics
+  *BlackDragon - Floating windows: Fix statusbar immersive mode for snap points.
+  *rogersb11 - Gesture anywhere floating switch 1/2
+  *sd3993 - Do not launch floating window when on default launcher
+  *lion0738 - [1/2] Base: option to launch heads up in floating mode.
+  *BlackDragon - Floating windows: Fix minimize/maximize buttons coloring.
+  *BlackDragon - Floating windows: Fix when we close floating window also remove the task.
+  *rogersb11 - Notifications: Launch in floating mode button.
+  *BlackDragon - Floating windows update: Fixes and Improvements.
+  *BlackDragon - Recents: Launch as Floating app.
+  *BlackDragon - Remove: "Recents: Launch as floating app."
+  *LorDClockaN - Chrome floating fix:
+  *Evan Anderson - Dismiss IME when floating window is dismissed
+  *oreiche - Keep app when opening floating window from recents panel
+  *BigBrother1984 - Forward Port: Floating Window with Multitasking.
+  *Myself5 - Revert "FW_Base - instant reboot action trigger (1/2)"
+  *Rabih Salamey - base: gut out soft reboot
+  *LorDClockaN - FWB: Toast icon switch (1/2)
+  *Steve Kondik - power: Boost improvements
+  *Daniel Martí - Add basic support for VorbisComment DATE tags
+  *Diogo Ferreira - SystemUI: Fix blinking when reported battery level is 0
+  *Jorge Ruesga - systemui: left hand navigation ring
+  *Jorge Ruesga - systemui: respect navigation rings configuration
+  *d34d - Ringtones: Allow excluding from removable storage
+  *Matt Garnes - Allow CAPTURE_AUDIO_HOTWORD to be whitelisted by signature.
+  *Steve Kondik - power: Add a new power hint for application launches
+  *Mikalacki Sava - SystemUI: fix NPE crash when Visualizer is not initialized
+  *Jorge Ruesga - systemui: wait for animation end before take a screenshoot
+  *d34d - Spam: Close writable DB after use
+  *Mykola Kondratenko - zygote: fix memory leak when fork process
+  *d34d - Fingerprint: don't start auth if not showing
+  *Roman Birg - Allow default system profile state to be overlayed
+  *d34d - Keyguard: Remove bouncer when re-registering status bar
+  *d34d - Show infinity for large notification counts
+  *Gabriele M - Let liblights adjust the brightness of LEDs while previewing it
+  *d34d - Notifications: Only check for spam if new
+  *Abhisek Devkota - Remove duplicate audio: Tejat is Argon
+  *d34d - Fingerprint: Allow disabling of vibration
+  *Danesh M - SystemUI : Toggle nav item visibility based on IME
+  *Adnan Begovic - PackageManager: Move fingerprint feature out of android namespace.
+  *Michael Bestas - core/SystemUI: Remove zh-rHK CAF translations
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - SystemUI: check RecentsConfiguration isn't null before running RecentsTaskLoader
+  *Hamster Tian - ResolverActivity: reduce elevation to make it flat
+  *Jorge Ruesga - base: hide qs tiles with sensitive data
+  *Myself5 - base: Fixup "SystemUI: use new visualizer from Eleven" for MSIM Devices
+  *Roman Birg - SettingsProvider: don't set default value for advanced mode
+  *ghepeu - Add support for Samsung extended AGPS
+  *stofstik - Added show volume panel tile to QS
+  *AdrianDC - LEDs Brightness [2/2]: Lights notifications brightness support
+  *AdrianDC - Lights with Screen On [1/2]: Optional allowment of lights
+  *Raj Yengisetty - SystemUI: do not load header bar if boot isn't complete
+  *d34d - Set mProximity to PROXIMITY_UNKNOWN on screen off
+  *Roman Birg - Fingerprint Service: fix potential NPE
+  *HazouPH - [1/2] Camera button support
+  *d34d - Show icon of package associated with Toast
+  *Wilhelm Fitzpatrick - Fix "Select correct 12 or 24 time format" breaking Chrome
+  *d34d - Themes: Use warning level logging for getBootTheme
+  *d34d - NavRing: Update search assistant drawable
+  *Wilhelm Fitzpatrick - Select correct 12 or 24 time format according to Locale
+  *d34d - Themes: Compose icons that just have scale defined
+  *maxwen - SystemUI: time-context header fixes
+  *xplodwild - [1/2] SystemUI: Add time-context headers to the notification header
+  *Myself5 - This one was not supposed to be in there.
+  *lion0738 - SystemUI: Fade keyguard visualizer along with other icons
+  *Scott Mertz - androidfw: fix cmsdk attribute lookup
+  *Chirayu Desai - Add the user set network mode to the siminfo table
+  *Scott Mertz - add config for proximity check on screen on default value
+  *Utkarsh Gupta - SystemUI: use new visualizer from Eleven
+  *Tom Powell - Automatic translation import
+  *blong - Filter internal account when set device owner
+  *Vinay Verma - Modify SILENT profile to restrict notification sound
+  *Sashidhar Ganiga - Fix return to task when single task activity is brought to front
+  *jinchul.kim - Trim task thumbnail within MAX_RECENT_BITMAPS.
+  *Nitin Shivpure - Bluetooth: Check for mPanservice before changing tethering state
+  *Kiran Kelageri - Bluetooth: Fix for crash in multi advertiser
+  *Jack Yoo - Keyguard: Adding null check for dateformat
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *d34d - Themes: Allow packages to be set as non-themeable
+  *d34d - Fingerprint: Don't start fingerprint auth in constructor
+  *Ricardo Cerqueira - DevicePolicy: Restore backup manager if the device owner is cleared
+  *myfluxi - backup: Fix the system server crash fix
+  *Steve Kondik - livedisplay: Fix boot-time race condition
+  *Steve Kondik - cmhw: Move CMHW out of the framework and into CMSDK
+  *Steve Kondik - cmsdk: Start external services at the right time
+  *d34d - Fingerprint: Call SecurityCallback.dismiss when recognized
+  *Amit Mahajan - DO NOT MERGE Change to add STK_PERMISSION for stk related commands.
+  *Wale Ogunwale - Prevent system uid component from running in an app process
+  *Michael Bestas - Fix wrong Hungarian translation
+  *Michael Bestas - Automatic translation import
+  *d34d - Revert "Revert "Wait until the Keyguard is drawn to dismiss the boot dialog.""
+  *Brandon McAnsh - Revamp 'Stay awake' choices
+  *Ricardo Cerqueira - SignalStrength: Allow for custom signal buckets in LTE
+  *Jorge Ruesga - base: don't refresh visualizer tile once the tile is destroyed
+  *Roman Birg - Revert "Barrier only messages shouldn't prevent the idle handlers from running"
+  *Roman Birg - Themes: don't recreateDefaults on typeface when locale changes
+  *Veeti Paananen - Disable PIN entry after successful quick unlock
+  *Marcel Dopita - Fix forcing media stream control on tablet
+  *Adnan Begovic - systemui: Provide empty view for empty lists published in QSTile.
+  *Apoorv Raghuvanshi - audio: Playback over USB DAC connected before boot
+  *louis_chang - [ActivityManager] Bring up Service if not schedule to restart
+  *Ricardo Cerqueira - PBD: Apply the same emmc discard logic as ext4_utils
+  *d34d - Keyguard: Don't show keyguard if CryptKeeper enabled
+  *Roman Birg - SystemUI: add missed super window calls
+  *Wale Ogunwale - Lockdown AM.getRunningAppProcesses API with permission.REAL_GET_TASKS
+  *Tom Powell - Automatic translation import
+  *emancebo - Fix telephony property access for CDMA rewrite rules in PhoneNumberUtils
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Kra1o5 - National roaming info for new Tuenti MNC in Spain
+  *Matt Garnes - Fix intent resolution of default preferred apps.
+  *Roman Birg - PhoneWinowManager: resolve home car intent
+  *Altaf-Mahdi - Themes: Theme power off and reboot dialog
+  *d34d - Keyguard: Stop fingerprint auth when not showing
+  *Qiang Chen - Fix StrictMode violation during getDefaultApn()
+  *Kun Liang - AppOps: fix delete ops wrongly matched issue
+  *Sashidhar Ganiga - frameworks/base: synchronize surface control object access.
+  *spooja - frameworks/base: Fix ContentService JNI leaks
+  *d34d - Fix memory leak in AAPT
+  *d34d - Make MANAGE_DOCUMENTS permission signature|system
+  *Roman Birg - LockPatternUtils: add a static way to retreive pattern from string
+  *dankoman - [1/3] Frameworks: Proximity speaker
+  *Myself5 - Fix double added case definition
+  *Myself5 - Fix missed Derp with missing /**
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - Keyguard: Don't disable visibility when scrambling pin.
+  *Roman Birg - SystemUI: update to use new Profiles LockSettings obj
+  *Adnan Begovic - systemui: Support remote expanded style.
+  *Adnan Begovic - SystemUI: Add support for external bitmap icons.
+  *Danesh M - CaptivePortal : Ensure uri is not null
+  *kai.cao - autobrightness: Fix the brightness dialog is not work when first enable auto-backlight
+  *Abhisek Devkota - Duplicate Alarm: Fermium == Argon
+  *Abhisek Devkota - Remove duplicate alarm
+  *d34d - CustomQSTile: Check for bad identifier in getTitle()
+  *Roman Birg - PackageManager: copy allowViaWhitelist flag for perm trees
+  *Steve Kondik - systemui: Fix various issues with transparent bars
+  *Steve Kondik - wm: Underp WindowManager flags
+  *Steve Kondik - camera: Unbreak the extended face detection code
+  *Pat Erley - ActivityManagerService: Don't export 'system' process in running app list
+  *Jorge Ruesga - qs: initialize day temperature in livedisplay tile
+  *Adnan Begovic - SystemUi: Respect shouldCollapsePanel when handling onClick.
+  *Roman Birg - framework: add config_ledCanPulse overlay setting
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - pm: remove stale permissions
+  *Mohammed Irfan - SystemUI: Crash fix from bad camera values.
+  *Jorge Ruesga - base: check nullability of ConnectivityManager#getNetworkCapabilities()
+  *d34d - Only clear icon cache when theme/icon pack applied
+  *Mohammed Irfan - Guard in short-circuit evaluations for stringSplit methods.
+  *Andy Mast - CYNGNOS-489: Fingerprint: Fix concurrent mod exception when getting Fingerprint list
+  *laufersteppenwolf - Fix GPS for old GPS HALs
+  *Michael Bestas - Automatic translation import
+  *nadlabak - PhoneNumberUtils: Add rewrite rule for CDMA networks in Ukraine
+  *Roman Birg - SystemUI: update notification clipping when reset
+  *Adnan Begovic - SettingsProvider: Update action for Profile picker.
+  *Andy Mast - Fingerprint: Add break after MSG_REMOVED
+  *Andy Mast - Authenticate When Keyguard Resumes From Camera
+  *Abhisek Devkota - Lazy Fix: "More Settings" localization
+  *Steve Kondik - livedisplay: Round values up
+  *d34d - Track current user id in ThemeService
+  *Michael Bestas - Fix mounting of non-FAT formatted SD cards (1/2)
+  *Danesh M - MediaScanner: Add support for default ringtones per sim
+  *Chirayu Desai - Revert CAF's default system sound settings
+  *STELIX - Fw_Base - Slim Heads-Up Basestatusbar missing part
+  *Daniel Koman - SystemUI: fix heads up snooze button
+  *Daniel Koman - SystemUI: better choice for heads up snooze icon
+  *Jean-Pierre Rasquin - [2/2] SlimHeadsUp: Add a global 3-way switch
+  *STELIX - Fw_Base - StatBarExpHeader: remove heads-up button from layout
+  *STELIX - Fw_Base - SystemUI QS: add RebootTile manifest permissions
+  *STELIX - Revert "SystemUI: add HeadsUp button in status bar header (1/2)"
+  *Lars Greiss - Frameworks: Be sure heads up view is attached before removing it
+  *Lars Greiss - Frameworks: Only set package name on user heads ups
+  *Lars Greiss - Frameworks: Slim heads up customizations for LP (1/2)
+  *STELIX - Revert "FW_Base - HeadsUp options [1/2]"
+  *STELIX - Revert "FW_Base - HeadsUp: add timeout option (1/2)"
+  *STELIX - Revert "FW_Base - HeadsUp: check if headsup is attached and not null when adding view"
+  *STELIX - Revert "FW_Base - [Heads up swipe] Disable by default"
+  *STELIX - Revert "FW_Base - [Heads up] Add touch outside event"
+  *STELIX - Revert "FW_Base - [Heads up] Touch outside to hide (1/2)"
+  *STELIX - Revert "FW_Base - HeadsUp: fix headsup for incoming calls"
+  *STELIX - Revert "FW_base - [Heads up] Don't show heads up while IME is showing"
+  *STELIX - Revert "FW_Base - HeadsUp: Don't reset Y coordinate and improve edge swipe readability"
+  *STELIX - Revert "FW_Base - Fix heads up dismiss not working"
+  *STELIX - Revert "FW_Base - QS: Add Headsup tile [1/2]"
+  *STELIX - Revert "FW_Base - QS: Add drawables for HeadsUp tile."
+  *STELIX - Revert "Fix Heads-up tile transparency in off state"
+  *STELIX - Revert "FW_Base - Add Feature: Heads Up custom text/background color/transparency"
+  *STELIX - Revert "FW_Base - Improve HeadsUp [1/2]"
+  *STELIX - Revert "FW_Base - Changes in Heads up qs tile"
+  *STELIX - Revert "FW_Base - Update to Heads Up"
+  *STELIX - Revert "Base: HeadsUp snooze function [1/2]"
+  *STELIX - Revert "Fix low battery exception with custom Heads Up colors"
+  *STELIX - Revert "Fix heads up default colors"
+  *STELIX - Revert "Heads Up: no custom text color in power save mode"
+  *Steve Kondik - livedisplay: Fix issue where settings weren't applied
+  *Brandon McAnsh - CaptivePortal: Remove captive_portal_login intent-filter
+  *Brandon McAnsh - CaptivePortal: Assert dataUri to prevent possible NPE
+  *Ricardo Cerqueira - Revert "Bluetooth: Check for mPanservice before changing tethering state"
+  *Michael Bestas - Automatic translation import
+  *Andy Mast - Keyguard Fingerprint: Send Unlock Stats
+  *Roman Birg - SettingsProvider: add overlay for SWAP_VOLUME_KEYS_ON_ROTATION
+  *Howard M. Harte - Fix build break introduced in 83b589ec9c743174ac473622adb3f759e9d598af
+  *ed.mancebo - Update indonesia country code in PhoneNumberUtils
+  *emancebo - When calling indonesia using +62 prefix while already in indonesia, replace +62 prefix with 0 (CDMA only)
+  *Adnan Begovic - core: Continue stripping out Profiles related code.
+  *d34d - Account for cmsdk resources when attaching theme assets
+  *Adnan Begovic - androidfw: Declare and load cmsdk resource package w/ id.
+  *Adnan Begovic - core: Factor out profiles related resources.
+  *Andy Mast - Fingerprint: Add getNumEnrollmentSteps [1/2]
+  *Jorge Ruesga - qs: fix NPE in visualizer tile
+  *Andy Mast - Keyguard Fingerprint: Lock immediately when fp is used [1/2]
+  *Roman Birg - SystemUI: more keyguard visualizer tweaks
+  *LuK1337 - msim: Fix saving default sim from select SIM dialog (1/2)
+  *Roman Birg - WallpaperManagerService: use a single file observer
+  *Matt Garnes - Fingerprint: Vibrate device.
+  *Roman Birg - SystemUI: fix keyguard unlock drawable not updating
+  *Andy Mast - Fingerprint: Get current user id via Process.myUserHandle()
+  *d34d - Add fingerprint to DB before calling clients
+  *Roman Birg - Fix keyguard wallpaper issues
+  *Roman Birg - improve lock screen wallpaper behavior
+  *Andy Mast - Keyguard Fingerprint: Don't cancel if device doesn't have the feature
+  *Andy Mast - SystemUI: Add uses-permission for fingerprint
+  *Andy Mast - Fingerprint: Secure the dump
+  *Henrik Baard - Remove memory leak in PersistentDataBlockService jni
+  *Lucas Gomez Jimenez - DO NOT MERGE Fix JNI global references leak in AudioEffect
+  *jshe32X - Avoid AsyncTask ThreadPool leak in RecentTaskLoaser
+  *Steve Kondik - backup: Fix a system server crash
+  *Abhisek Devkota - Even more duplicates
+  *Utkarsh Gupta - Rewrite Keyguard Visualizer
+  *Andy Mast - Add fingerprint permission [1/2]
+  *Steve Kondik - Add a few more default QS tiles
+  *Steve Kondik - livedisplay: Fix outdoor mode detection
+  *Christian Poetzsch - Barrier only messages shouldn't prevent the idle handlers from running
+  *Emmanuel Berthier - Add Process IOWAIT info to ANR dump
+  *Snild Dolkow - Avoid ANR loop because of queued-up ANR runnables
+  *Charles Tsai - Use isolated thread to perform onStart()
+  *Roman Birg - SystemUI: dismiss brightness slider on screen off
+  *Andy Mast - Fingerprint: Reset state when client cancels
+  *Andy Mast - Keyguard: Increase time to show hint texts
+  *Andy Mast - Keyguard: Add fingerprint icon to the bottom view
+  *LuK1337 - SystemUI: Fix FC when mHandler is null
+  *Svet Ganov - DO NOT MERGE Don't take flags when creating app widget config activity.
+  *Deepanshu Gupta - Remove implementation of deprecated method.
+  *Leon Scroggins III - Make Bitmap_createFromParcel check the color count. DO NOT MERGE
+  *Diego Perez - Do not paint shadow if outside of the clip area
+  *Deepanshu Gupta - Add Asset management support for fonts.
+  *Christopher Tate - Mark persistent apps as such when the ProcessRecord is created
+  *Rob - Revert "Wait until the Keyguard is drawn to dismiss the boot dialog."
+  *d34d - Store manifest hash code in PackageParser.Package
+  *Andy Mast - Keyguard: Show retry text on unidentified fingerprint
+  *Roman Birg - SystemUI: fix clock jumping when expanding QS from lockscreen
+  *Andy Mast - Keyguard: Show fallback after 2 failed auth attempts
+  *Andy Mast - Keyguard: Authenticate with fingerprint
+  *Michael Bestas - Automatic translation import
+  *Scott Mertz - Fingerprint: disallow API calls when fingerprint is not available
+  *Matt Garnes - Wait until the Keyguard is drawn to dismiss the boot dialog.
+  *Wilhelm Fitzpatrick - WhisperPush: allowing whitelisting of needed framework permissions
+  *Matt Garnes - Add default for Settings.System.DOUBLE_TAP_SLEEP_GESTURE.
+  *Roman Birg - SystemUI: recalculate clock position on removing empty shade views
+  *Andy Mast - Enable fingerprint option in Settings [1/3]
+  *Andy Mast - Fingerprint [1/2]: Numerous Fingerprint Improvements
+  *Roman Birg - density: do not apply to virtual displays
+  *Roman Birg - SystemUI: hide navigation bar faster in SetupWizard
+  *Danny Baumann - Clear callback handler queue when unregistering a phone state listener.
+  *d34d - Stop checking for resources.arsc in shouldCreateIdmap
+  *Adnan Begovic - frameworks: Factor out Profiles API to CMSDK
+  *Roman Birg - SystemUI: fix recents task view height calculation
+  *Roman Birg - SystemUI: don't launch visualizer before we are attached
+  *Roman Birg - return default density only for primary display
+  *Steve Kondik - alarmmanager: Add sanity checking for elapsed_realtime alarms
+  *tobitege - QSTileView: fix label recreate order
+  *Roman Birg - SystemUI: be more event driven in keyguard visualizer
+  *Scott Mertz - Fingerprint: Make the existing FingerprintService semi-useful.
+  *Roman Birg - SystemUI: workaround for visualizer flash on track change
+  *Roman Birg - SystemUI: dynamically generate visualizer color
+  *Steve Kondik - alarmmanager: Reduce calls to elapsedRealtime()
+  *ywen - Fix a GL error leak issue
+  *Roman Birg - SystemUI: visualizer state improvements
+  *STELIX - Fw_Base - Super Slim PIE Fix [1/2]
+  *rogersb11 - I like yours better
+  *rogersb11 - Add restart systemui to slim actions 2/2
+  *Lars Greiss - Frameworks: SlimPie (1/2) - From BlissRom
+  *LorDClockaN - DERP after gazilion patches
+  *LorDClockaN - Fix build after slim's shortcuts
+  *fusionjack - Framework: SlimAction as QuickTile (1/2)
+  *Lars Greiss - Frameworks: add ability to send a custom intent after keyguard is finished
+  *Lars Greiss - Frameworks: Keyguard - Add user configurable shortcuts
+  *Lars Greiss - Frameworks: add all slim shortcut image resources
+  *Lars Greiss - Frameworks: inital bringup of slim actions and helper classes
+  *Lars Greiss - Frameworks: smart pulldown we do not support anymore
+  *Lars Greiss - Frameworks: Add several Slim helper classes and constants back
+  *Daniel Koman - frameworks: vectorize slim shortcut action icons
+  *dankoman - Frameworks: add shortcut action icons
+  *Sven R - Frameworks: moar shortcut icons by Sven R.
+  *Danny Baumann - Remove some useless code in KeyguardUpdateMonitor.
+  *Danny Baumann - Optimize GPS property reloading.
+  *ed.mancebo - Add sms short codes for Indonesia
+  *Roman Birg - SystemUI: fix dpad arrow keys after rotation
+  *Kim Le - Revert "base: zenmode: add 90 minutes downtime"
+  *Dave Kover - Fix LiveDisplay notification.
+  *Roman Birg - SystemUI: fix visualizer tile initial state
+  *Andreas Gampe - Frameworks/base: Add removeAll for ArraySet
+  *Adnan Begovic - core: Protect against system server take down on empty tile order.
+  *Michael Bestas - Automatic translation import
+  *wangjing - Default time format is hard coded to 24
+  *Kra1o5 - Revert "Determine default 12/24 hour time format setting from locale."
+  *jrizzoli - base: zenmode: add 90 minutes downtime
+  *Andrew Dodd - wifi: Allow Settings to retrieve country code (2/3)
+  *Jorge Ruesga - base: wifi priorities
+  *Roman Birg - Profiles: fix mute ring mode not applying
+  *Steve Kondik - themes: Load icon packs outside the big lock
+  *Michael Bestas - Improve dynamic tile strings
+  *Jorge Ruesga - base: dynamic tiles
+  *Jorge Ruesga - qs: use external resource package for custom tiles
+  *jinchul.kim - KillProcessGroup on background thread
+  *Steve Kondik - Revert "Kill process asynchronously on updateOomAdjLocked."
+  *Charles Tsai - Fix overflow/underflow problem in comparison
+  *jinho.park - Fix bug regarding the comparator sorts Alarms into increasing time order.
+  *Steve Kondik - am: Fix delayed GC merge damage, again
+  *Roman Birg - SystemUI: fix navbar dpad arrow keys regression
+  *Steve Kondik - themes: Fix strictmode warnings
+  *Roman Birg - AudioService: don't launch music player while in call
+  *d34d - Close cursor after getting supported components.
+  *emancebo - SettingsProvider: turn off mobile data roaming by default
+  *Adnan Begovic - PackageManagerService: Don't attempt to dexopt platform-res.
+  *d34d - Show reboot dialog using themed resources
+  *Roman Birg - SystemUI: hide blur when showing keyguard media
+  *jie.liu - Properly animate SIM PIN entry screen transition.
+  *STELIX - Revert "FW_Base - Navigation Bar Customization [1/2]"
+  *Steve Kondik - Revert "fix bug about view cache in RemoteViews"
+  *d34d - Handle case where profiles.xml was partially saved
+  *STELIX - FW_Base - forgot to declare boolean
+  *tobitege - Heads Up: Fix heads up default colors, part duh
+  *tobitege - Heads Up: no custom text color in power save mode
+  *tobitege - FW_Base - Fix default battery text color (2/2)
+  *tobitege - Navbar: tint and buttons loading fixup
+  *STELIX - Revert "Navbar: tint and buttons loading fixup"
+  *tobitege - Fix heads up default colors
+  *Corey Edwards - Fix the Chamber Of Secrets
+  *d34d - Get themed resources in KeyButtonView
+  *tobitege - Status bar header: fix custom buttons long-click
+  *tobitege - Navbar: tint and buttons loading fixup
+  *tobitege - Navbar loading and tint improvements
+  *asianflavor - Fixed back softkey when nav bar height was changed
+  *eyosen - notification drawer: powermenu updates
+  *tobitege - Fix VPN icon color
+  *tobitege - Fix: init notification count text color
+  *Kyrylo Mikos - SystemUI: Fix missing top task in recent panel.
+  *Alexander Martinz - SystemUI: Keyguard: do not limit double tap to sleep to statusbar
+  *Lokesh Chamane - TaskManager: Update some functions
+  *Janson Kang - SystemUI: Cleanup longpress action for Heads Up button
+  *dexmc - SystemUI: Add longpress action for TaskManager button
+  *siracuervo - Enable some more actions for navbar
+  *Daniel Koman - SystemUI: vector support for navbar/pie icons
+  *westcripp - FW_Base - Improve Task manager UI
+  *Altaf-Mahdi - SystemUI: Double tap to sleep anywhere on the lock screen (1/2)
+  *westcripp - Task manager : Remove empty notification after switch on/off logic
+  *westcripp - Task Manager : On switch recreate statusbar to fix task view
+  *Dave Kessler - NavigationBarView: Add image rotation handling for phones
+  *Altaf-Mahdi - FW_Base - Task manager improvements: Switch [1/2]
+  *Nico60 - Add color to network traffic arrows
+  *Daniel Koman - frameworks: vectorize slim shortcut action icons
+  *jgcaap - FW_Base - More pratical recents animation timeout
+  *Altaf-Mahdi - Base: option to disable torch when the screen turns off (1/2)
+  *STELIX - FW_Base - Custom scrolling values: fix the build
+  *garwedgess - [1/5] Base: Breathing missedcall/sms/voicemail
+  *Yanuar Harry - FW_Base - custom scrolling values [1/2]
+  *Dave Kover - SystemUI: Expose values in status bar expanded header
+  *Roman Birg - Explicitly declare which permissions can be granted via signature
+  *Roman Birg - Allow permissions to be granted via whitelisted signatures
+  *Roman Birg - Density scaling: return device's default density
+  *Roman Birg - SystemUI: don't reinflate search view on rotate
+  *Chirayu Desai - Revert "Fixes large number of thumbnails leads to low memory"
+  *Michael Bestas - Automatic translation import
+  *tobitege - Fix USB intent warning on deviceAttached()
+  *Roman Birg - ExternalStorageFormatter: pass whether to wipe internal storage
+  *Michael Bestas - Automatic translation import
+  *tobitege - Fix USB intent warning on deviceAttached()
+  *Roman Birg - ExternalStorageFormatter: pass whether to wipe internal storage
+  *STELIX - FW_Base - QS: Fix some tile's animation
+  *heydabop - fix build
+  *Jet.Z - fix bug about view cache in RemoteViews
+  *riddle_hsu - [ActivityManager] Fix index OOB when updating visible.
+  *jinchul.kim - Kill process asynchronously on updateOomAdjLocked.
+  *riddle_hsu - Run BatteryCallback on CpuTracker thread.
+  *emancebo - PackageManagerService: override native lib root for prebundled packages
+  *d34d - Add File.separator to end of internalPath
+  *Lucas Gomez Jimenez - Fix in effectCallback to avoid sending callbacks to dead objects
+  *Jason Monk - Add hotspot icon to status bar
+  *Christopher Tate - Close race condition in binderDied()
+  *Satish Kodishala - Bluetooth: Adding synchronization to handle multiple threads
+  *Steve Kondik - power: Fix locking for wakeup proximity check
+  *Arne Coucheron - audio: fix incall music ifdefs (2/3)
+  *Roman Birg - SystemUI: always log statusbar state
+  *Michael Stucki - Revert "frameworks/base: Make minfree values optimal for 32bit devices"
+  *Michael Bestas - SystemUI: Add missing QS accessibility messages
+  *Dave Kover - SystemUI: Add new dimens values for expanded status bar padding
+  *Ricardo Cerqueira - Revert "Revert "Boot up optimization for phoneprocess""
+  *Danny Baumann - Add a method to query the voicemail number.
+  *Stephen Bird - MediaScanner: Detect folders
+  *xinhe - Fix for empty RSSI triangle after boot
+  *Roman Birg - SystemUI: add missed statusbar state logging
+  *Roman Birg - Revert "SystemUI: Fix no LED indication for missed call when screen off"
+  *Roman Birg - SystemUI: remove duplicate PhoneStatusBar variables
+  *Roman Birg - SystemUI: add RecentsView EventLogs
+  *Erica Chang - services: button brightness should check proximity
+  *Michael Bestas - Automatic translation import
+  *d34d - Don't set mHomeConsumed to true for KEY_ACTION_SLEEP
+  *Erica Chang - frameworks: display: shorten automatic brightness debounce
+  *Dave Kover - SystemUI: Expose weather text colors
+  *Adnan Begovic - SystemUi: Support expanded styles for custom tiles.
+  *nadlabak - PowerManagerService: Fix updating of mUserActivitySummary
+  *Roman Birg - Density scaling: scale compatibility apps, wm command support
+  *Roman Birg - Revert "Revert "Allow custom density setting""
+  *Chris Sarbora - Drop protection level of certain SMS-related system permissions
+  *Aditya Pandey - Code Cleanup: No longer required as AOSP commit supersedes this
+  *Jinpyo-laptop - Over scroll effects 1/2
+  *tobitege - Prevent NPE in InputMethodManager.Map
+  *tobitege - Fix navigation bar buttons with custom tint color
+  *tobitege - Fix low battery exception with custom Heads Up colors
+  *tobitege - Fix Navigation bar custom button sizes
+  *Lokesh Chamane - Base: HeadsUp snooze function [1/2]
+  *Janson Kang - FW_Base - Update to Heads Up
+  *cristianomatos - Update pie icons on theme changes
+  *tobitege - Extra null checks; fix vibrate and animations
+  *tobitege - Add power menu button transition upon header expansion/collapse
+  *Altaf-Mahdi - SystemUI: add HeadsUp button in status bar header (1/2)
+  *westcripp - Materialize task kill button
+  *Altaf-Mahdi - FW_Base - Changes in Heads up qs tile
+  *BigBrother1984 - FW_Base - Improve HeadsUp [1/2]
+  *Chet Kener - core: Update GPS Icons to be more Material
+  *Lars Greiss - InputWrapper: opt out early if session == null
+  *David96 - Fix NPE causing a hot reboot when pressing power button
+  *Jostein Kjønigsen - Fix Photosphere/Camera FCs
+  *tobitege - Avoid NPE in ArraysAdapter on null item
+  *tobitege - Silence chatty TypedArray logging
+  *guotao.deng - VolumePanel: volume bar disorderly jump when drag it.
+  *longping.zou - MultiSelectListPreference.java should deal with onRestoreInstanceState method
+  *d34d - Observer NAVBAR_FORCE_ENABLE in LockTaskNotify
+  *William C. Garrison III - VolumePanel: better handling of updating sliders in expanded view
+  *William C. Garrison III - VolumePanel: show hint for unlinked notification slider too
+  *Andy Mast - Introduce Theme Versioning [1/2]
+  *Hamster Tian - frameworks/base: enable localization of Chinese operator's PLMN
+  *Scott Mertz - fingerprint: register correct function for nativeEnrollCancel
+  *Scott Mertz - fingerprint: detach java vm in HAL callback
+  *Michael Bestas - Automatic translation import
+  *Brandon McAnsh - Profiles: Setup uuid's for the defaults
+  *yong.zou - Settings: Fix install apps will fail after setting Preferred install location as Removable SD card and removing SD card
+  *Roman Birg - SystemUI: prompt for SIM PIN if lockscreen is disabled
+  *Danny Baumann - Fix typo in density assignment.
+  *Roman Birg - Revert "Allow custom density setting"
+  *tobitege - FW_Base - Fix clock seconds display with am/pm
+  *STELIX - Revert "FW_Base - Fix clock seconds display with am/pm"
+  *STELIX - FW_Base - Update a string
+  *Kryten2k35 - Call recording encoder/format choice 3/3
+  *Muhammed Nazim - [3/3] frameworks/base: National Data Roaming
+  *darkobas - make lockscreen weather fonts a bit smaller
+  *rogersb11 - FW_Base - Power menu header button improvement
+  *Kra1o5 - FW_Base - Add option to set default custom function to button recents (1/2)
+  *tobitege - Fix NPE in GlobalActions.getUiContext if result is null
+  *tobitege - Fix NPE in navbar with ACTION_IME being null
+  *Susan McCombs - FW_Base - Fix ForceClose due to TaskManger.
+  *haiyangl - FW_Base - SystemUI: Add task manager
+  *Andy Mast - Themes: Fix Reboot Background
+  *rmcc - Theme reboot menu
+  *Daniel MM - CarbonLogo: Increase "C" size
+  *Daniel MM - Carbon Easter Egg (1/2)
+  *Matt Garnes - Determine default 12/24 hour time format setting from locale.
+  *Varad Deshmukh - Modify GC Delay to include subsequent launches. (fix)
+  *Roman Birg - Revert "Better density scaling compatibility"
+  *Roman Birg - Profiles: re-enable data toggling
+  *Roman Birg - Better density scaling compatibility
+  *Jorge Ruesga - systemui: notify everyone that lockscreen is not going to be shown
+  *rogersb11 - FW_Base - Fix tiles with custom colors toggle issues
+  *tobitege - FW_Base - Fix clock seconds display with am/pm
+  *AlmightyMegadeth00 - FW_Base - Navigation Bar Customization [1/2]
+  *STELIX - FW_Base - SystemUI Recents: just a little cleanUp
+
+Project name: android_frameworks_opt_chips
+  *emancebo - chips: extend phone number regex to recognize russian trunk prefix
+  *Yvonne Wong - Fix exception that crashes app when <<>> chip is clicked on issue-id: CYNGNOS-522
+  *Danesh M - Revert "More Chip: use pendingcount instead of counting again"
+  *Stephen Bird - More Chip: use pendingcount instead of counting again
+  *Matt Garnes - Apply anti-aliasing when drawing chips.
+
+Project name: android_frameworks_opt_hardware
+  *Steve Kondik - cmhw: Add PersistentStorage API
+  *Steve Kondik - hardware: Add DisplayModeControl API
+  *Steve Kondik - cmhw: Add auto contrast support
+
+Project name: android_frameworks_opt_telephony
+  *Adnan Begovic - Telephony: Make sure we're stripping non-digits prior checkDestination.
+  *Adnan Begovic - telephony: Fix FrameworksTelephonyTests.
+  *Chirayu Desai - Add the user set network mode to the siminfo table
+  *Chirayu Desai - Change network mode on data sub change
+  *Amit Mahajan - DO NOT MERGE Change to add STK_PERMISSION for stk related commands.
+  *emancebo - Telephony: fallback to xml resources for sms shortcode recognition
+  *Martin Brabham - [MMS-55]: Add column to interface
+  *Muhammed Siju - Fix LTE attach issue due to wrong initial attach profile.
+  *emancebo - telephony: read IMSI from CSIM if available in CDMALTEPhone
+  *Deepak Kundra - Telephony: Apply SPN override for cdma SIM (RUIM)
+  *Ricardo Cerqueira - SIMRecords: Treat empty SPN fields as null and proceed with the fallbacks
+  *emancebo - telephony: use IMEI as device ID when LteOnCdma mode is enabled
+  *emancebo - msim: fix parse error when roaming with slot 2 only
+  *Danny Baumann - Send out a new SPN_STRINGS_UPDATED broadcast if the sub ID changes.
+  *Danesh M - Telephony : Ensure private numbers are blocked if block unknown numbers is enabled
+  *Beena More - Telephony: DDS switch oemhook message sent twice
+  *Muhammed Siju - Fix duplicate events received in DcTracker.
+  *Sukanya Rajkhowa - Check for DDS validity
+  *Sukanya Rajkhowa - Reject network request when DDS is invalid
+  *Susheel nyamala - Telephony: On demand DDS switch uses preferred sub
+  *Sukanya Rajkhowa - Ignore DdsRequest for non DDS network factory
+  *Muhammed Siju - Fix DDS switch issue from GSM to CDMA.
+  *Hu Chunming - Fix issue that DDS can not get back to primary sub and network mode shows incorrect in settings.
+  *Lokesh Chamane - Fix the build
+  *emancebo - msim: order getSubInfo list by slot ID
+  *Ricardo Cerqueira - Revert "SubscriptionController: getPhoneId() should never return negative values"
+  *Sandeep Gutta - MSIM: Change default fallback subId value
+  *Mengjun Leng - Fix ACTION_DEFAULT_SUBSCRIPTION_CHANGED is not sent after power on
+  *Adnan - Telephony: Actually abort flex mapping if subs are null.
+  *Michael Bestas - Revert "Set default SMS outgoing check interval to 15 minutes"
+  *Muhammed Nazim - Return: National Data Roaming [1/3]
+  *Ricardo Cerqueira - RIL: Fix datacall parcel reading
+
+Project name: android_frameworks_opt_net_wifi
+  *Hu Wang - Wifi: set mConnected true before start monitor thread
+  *sanketk - wifi: do not adjust wifi score when WQE is enabled
+  *Henrik Baard - Fix memory leak in WifiNative
+  *Hu Wang - Wifi: get rid of the log from Gbk2Utf
+  *Nalla Kartheek - Wifi:Set framework disconnected state scan interval when P2P connected
+  *Jorge Ruesga - wifi: wifi priorities
+  *Jorge Ruesga - wifi: Allow Settings to retrieve country code (1/3)
+
+Project name: android_frameworks_av
+  *Kyle Repinski - stagefright: id3: Fix crash.
+  *Kyle Repinski - Fix compiler issues uncovered at higher optimization levels.
+  *Jorge Ruesga - mediascanner: handle DATE tag
+  *Dhananjay Kumar - soundpool: update sample rate when reusing audiotrack
+  *Dhananjay Kumar - soundpool: reuse channel for same sample if available
+  *Satya Krishna Pindiproli - mediaplayerservice: reset mBytesWritten in AudioSink flush and stop
+  *Caio Schnepper - stagefright: Correct Exynos4 stride alignment
+  *rINanDO - stagefright: Exynos4 MPEG4 decoder should set native color format.
+  *Eric Laurent - audio effects: fix heap overflow
+  *Andreas Schneider - libstagefright: Add support for NV21 color format
+  *Alexy Joseph - libmedia: Increase framecount in Track Offload
+  *Christopher R. Palmer - stagefright: Add libhwc to exynos include paths
+  *Christopher N. Hesse - stagefright: Add support for Exynos hardware audio decoding
+  *Ethan Chen - stagefright: Update makefile for Exynos variants.
+  *Narsinga Rao Chella - audiopolicy: fix for voice call to work on USB headset during concurrency
+  *Steve Kondik - stagefright: Don't crash on invalid / null AVCC atoms in MKV
+  *Mazhar - Fatal error while playing certain mkv files.
+  *Nick Kralevich - MPEG4Extractor.cpp: handle chunk_size > SIZE_MAX
+  *Zhou Song - AudioMixer: fill 0s at right place when no more buffers available
+  *Surajit Podder - video: Disable resync markers
+  *Sultanxda - libstagefright: Scale up bitrate for HSR videos
+  *Zach Riggle - IOMX: Add buffer range check to emptyBuffer
+  *Chong Zhang - HDCP: buffer over flow check -- DO NOT MERGE
+  *Marco Nelissen - Add some sanity checks
+  *Lajos Molnar - Add AUtils::isInRange, and use it to detect malformed MPEG4 nal sizes
+  *Manikanta Kanamarlapudi - libstagefright: Fix incorrect duration calculation
+  *Kim Zhang - libstagefright: fix output buffer is not released by Writer when stopping
+  *Niel Alejandro Paz - Validation of Number of Channels on WAV files
+  *daisuke jinno - The preview frame data is broken when sending via Binder
+  *Evgenii Stepanov - Fix new[] vs delete mismatch.
+  *Marco Nelissen - Check allocation
+  *Evgenii Stepanov - Fix global-buffer-overflow in voAWB_Copy.
+  *myfluxi - libstagefright: Remove nBitPerSample CHECK
+  *Joshua J. Drake - Detect allocation failures and bail gracefully
+  *Nick Kralevich - MPEG4Extractor.cpp: Add check for size == SIZE_MAX
+  *Joshua J. Drake - Fix null-pointer-dereferences accessing the SampleTable
+  *Joshua J. Drake - Fix multiple division-by-zero conditions in MPEG4 parsing
+  *Dhananjay Kumar - libeffects: validate channel mask in downmixer configure
+  *Ashish Jain - audiopolicy: fix playback of multichannel pcm clips via low latency output
+  *Mingming Yin - audiopolicy: use deep_buffer as default output for music stream
+  *Haynes Mathew George - AudioOutput: Always open AudioTrack with a flag
+  *Wei Jia - SampleTable: fix integer overflow checks.
+  *Joshua J. Drake - MPEG4Extractor: still more NULL dereference fixes
+  *Marco Nelissen - Guard against codecinfo overflow
+  *Haynes Mathew George - nuplayer: Fix incorrect state handling while shutting down a decoder
+  *Shivaprasad Hongal - libstagefright: Fix crash in convertMetaDataToMessage
+  *kunleiz - audiopolicy: Fix for isStateInCall() do not return proper status
+  *Apurupa Pattapu - httplive: Adjust seek time to last video IDR time
+  *Apurupa Pattapu - httplive: Check for NULL playlist in postPrepared
+  *Apurupa Pattapu - httplive: Check for bandwidth switch only for variant playlists
+  *Mingming Yin - libstagefright: use SW AAC encoder for HE-AAC format
+  *Alexy Joseph - libmedia: Enable TrackOffload for more usecases
+  *Alexy Joseph - libmedia: AudioTrack offload only for STREAM_MUSIC
+  *Ethan Chen - audiopolicy: Make sense of concurrency properties
+  *Michael Bestas - libstagefright: Fix LPA default min duration
+  *dianlujitao - audiopolicy: Fix DTS Eagle dependence on kernel
+  *Ricardo Cerqueira - cameraservice: Resolve message vs start/stop preview races
+  *Dan Pasanen - camera: add ability for a device to specify MAX_CAMERAS
+  *Ethan Chen - stagefright: Remove deprecated FFMPEG config
+  *Joshua J. Drake - Prevent reading past the end of the buffer in 3GPP
+  *Joshua J. Drake - Prevent integer underflow if size is below 6
+  *Joshua J. Drake - Fix integer overflow when handling MPEG4 tx3g atom
+  *Joshua J. Drake - Fix integer underflow in covr MPEG4 processing
+  *Joshua J. Drake - Prevent integer overflow when processing covr MPEG4 atoms
+  *Steve Kondik - stagefright: Move a bunch of FFMPEG stuff out of here
+  *Steve Kondik - stagefright: Add support for loading a custom OMXPlugin
+  *Ethan Chen - audio: Reduce logging verbosity
+  *Paras Nagda - Acodec: Add interlaced video support
+  *Pavan Chikkala - audio: fallback to SW decoder for video clips
+  *Alexy Joseph - libmedia: restrict nuplayer from using track offload
+  *Caio Schnepper - libstagefright: back off exynos4_enhancements HWC_HWOVERLAY usage
+  *Ricardo Cerqueira - Revert "libstagefright: free mMoovBoxBuffer"
+  *Steve Kondik - audiopolicy: Add msm8994
+  *Ricardo Cerqueira - stagefright: ffmpeg: Slightly raise the threshold for the ffmpeg scanner
+  *Xavier Varricatt - nuplayer: Fix incorrect audio resume time during seek
+  *Steve Kondik - stagefright: Fix issues with software decoders
+  *Yogesh Solanke - Nuplayer: During flush operation flush audiosink
+  *Haynes Mathew George - audiooutput: Serialize access to AudioOutput
+  *Sharad Sangle - nuplayer: Don't write data to sink if sink is stopped
+  *Arne Coucheron - audiopolicy: Use legacy alsa to guard incall music feature
+  *Steve Kondik - audiopolicy: Unbreak incall music
+  *Xiaoming Yang - NuPlayer: Clear stale track packets on seek
+  *Weiyin Jiang - nuplayer: start or stop audio sink from renderer only
+  *Naresh Tanniru - Revert "audio: Reduce device switch delay"
+  *Joshua J. Drake - Fix integer overflow during MP4 atom processing
+  *Joshua J. Drake - Fix integer underflow in ESDS processing
+  *Joshua J. Drake - Fix several ineffective integer overflow checks
+  *Ramjee Singh - audio: removed stream type check from AudioTrack
+  *Manikanta Sivapala - nuplayer: improve startup/rebuffering for http progressive playback
+  *Amit Shekhar - frameworks/av: Fix NULL check for source
+  *Chaithanya Krishna Bacharaju - stagefright: Replace strncpy with strlcpy
+  *Preetam Singh Ranawat - NuPlayer: Fix incorrect time update for pause followed by seek, resume
+  *Preetam Singh Ranawat - NuPlayer: Fix for pcm offload not using offload path after pause time out
+  *Preetam Singh Ranawat - AudioFlinger: Add PCM offload format for dumpsys logging
+  *Preetam Singh Ranawat - NuPlayer: Fix for PCM offload fallback on BT
+  *lubiny - RTSPSource: check audio buffer count
+  *Hui (QRD) Yu - Nuplayer: Fix no image or image will be delay issue
+  *Dan Liang - Fix div zero error in corrupted media file
+  *Mykola Kondratenko - MediaCodec: use non-blocking call to get service
+  *Marco Nelissen - Signal EOS at end of mpeg video to flush out final sample
+  *Suresh Choudhary - libstagefright: free mMoovBoxBuffer
+  *Marco Nelissen - Don't fail read when "seeking" to current position
+  *Robert Shih - ESQueue:use 0x000001 instead of 0x00000001 as sync word in H264/MPEG_VIDEO
+  *Arne Coucheron - audio: fix incall music ifdefs (3/3)
+  *nadlabak - audiopolicy: Fix call recording for legacy qcom HAL (again)
+
+Project name: android_frameworks_native
+  *Dan Stoza - SurfaceFlinger: Fix integer overflow in Mesh ctor
+  *Dan Stoza - libgui: Clear frame number while freeing slot
+  *Adnan Begovic - native: Move fingerprint feature out of android namespace.
+  *Jesse Hall - libagl: Fix buffer read overrun in eglCreatePbufferSurface
+  *Ethan Chen - Revert "binder: Remove deprecated Exynos platform variant logic"
+  *Ethan Chen - binder: Remove deprecated Exynos platform variant logic
+  *Ethan Chen - binder: Update makefile for Exynos variants
+  *Adam Lesinski - Verify that the native handle was created
+  *radhakrishna - sf: Restrict GPU tile render feature to MAX_LAYER_COUNT
+  *Saurabh Shah - SF: Enable context priority
+  *Steve Kondik - Revert "Add OMX_AUDIO_CodingAPE and OMX_AUDIO_CodingDTS"
+  *Chitti Babu Theegala - Tuning compiler thread count for optimal application install times
+  *Dan Stoza - SF: Skip render-to-texture for color transforms
+  *Jorge Ruesga - native: dock battery
+  *Andy Mast - Enable fingerprint option in Settings [2/3]
+  *Jesse Hall - surfaceflinger: use Mutex timedLock instead of tryLock loop
+  *Dan Stoza - SF: Reduce resync samples without present
+  *bmc08gt - Add dalvik heap override for xxxhdpi phone
+  *bmc08gt - Add HWUI overrides for xxxhdpi phone
+
+Project name: android_external_icu
+  *Zach Riggle - Fix potential overflow issue
+  *Elliott Hughes - Cherrypick http://bugs.icu-project.org/trac/changeset/37162.
+  *Roman Birg - Revert "icu: add Kiev meta translations"
+  *Roman Birg - icu: add Kiev meta translations
+  *Roman Birg - Revert "icu: add Kiev summer time zone translation"
+  *Roman Birg - icu: add Kiev summer time zone translation
+
+Project name: freetype
+  *Makoto Onuki - Update to freetype 2.6.0
+  *Ben Wagner - Add ftmm.c to FreeType build.
+
+Project name: android_external_stagefright-plugins
+  *Christopher R. Palmer - ffmpeg-extractor: Fix deadlock when stopping the reader thread
+  *Steve Kondik - stagefright-plugins: Restructure the code
+  *Ethan Chen - stagefright-plugins: Remove Vorbis/MP3/H263/H264/HEVC
+  *Steve Kondik - stagefright-plugins: Fix adaptive buffer and crop handling
+  *Steve Kondik - stagefright-plugins: Add special handling of DivX files
+  *Steve Kondik - stagefright-plugins: Improve seeking further
+  *Steve Kondik - stagefright-plugins: Disable lowres
+  *Steve Kondik - stagefright-plugins: Update codec list with capabilities
+  *Steve Kondik - stagefright-plugins: Set sensible defaults for audio decoders
+  *Steve Kondik - ffmpeg: Remove a couple of codecs we don't need
+  *Steve Kondik - stagefright-plugins: Minor fix for FFMPEG 2.7
+  *Steve Kondik - stagefright-plugins: Convert tabs to spaces
+  *Steve Kondik - stagefright-plugins: Refactoring the extractor
+  *Steve Kondik - stagefright-plugins: Clean up makefiles
+  *Steve Kondik - stagefright-plugins: Move and update codec XML
+  *Steve Kondik - stagefright-plugins: Refactor the decoders
+  *Ethan Chen - FFmpegExtractor: mark HEVC as supported
+
+Project name: android_external_lzma
+  *Steve Kondik - xz: Enable crc64 support
+
+Project name: conscrypt
+  *Kenny Root - OpenSSLX509Certificate: mark mContext as transient
+
+Project name: android_external_sonivox
+  *Eric Laurent - DLS parser: fix wave pool size check.
+  *Eric Laurent - DLS parser: fix wave pool size check.
+
+Project name: android_external_libpng
+  *Narayan Kamath - Restore a width check that was removed from png.c (CVE-2015-0973)
+
+Project name: android_external_bluetooth_bluedroid
+  *Łukasz Domeradzki - Fix O3 SIGBUS
+  *Markus Schmidt - Bluetooth losing HF connection to car-kit after 5 seconds
+  *tobitege - Fix compile error in btif_rfcomm due to invalid comparison
+  *Steve Kondik - bluedroid: Fix uninitialized variable warning
+  *Christopher R. Palmer - bluetooth: a2dp: Property account pcm.counter
+  *Christopher R. Palmer - bluetooth: a2dp: Allow 2 full tick's worth of data to be sent
+  *Christopher R. Palmer - bluetooth: a2dp: Buffer sufficient data to keep devices happy
+
+Project name: android_external_openssl
+  *Brandon McAnsh - openssl: host: Only show warning if HOST OS is not linux or darwin
+
+Project name: android_external_wpa_supplicant_8
+  *Scott Mertz - Revert "eap_peer: add more qmi dependencies with qmi proxy"
+  *Scott Mertz - eap_peer: add more qmi dependencies with qmi proxy
+  *Jouni Malinen - P2P: Validate SSID element length before copying it
+  *Ricardo Cerqueira - eap_peer: Make the QMI EAP proxy a standalone lib
+  *Jouni Malinen - EAP-pwd server: Fix payload length validation for Commit and Confirm
+  *Jouni Malinen - EAP-pwd server: Fix Total-Length parsing for fragment reassembly
+  *Jouni Malinen - EAP-pwd peer: Make sure in_frag_pos is cleared to zero on allocation.
+  *Jouni Malinen - EAP-pwd peer: Fix asymmetric fragmentation behavior.
+  *Jouni Malinen - EAP-pwd peer: Fix Total-Length parsing for fragment reassembly.
+  *Jouni Malinen - EAP-pwd peer: Fix payload length validation for Commit and Confirm.
+  *Jouni Malinen - AP WMM: Fix integer underflow in WMM Action frame parser.
+  *Jouni Malinen - WPS: Check maximum HTTP body length earlier in the process.
+  *Jouni Malinen - WPS: Extra validation step for HTTP reader
+  *Jouni Malinen - WPS: Fix HTTP chunked transfer encoding parser.
+
+Project name: android_external_f2fs-tools
+  *Keith Mok - Fix f2fs_trim_device multiple definitions
+  *Keith Mok - Add darwin support for building the host tools
+  *Jaegeuk Kim - mkfs.f2fs: don't need to limit MIN_VOLUME SIZE
+  *Jaegeuk Kim - mkfs.f2fs: set overprovision size more precisely
+  *Jaegeuk Kim - mkfs.f2fs: fix wrong documentation
+  *Yunlei He - fsck.f2fs: add segment type in sit_dump
+  *Jaegeuk Kim - fsck.f2fs: drop extent_info to avoid potential wrong access
+  *Jaegeuk Kim - fsck.f2fs: select to update the latest valid summary
+  *Jaegeuk Kim - fsck.f2fs: add hash conversion for encrypted dentries
+  *Jaegeuk Kim - fsck.f2fs: avoid build warning
+  *Jaegeuk Kim - dump.f2fs: show i_advise field in inode
+  *Jaegeuk Kim - fsck.f2fs: show superblock features and encryption info
+  *Jaegeuk Kim - mkfs.f2fs: set encryption feature
+  *Jaegeuk Kim - fsck.f2fs: show ckeckpoint version info
+  *Jaegeuk Kim - Revert "mkfs.f2fs: 512 UTF-16 characters for label"
+  *Jaegeuk Kim - fsck.f2fs: fix orphan inode's link count
+  *Jaegeuk Kim - fsck.f2fs: fix missing dentries
+  *Jaegeuk Kim - fsck.f2fs: clean up child information
+  *Jaegeuk Kim - fsck.f2fs: fix missing i_links
+  *Jaegeuk Kim - fsck.f2fs: count child directories correctly for i_links
+  *Jaegeuk Kim - fsck.f2fs: fix corrupted dentries
+  *Jaegeuk Kim - fsck.f2fs: fix summary block
+  *Jaegeuk Kim - fsck.f2fs: return summary block pointer and types
+  *Jaegeuk Kim - fsck.f2fs: preserve orphan blocks
+  *Jaegeuk Kim - fsck.f2fs: skip block count fix when i_links is fixed
+  *Jaegeuk Kim - fsck.f2fs: fix inodes having wrong i_links
+  *Jaegeuk Kim - fsck.f2fs: check file types
+  *Jaegeuk Kim - fsck.f2fs: remove inconsistent named directories
+  *Jaegeuk Kim - fsck.f2fs: reduce redundant message
+  *Jaegeuk Kim - mkfs.f2fs: 512 UTF-16 characters for label
+  *Jaegeuk Kim - mkfs.f2fs: add quite mode, -q
+  *Jaegeuk Kim - fsck.f2fs: show total sectors consumed by filesystem
+  *Jaegeuk Kim - fsck.f2fs: show cp_state for fsck.f2fs
+  *Jaegeuk Kim - mkfs.f2fs: show bytes for total_sectors
+  *Gustavo Zacarias - configure: add check for fallocate
+  *Anthony G. Basile - f2fs-tools: fix build system to make distcheck correctly
+
+Project name: android_external_ffmpeg
+  *dhacker29 - ffmpeg: Set cpu arch for silvermont config
+  *Steve Kondik - ffmpeg: Readd missing X86 fixups
+  *Steve Kondik - ffmpeg: Regenerate configurations for FFMPEG 2.7
+  *Steve Kondik - ffmpeg: Add script to regenerate the configs
+  *Steve Kondik - ffmpeg: Update Android build configuration
+  *dhacker29 - x86: Use yasm from prebuilts and don't depend on host install
+  *Howard M. Harte - Add configuration for silvermont CPU based on Atom.
+  *Ricardo Cerqueira - Clean up some build-time warnings
+  *Chris Sarbora - Get ffmpeg building for emulatorx86
+  *Steve Kondik - ffmpeg: Fix variable collisions
+  *Ricardo Cerqueira - build: Use ARM mode for arm32 builds
+  *Ricardo Cerqueira - Fixup armv8-a building, and make multiarch builds work
+  *Steve Kondik - avutil: Use _SC_NPROCESSORS_CONF
+  *Steve Kondik - Update Android build for FFMPEG 2.5
+  *Chih-Wei Huang - Android porting for ffmpeg 2.1 release
+  *Michael Niedermayer - configure: Disable VSX on unspecified / generic CPUs
+  *Deliang Fu - avformat: Fix bug in parse_rps for HEVC.
+  *Andreas Cadhalpun - takdec: ensure chan2 is a valid channel index
+  *Michael Niedermayer - avcodec/h264_slice: Use AVFrame diemensions for grayscale handling
+  *Michael Niedermayer - avdevice/lavfi: do not rescale AV_NOPTS_VALUE in lavfi_read_packet()
+  *Michael Niedermayer - MAINTAINERS: add 2.7
+  *Michael Niedermayer - Update for 2.7
+  *Michael Niedermayer - add RELEASE_NOTES, based on previous
+  *Andreas Cadhalpun - sonic: set avctx->channels in sonic_decode_init
+  *Michael Niedermayer - Changelog: Add 2.7 entry
+  *Michael Niedermayer - doc/APIchanges: fill in missing stuff
+  *Michael Niedermayer - doc/APIchanges: Add 2.7 separator
+  *Simon Thelen - libavutil/channel_layout: Correctly return layout when channel specification ends with a trailing 'c'.
+  *Vignesh Venkatasubramanian - lavf/webm_chunk: Remove AVFMT_ALLOW_FLUSH
+  *Michael Niedermayer - avcodec/jpeg2000dec: Fix gain regression with gray16
+  *Michael Niedermayer - fate: Force jpeg2000 decoder for dcinema
+  *Michael Niedermayer - avcodec/libopenjpegdec: Mark as experimental if <= 1.3
+  *Michael Niedermayer - avcodec/jpeg2000: remove unused variable
+  *Michael Niedermayer - avformat/oggenc: Fix return code in case of flushing
+  *Rodger Combs - doc/muxers: document new break_non_keyframes option
+  *Michael Niedermayer - avcodec/jpeg2000: Disable special case for JPEG2000_QSTY_SI
+  *Michael Niedermayer - avcodec/jpeg2000dec: Add placeholder for PLT parsing
+  *Michael Niedermayer - avcodec/jpeg2000dec: Handle Psot = 0
+  *Luca Barbato - mkv: Correctly report the latest packet had been flushed
+  *Rodger Combs - lavf/segment: add an option to allow breaking on non-keyframes
+  *James Almer - mpjpegdec: don't try to alloc an AVIOContext when probe is guaranteed to fail
+  *Janne Grunau - imc: add required padding for GetBitContext buffer
+  *Janne Grunau - ac3_parser: add required padding for GetBitContext buffer
+  *Janne Grunau - aac_parser: add required padding for GetBitContext buffer
+  *Michael Niedermayer - avcodec/x86/h264_weight: handle weight1=128
+  *Michael Niedermayer - avcodec/jpeg2000dec: Fix some 5/3 bitexactness issues
+  *Rodger Combs - lavf/tls_securetransport: fix SNI support when not verifying
+  *Michael Niedermayer - avcodec/jpeg2000dec: Fix subsampled decoding
+  *Michael Niedermayer - avcodec/jpeg2000dec: Check that coords match before applying ICT
+  *Michael Niedermayer - avcodec/jpeg2000dec: Fix high bit depth branch sample shift
+  *Andreas Cadhalpun - vp8: change mv_{min,max}.{x,y} type to int
+  *James Almer - mpjpegdec: don't try to alloc an AVIOContext when probe is guaranteed to fail
+  *Andreas Cadhalpun - vp9: change type of tile_size from unsigned to int64_t
+  *James Almer - mpjpegdec: fix memory leak in probe function
+  *Michael Niedermayer - swr: Fix ASSERT_LEVEL warning
+  *Michael Niedermayer - avcodec/hq_hqa: Fix signness of tag
+  *Donny Yang - avcodec/apng: Add partial support for blending with PAL8 pixel format
+  *Donny Yang - avcodec/apng: Add support for blending with GRAY8A pixel format
+  *Donny Yang - avcodec/apng: Add blending support for non-alpha pixel formats
+  *Donny Yang - avcodec/apng: Dispose previous frame properly
+  *Rodger Combs - lavf/tls: let the user specify what name to verify against
+  *Vittorio Giovara - rtpdec_asf: Check memory allocation and free memory on error
+  *Vittorio Giovara - mov: Check memory allocation
+  *Vittorio Giovara - jack: Check memory allocation
+  *Vittorio Giovara - audiointerleave: Always initialize new_pkt
+  *Vittorio Giovara - sctp: Always initialize outmsg struct
+  *Janne Grunau - mpjpgdec: free AVIOContext leak on early probe fail
+  *Vittorio Giovara - mpegvideo: Move OutFormat enum to mpegutils.h
+  *Vittorio Giovara - mpegvideo: Split picture allocation for encoding and decoding
+  *Vittorio Giovara - mpegvideo: Rework frame_size_alloc function
+  *Vittorio Giovara - mpegvideo: Move various temporary buffers to a separate context
+  *Luca Barbato - configure: Support MSVC 2015
+  *Michael Niedermayer - avformat/mxfenc: Allow overriding /manual setting of the signal standard
+  *Max Poliakovski - atrac3plus: give the phase_shift flag a better name.
+  *Max Poliakovski - atrac3plus: add support for GHA phase inversion.
+  *Michael Niedermayer - avformat/version: Bump version for single jpeg muxer
+  *Michael Niedermayer - doc/ffserver: Add entry for missing jpeg variant
+  *Caligula useraccount - ffserver: Use singlejpeg muxer for jpeg
+  *Caligula useraccount - avformat: Add single jpeg muxer
+  *Michael Niedermayer - avcodec/aacdec: Do not return a uninitialized value
+  *Michael Niedermayer - avformat/hdsenc: Change duration from single to to double precision
+  *Michael Niedermayer - avformat/rmenc: Remove float usage
+  *Michael Niedermayer - avcodec/libstagefright: Check for pthread_create() failure
+  *Clément Bœsch - avfilter: fix a few 5 spaces indent
+  *Michael Niedermayer - avdevice/iec61883: Check pthread init for failures
+  *Michael Niedermayer - ffserver: Check for ffio_set_buf_size() failure
+  *Michael Niedermayer - avformat/aviobuf: Check for ffio_set_buf_size() failure
+  *Michael Niedermayer - avformat/ffmdec: Check ffio_set_buf_size() return value
+  *Michael Niedermayer - ffserver: Check allocations (likely not all)
+  *Luca Barbato - aac: Wait to know the channels before allocating frame
+  *Sebastian Dröge - aac: Support channel configurations 11 and 12
+  *nu774 - aac: correctly map 7.1ch-wide AAC from FDK AAC encoder
+  *Luca Barbato - avio: Add avio_put_str16be
+  *Luca Barbato - mpjpeg: Initial implementation
+  *James Almer - fate: add missing avdevice dependency to closed caption test
+  *Philip Langdale - avcodec/allcodecs: Re-order nvenc encoders below x264/5.
+  *Ganesh Ajjanagadde - vf_colormatrix: calculate coefficients only once
+  *Michael Niedermayer - avcodec/mpegvideo: Use av_memdup() for allocating thread_context
+  *Michael Niedermayer - avcodec/mpegvideo: Clear thread_context array before allocating
+  *Michael Niedermayer - avcodec/mpegvideo: Merge thread context initialization loops
+  *Philip Langdale - avcodec/nvenc: Add 'nvenc_h264' as an alternative name for 'nvenc'
+  *Philip Langdale - avcodec/nvenc: Rename nvenc_h265 to nvenc_hevc
+  *Philip Langdale - Revert "avcodec: Rename nvenc.c to nvenc_a.c, to avoid conflict with the other implementation"
+  *Philip Langdale - Revert "Merge commit 'b08caa87c35a768ec0abb16b1e99c3a85f1df28e'"
+  *Philip Langdale - Revert "nvenc: remove cuda.h requirement for nvenc_a"
+  *Philip Langdale - Revert "avcodec/Makefile: fix checkheaders for nvenc_b"
+  *Philip Langdale - Revert "Changelog: Drop duplicate NVENC entry"
+  *Michael Niedermayer - avutil/colorspace: Remove RGB_TO_Y/U/V
+  *Paul B Mahol - avcodec/exr: fix crash caused by merge
+  *James Almer - configure: improve the checks for gmtime_r and localtime_r
+  *Michael Niedermayer - Changelog: Drop duplicate NVENC entry
+  *Clément Bœsch - avdevice/x11grab: use av_clip() instead of nested min & max
+  *Clément Bœsch - avcodec/snowenc: use av_clip() instead of nested min & max
+  *Clément Bœsch - avcodec/mpegvideo: use av_clip() instead of nested min & max
+  *Clément Bœsch - ffplay: use av_clip() instead of nested min & max
+  *Ronald S. Bultje - hevc: fix typo (mpv -> mvp).
+  *Clément Bœsch - swresample: fix initilaize/initialize typo
+  *Clément Bœsch - doc/filters: fix inaccuarte/inaccurate typo
+  *Stephan Holljes - lavf/http: Add simple autodetection for client HTTP method, based on AVIO_FLAG_READ.
+  *Stephan Holljes - lavf/http: Indent else-clause.
+  *Stephan Holljes - lavf/http: Properly process HTTP header on listen.
+  *Stephan Holljes - lavf/http: Rudimentary error handling for HTTP requests received from clients.
+  *Stephan Holljes - lavf/http: Process HTTP header before sending response.
+  *Stephan Holljes - lavf/http: Document method option.
+  *Michael Niedermayer - avformat/mxfenc: Add mxf muxer avclass
+  *Michael Niedermayer - avcodec/s302m: Only set the sample rate when some data is output
+  *Michael Niedermayer - avformat/utils: Do not select audio streams with unknown sample rate in av_find_best_stream()
+  *Michael Niedermayer - avcodec/s302m: Check for non PCM Streams
+  *Ganesh Ajjanagadde - flvdec: fix lack of duration for some files
+  *Michael Niedermayer - avformat/flvdec: Show unknown tags at debug level
+  *Michael Niedermayer - avformat/flvdec: Add TYPE_ONCAPTIONINFO
+  *Michael Niedermayer - avformat/flvdec: increase buffer size for parsing metadata string key
+  *Michael Niedermayer - Revert addition of a few fixed_dsp functions to APIChanges
+  *Michael Niedermayer - avutil/ppc/cpu: add include avassert.h
+  *Michael Niedermayer - avutil/softfloat: Fix alternative implementation of av_normalize1_sf()
+  *Michael Niedermayer - avutil/softfloat: Fix alternative implementation of av_normalize_sf()
+  *Andreas Cadhalpun - arm: only enable setend on ARMv6
+  *Michael Niedermayer - avutil/softfloat: Move av_sincos_sf() from header to c file
+  *Nedeljko Babic - libavutil/doc: Changes in documentation due to changes to fixed_dsp
+  *Michael Niedermayer - avutil/softfloat: Add more tests for the normalization
+  *Michael Niedermayer - avutil/softfloat: Fix thresholds in av_normalize_sf()
+  *Michael Niedermayer - avcodec/rdft: Use more specific error codes
+  *Vignesh Venkatasubramanian - lavf/matroskaenc: Write Block Keyframe correctly
+  *Michael Niedermayer - avcodec/utils: Assert that audio decoders do not report using more data than was input
+  *Michael Niedermayer - avcodec/alsdec: Check for overread
+  *Michael Niedermayer - avcodec/atrac3plusdec: consume only as many bytes as available
+  *Michael Niedermayer - avcodec/adpcm: Check for overreads
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC idct functions
+  *Nedeljko Babic - libavutil/softfloat: Fix av_normalize1_sf bias.
+  *Juanjo - lavf/riffenc: Set correct block align for mp2.
+  *Carl Eugen Hoyos - lavfi/tinterlace: Double aspect ratio for modes merge and pad.
+  *Michael Niedermayer - swresample/resample: fix typos
+  *Michael Niedermayer - avcodec/proresenc_anatoliy: Use more specific error codes
+  *Michael Niedermayer - avcodec/snow: replace unspecific error code
+  *Michael Niedermayer - swresample/swresample: Cleanup on init failure.
+  *Michael Niedermayer - swresample: Add swr_get_out_samples()
+  *James Almer - fate: add missing lavfi indev dependency to closed caption test
+  *Michael Niedermayer - libswresample/rematrix: Check for malloc errors
+  *Anshul Maheshwari - fate: Add Closed caption test
+  *Nedeljko Babic - libavutil: Add new fixed dsp functions.
+  *Michael Niedermayer - Revert "avformat/rtpenc: check av_packet_get_side_data() return, fix null ptr dereference"
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC uni mc epel functions
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC mc epel functions
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC biw mc functions
+  *Michael Niedermayer - avutil/ppc/cpu: Our code assumes vsx implies altivec, thus assert this
+  *Michael Niedermayer - avformat/mov: Retry same packet on IO failure to avoid loosing a packet
+  *Stefano Sabatini - ffmpeg_dxva2: call GetDesktopWindow() in place of GetShellWindow()
+  *nu774 - aac: Correctly map multichannel ADTS AAC with non-zero channel_config + PCE
+  *Paul B Mahol - avfilter/vf_blend: add linearlight and glow mode
+  *Luca Barbato - bink: Factorize bink put_pixel
+  *Martin Storsjö - configure: Check for DXVA2_ConfigPictureDecode instead of LPDIRECT3DSURFACE9
+  *Martin Storsjö - configure: Remove unnecessary tests for d3d11va
+  *Martin Storsjö - configure: Don't run "export $e" for an empty string
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC uniw mc functions
+  *Michael Niedermayer - avformat/mxfenc: Accept MXF D-10 with 49.999840 Mbit/sec
+  *Ganesh Ajjanagadde - swresample/dither: check memory allocation
+  *Donny Yang - avcodec/apng: Remove blending support for AV_PIX_FMT_ARGB
+  *Michael Niedermayer - swresample: Check the return value of resampler->init()
+  *Andreas Cadhalpun - libopenjpegdec: register logging callback functions
+  *Andreas Cadhalpun - libopenjpegenc: use variable instead of type for sizeof
+  *Andreas Cadhalpun - libopenjpegenc: add NULL check for img before accessing it
+  *Michael Niedermayer - configure: Remove now redundant vsx setting code
+  *James Almer - configure: don't enable tls protocols if network is disabled
+  *Paul B Mahol - avfilter/vf_blend: add hardmix mode
+  *Paul B Mahol - avfilter/vf_blend: fix vividlight blend mode
+  *Paul B Mahol - avfilter/vf_blend: clip result for divide blend mode
+  *Michael Niedermayer - configure: Do not dump the whole environment to stdout
+  *Michael Niedermayer - avformat/sbgdec: Check alloc_array_elem() return value
+  *Michael Niedermayer - avcodec/flacenc: Simplify sizeof()
+  *Michael Niedermayer - avcodec/proresenc_anatoliy: Check av_frame_alloc() return code
+  *Michael Niedermayer - compat/os2threads: Check av_malloc() return code
+  *Michael Niedermayer - ffserver: check return code of avio_alloc_context()
+  *Michael Niedermayer - avformat/mxfdec: return error instead of segfaulting if there are no streams
+  *周晓勇 - avcodec: loongson3 optimized h264chroma put and avg with mmi
+  *Luca Barbato - configure: Use pkg-config for fdk-aac
+  *Luca Barbato - configure: Provide an option to override the environment
+  *Luca Barbato - configure: Support the extended pkgconf syntax
+  *Shivraj Patil - avcodec/mips: MSA (MIPS-SIMD-Arch) optimizations for HEVC bi mc functions
+  *James Almer - configure: don't enable any tls protocol if network is disabled
+  *Michael Niedermayer - avcodec/snowenc: avoid floats in the rangecoder initialization
+  *Martin Storsjö - configure: Remove some unnecessary exported config items
+  *Martin Storsjö - configure: Require LPDIRECT3DSURFACE9 for dxva2
+  *Martin Storsjö - dxva2: Add ifdefs around structs that might not be available
+  *Michael Niedermayer - avcodec/rangecoder: avoid float operation
+  *James Almer - avcodec/Makefile: fix checkheaders for nvenc_b
+  *Stefano Sabatini - doc/formats.texi: document max_interlave_delta muxing option
+  *Michael Niedermayer - avformat/movenc: Fix potential signed overflows
+  *Ronald S. Bultje - vp9: clamp final zero MV if find_ref_mvs() found no suitable candidates.
+  *Michael Niedermayer - avutil/float_dsp: Fix ambiguous wording about vector products
+  *Michael Niedermayer - avformat/mxfenc: Correct klv_fill_key
+  *Steve Lhomme - dxva2: Fix build when only D3D11 or DXVA2 is used
+  *Steve Lhomme - configure: Check if ID3D11VideoDecoder exists, not just the header to enable d3d11va
+  *Michael Niedermayer - h264: Fix HWACCEL_MAX for D3D11
+  *Michael Niedermayer - hevc: Fix HWACCEL_MAX for D3D11
+  *Martin Storsjö - rtmpdh: Use GMP functions directly, instead of nettle wrappers
+  *Martin Storsjö - rtmpdh: Fix the indentation in a struct
+  *James Almer - nvenc: remove cuda.h requirement for nvenc_a
+  *Michael Niedermayer - avcodec/ppc/pixblockdsp: Fix type of get_pixels_vsx()
+  *Michael Niedermayer - avutil/ppc/cpu: Remove !ARCH_PPC64 check for mfspr, the code should now support ppc64
+  *Michael Niedermayer - avformat/utils: Simplify get_std_framerate() check
+  *Michael Niedermayer - avcodec: Rename nvenc.c to nvenc_a.c, to avoid conflict with the other implementation
+  *Michael Niedermayer - avcodec/aacpsy: Clear the correct pointer
+  *James Almer - x86: check for AV_CPU_FLAG_AVXSLOW where useful
+  *Michael Niedermayer - avutil/ppc/float_dsp_init: Disable duplicate functions
+  *Michael Niedermayer - configure: ldbrx seems not working on qemu power8, disable for now
+  *Michael Niedermayer - avutil/ppc/cpu: Check if unistd.h is available before including it
+  *Gilles Chanteperdrix - avformat/libquvi: fix error handling
+  *Luca Barbato - nvenc: H264 and HEVC encoders
+  *Vittorio Giovara - xsub: Check memory allocation
+  *Vittorio Giovara - wma: Check memory allocation
+  *Vittorio Giovara - truemotion2: Check memory allocation
+  *Vittorio Giovara - svq1: Check memory allocation
+  *Vittorio Giovara - ratecontrol: Check memory allocation
+  *Vittorio Giovara - pthread: Check memory allocation
+  *Vittorio Giovara - psymodel: Check memory allocation
+  *Vittorio Giovara - xvid: Check memory allocation
+  *Vittorio Giovara - x264: Check memory allocation
+  *Vittorio Giovara - libtheora: Check memory allocation
+  *Vittorio Giovara - lcl: Check memory allocation
+  *Vittorio Giovara - jpegls: Check memory allocation
+  *Vittorio Giovara - huffyuv: Check memory allocation
+  *Vittorio Giovara - eatgv: Check memory allocation
+  *Vittorio Giovara - dct: Check memory allocation
+  *Vittorio Giovara - asv: Check memory allocation
+  *Vittorio Giovara - aacpsy: Check memory allocation
+  *Peter Cordes - avfilter/vf_mpdecimate: add comment about 8x8 SAD
+  *Peter Cordes - avfilter/vf_mpdecimate: support more pixel formats, including GBRP
+  *Peter Cordes - avfilter/vf_mpdecimate: debug logging of threshold stats
+  *Vittorio Giovara - mpegvideo: Move MotionEstContext and function declarations to a separate header
+  *Vittorio Giovara - mpegvideo: mpeg12: Move function declarations
+  *Vittorio Giovara - mpegvideo: Move tables to a separate file
+  *Vittorio Giovara - mpegvideo: msmpeg4: Move function declarations
+  *Vittorio Giovara - mpegvideo: wmv2: Move function declarations
+  *Hendrik Leppkes - dxva2_hevc: re-write reference frame handling
+  *Hendrik Leppkes - dxva2_hevc: fix 32x32 scaling lists
+  *Andreas Cadhalpun - mov: always check avio_read return value
+  *Vittorio Giovara - avio: Add avio_read wrapper to simplify error checking
+  *Andreas Cadhalpun - mov: reject zero bytes_per_frame with non-zero samples_per_frame
+  *Andreas Cadhalpun - mov: abort on EOF in ff_mov_read_chan
+  *Luca Barbato - mov: Correctly allocate ctts_data
+  *Andreas Cadhalpun - mov: Fix two memleaks
+  *Peter Cordes - avfilter/vf_mpdecimate: pass the same AVClass context as use elsewhere to av_pixelutils_get_sad_fn()
+  *Vittorio Giovara - vp9: Parse subsampling and report missing feature
+  *Clément Bœsch - tests: add some ASS/SSA/MKS remux and transcode tests
+  *James Almer - x86: check for AV_CPU_FLAG_AVXSLOW where useful
+  *James Almer - x86: Add helper macros to check for slow cpuflags
+  *James Almer - x86: add AV_CPU_FLAG_AVXSLOW flag
+  *Luca Barbato - ppc: vsx: Implement diff_pixels and get_pixels
+  *Luca Barbato - ppc: vsx: Implement float_dsp
+  *Luca Barbato - ppc: cpu: Add support for VSX and POWER8 extensions
+  *Luca Barbato - ppc: Restrict some Altivec implementations to Big Endian
+  *Luca Barbato - ppc: configure: Support ISA 2.06 and later
+  *Luca Barbato - ppc: Clarify and extend the cpuid check
+  *Luca Barbato - ppc: linux: Check altivec using the auxv
+  *Luca Barbato - ppc: pixblockdsp: Use the abriged vector types
+  *Luca Barbato - ppc: avutil: Use the abriged vector types
+  *Luca Barbato - ppc: avutil: Drop a potentially dangerous workaround
+  *Rodger Combs - configure: Check for SecItemImport for securetransport as well
+  *wm4 - network: prevent SIGPIPE on OSX
+  *Michael Niedermayer - avfilter/vf_fade: Force alpha pixel format if alpha is set to 1
+  *Michael Niedermayer - avcodec/parser: Print an error in case of reallocation fails in ff_combine_frame()
+  *Michael Niedermayer - postproc: Avoid floats in maxClipped computation
+  *Michael Niedermayer - postproc/postprocess_template: Compute packedYScale and QPCorrecture without floats
+  *wm4 - network: prevent SIGPIPE on OSX
+  *Andreas Cadhalpun - libopenjpegdec: check existence of image component data
+  *Michael Niedermayer - doc/ffmpeg: Document xerror
+  *Michael Niedermayer - avformat/movenc: Add loction/xyz support to allow copying data between mov files
+  *Luca Barbato - h264: Make sure reinit failures mark the context as not initialized
+  *Luca Barbato - msrle: Use FFABS to determine the frame size in msrle_decode_pal4
+  *Michael Niedermayer - avformat/mov: Also export loci altitude
+  *Michael Niedermayer - avformat/mov: Append place name instead of overwriting for loci
+  *Rodger Combs - lavf/tls_securetransport: add missing copyright notice
+  *banastasov - avcodec/dvbsubdec: Fix buf_size check in dvbsub_parse_display_definition_segment()
+  *Michael Niedermayer - avformat/h264dec: Add ff_tlog() with trace information about h264 probing
+  *Michael Niedermayer - avformat/h264dec: Fix detection of invalid h264 with 0x100 startcodes
+  *Martin Storsjö - rtmpdh: Generate the whole private exponent using av_get_random_seed() with nettle/gmp
+  *Rodger Combs - lavf/tls: Support Secure Transport
+  *Michael Niedermayer - configure: Fix showcqt fft dependancy
+  *Ingo Brückl - build: add configure option pkgconfigdir
+  *Nedeljko Babic - libavutil: Cosmetic changes to fixed_dsp file.
+  *Andreas Cadhalpun - mov: fix DTS calculation for samples with negative stts duration
+  *Michael Niedermayer - avcodec/mpegvideo: Use FFSWAP to exchange pointers
+  *Michael Niedermayer - avcodec/ac3_parser: Avoid floats in bitrate computation
+  *Michael Niedermayer - avformat/movenc: Check that track_width_1616 fits within the available 32bit before storing it
+  *Michael Niedermayer - avformat/movenc: avoid floats in width/height/aspect ratio computations
+  *Michael Niedermayer - avformat/concatdec: Enable auto_convert by default
+  *Michael Niedermayer - avformat/mov: Avoid float usage in yuv_to_rgba()
+  *Martin Storsjö - rtmpdh: Create sufficiently long private keys for gcrypt/nettle
+  *Martin Storsjö - rtmpdh: Remove an unnecessary check in the gcrypt/nettle dh_compute_key
+  *Martin Storsjö - rtmpdh: Add fate test for the DH handshake routine
+  *Martin Storsjö - rtmpdh: Pass the actual buffer size of the output secret key
+  *Martin Storsjö - rtmpdh: Check the output buffer size in the openssl version of dh_compute_key
+  *Martin Storsjö - rtmpdh: Fix a local variable name in the nettle/gcrypt codepath
+  *Martin Storsjö - rtmpdh: Make sure ret is initialized in the nettle version of bn_hex2bn
+  *Hendrik Leppkes - dxva2_hevc: re-write reference frame handling
+  *Hendrik Leppkes - dxva2_hevc: fix 32x32 scaling lists
+  *Michael Niedermayer - avcodec/mpegvideo: Reset bitstream_buffer_size on allocation failure
+  *Roman Savchenko - avcodec/mpegvideo: Check pointer when allocation fail
+  *Roman Savchenko - avformat/avienc: Correct possible dereference of null
+  *Shivraj Patil - avcodec/mips/hevcdsp_msa: Restructure as per avutil/mips/generic_macros_msa.h
+  *wm4 - pixfmt: remove misleading and broken documentation
+  *Michael Niedermayer - x86: cavs: Remove an unneeded scratch buffer
+  *Shivraj Patil - avcodec/mips: Split uni mc optimizations to new file
+  *Anton Khirnov - rl: Add error checking to ff_rl_init().
+  *Anton Khirnov - rl: Add a function for freeing dynamically allocated tables.
+  *Anton Khirnov - rl: Rename ff_*_rl() to ff_rl_*()
+  *Anton Khirnov - mpegvideo: Move ff_*_rl functions to a separate file
+  *Vittorio Giovara - mpegvideo: Drop exchange_uv() function and use its code directly
+  *wm4 - dvdsubdec: implement flushing
+  *wm4 - dvdsubdec: reset buffer size on invalid over-large packets
+  *Martin Storsjö - tls_gnutls: Add missing includes for the gcrypt thread safety callbacks
+  *Michael Niedermayer - avformat/mxfenc: Support storing signal standard for D10 muxing
+  *Carl Eugen Hoyos - lavc/x264: Support bgr0 as input pix_fmt.
+  *Carl Eugen Hoyos - lavf: Use av_codec_get_tag2() in avformat_query_codec().
+  *Shivraj Patil - avcodec/mips: Restructure as per avutil/mips/generic_macros_msa.h
+  *Timothy Gu - x86inc: Clear __SECT__
+  *Shivraj Patil - avutil/mips: Restructure of generic macros
+  *Timothy Gu - network: Move variable declaration under an #if
+  *Michael Niedermayer - avcodec/ffv1dec: Fix skip_alpha
+  *Timothy Gu - x86inc: Clear __SECT__
+  *Timothy Gu - Revert "Move struc FFTContext below SECTION_RODATA"
+  *wm4 - lavf: move TLS-related ifdeffery to library specific files
+  *wm4 - lavf: split tls.c
+
+Project name: android_external_libnfc-nci
+  *Ricardo Cerqueira - pn547: Don't attempt to downgrade firmware
+  *Ricardo Cerqueira - pn547: Force rewrite of config even if we think it's the same
+  *Steve Kondik - libnfc-nci: Add NXP chip type disambiguation
+  *Jizhou Liao - Rename NXP HAL
+  *Rashed Abdel-Tawab - Include stl symbols and headers
+  *Jizhou Liao - Update .conf file
+  *Jizhou Liao - Add Peer-To-Peer priority mechanism
+  *Jizhou Liao - Adding MiFARE DESFire format support
+  *Jizhou Liao - Correct corrupted CC value on MIFARE ULC tag
+  *Jizhou Liao - T1T HR0 and HR1 parameters missing in tag dectection
+  *Jizhou Liao - Increase maximum AID routing buffer length and entry size.
+  *Jizhou Liao - Increase APDU buffer size to support extended APDU
+  *Jizhou Liao - Fix unhandled NCI errors and wrong states
+  *Jizhou Liao - Increase HCI EVT buffer size
+  *Jizhou Liao - Fix maximum HCP package size
+  *Jizhou Liao - Memory leak and NULL pointer check fixes
+  *Jizhou Liao - Code inspection fixes
+  *Jizhou Liao - Changes base on coding conventions rules
+  *Shareef Ali - Fix board-specific HAL module naming
+  *Steve Kondik - nfc_nci: Allow passing in the HAL suffix as a variable
+  *Jizhou Liao - Add NFC-DEP routing
+
+Project name: android_external_libtar
+  *Tom Marshall - libtar: Support transparent compression
+
+Project name: android_external_dhcpcd
+  *Tom Marshall - dhcpcd: Send unique IAID
+  *Tom Marshall - dhcpcd: Send proper DUID
+
+Project name: android_external_chromium_org_third_party_boringssl_src
+  *kenshin - mitigate logjam (CVE-2015-4000)
+
+Project name: android_external_chromium_org
+  *Adam Langley - net: disable SSLv3.
+
+Project name: external_android_support-prebuilt
+  *Raj Yengisetty - Update support libs to 22.2.1
+  *Stephen Bird - Initial commit
+  *Abhisek Devkota - Initial empty repository
+
+Project name: android_external_sepolicy
+  *Adnan Begovic - sepolicy: Remove profiles from context, moved to cm
+  *Stephen Smalley - Define types for userdata and cache block devices.
+  *Manu Prasad - Revert "WFD : Adding policy exceptions in app domain for wfd"
+  *Ricardo Cerqueira - domain: Restore original neverallow rules for shipping builds
+
+Project name: android_external_android-visualizer
+  *Roman Birg - VisualizerView: add ability to disable drawing
+  *Roman Birg - Revert "visualizer: don't draw fade out paint when there's no content"
+  *Roman Birg - visualizer: don't draw fade out paint when there's no content
+  *Roman Birg - visualizer view: optimize allocations during drawing
+
+Project name: android_external_whispersystems_WhisperPush
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Brinly Taylor - WhisperPush: Update Terms Of Service and Privacy URL
+  *Michael Bestas - Automatic translation import
+  *Wilhelm Fitzpatrick - WhisperPush: accept registration SMS from any number
+  *Michael Bestas - Automatic translation import
+  *Wilhelm Fitzpatrick - WhisperPush: add weekly active users metric
+  *Wilhelm Fitzpatrick - WhisperPush: service for WPv2 update to interrogate/disable v1
+  *Wilhelm Fitzpatrick - WhisperPush: add Twilio SMS number for Indonesia
+  *Michael Bestas - Automatic translation import
+  *tobitege - Do not launchGcmRegistration if never registered
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_external_whispersystems_curve25519-java
+  *Adnan Begovic - curve25519: Make sure we're building the libcurve JNI.
+  *Wilhelm Fitzpatrick - curve25519: prevent dex2oat method verify failure
+
+Project name: android_external_whispersystems_TextSecure
+  *Adnan Begovic - TextSecure: Deprecate old curve25519.
+
+Project name: android_external_jpeg
+  *Xin Qi - Enable neon optimization for 32bits.
+
+Project name: android_kernel_xiaomi_armani
+  *tarun93 - update and add carbon kernel defconfig
+  *Blechd0se - cpufreq: freq_table: bail out early if freq = target_freq
+  *Stratos Karafotis - cpufreq: Introduce new relation for freq selection
+  *Alin - security: force SELinux permissive mode
+  *tarun93 - Defconfig Update
+  *faux123 - mdss_dsi_panel.c: add powersuspend hooks
+  *yank555-lu - kernel/power/powersuspend: cumulative update to version 1.5
+  *yank555-lu - kernel/power/powersuspend: LCD screen on/off hooks (Yank555.lu)
+  *Paul Reioux - kernel/power/powersuspend: default to userspace for now
+  *yank555-lu - kernel/power/powersuspend: add back userpace control w/ default kernel control
+  *yank555-lu - kernel/power/powersuspend: remove userspace dependency from powersuspend
+  *Paul Reioux - powersuspend: fix logci derps :p
+  *Paul Reioux - powersuspend: new PM kernel driver for Android w/o early_suspend
+  *Pranav Vashi - msm: Fix logic and rectify Alucard parameters
+  *Pranav Vashi - msm: Add Alucard hotplug
+  *Blechd0se - cpufreq: implement cpufreq_quick_get_util()
+  *Joe Maples - Optimize slub by not using fair sleepers
+  *Randy DuCharme - Revamp spinlock ASM code
+  *Luka Karinja - msm8226: underclock GPU to 100MHz
+  *myfluxi - PM: devfreq: Fix show available freqs
+  *myfluxi - PM: devfreq: Use high priority workqueue
+  *myfluxi - msm: kgsl: Report correct GPU frequency in sysfs
+  *tarun93 - drop unwanted things
+  *xiaobing tu - deadline: Allow 0ms deadline latency, increase the read speed
+  *savoca - msm: mdss: Remove deprecated __dev* markings
+  *savoca - msm: mdss: Add pa_v2 support to KCAL
+  *savoca - msm: mdss: Replace PGC implementation with PCC for KCAL
+  *savoca - msm: mdss: Add KCAL support for post processing control [v2]
+  *Luka Karinja - msm: kgsl: build only a3xx for armani, remove a2xx
+  *myfluxi - msm: acpuclock: Fix acpuclk_get_rate
+  *savoca - drivers: Upgrade frandom from staging
+  *savoca - staging: frandom: Clear up checkpatch conflicts
+  *savoca - staging: frandom: Dynamically allocate the char device numbers
+  *savoca - staging: Add frandom RNG driver
+  *faux123 - overall_stats: forward port to kernel 3.4+
+  *faux123 - overall_stats: make dual/quad core stats configurable via meunconfig
+  *faux123 - overall_stats: add overall stats for all available cores
+  *Paul Reioux - Asynchronous Fsync: initial extraction of Async Fsync from HTC
+  *Paul Reioux - fs/dyn_sync_cntrl: dynamic sync control
+  *Steve Kondik - msm: Fix high load average from uninterruptible waits
+  *Angelo G. Del Regno -- EternityProject Team Manager - sched: LOAD_FREQ (4*HZ+61) avoids loadavg Moire
+  *poondog - DRIVERS: SLIMBUS: slimbus enhancements mkII
+  *tarunkapadia93 - mmc: disable crc check for 30% extra performance in IO
+  *Stephen Smalley - selinux: Report permissive mode in avc: denied messages.
+  *Steven Rostedt - SELinux: Fix possible NULL pointer dereference in selinux_inode_permission()
+  *Eric Paris - SELinux: include definition of new capabilities
+  *tarun93 - kgsl : default clock to min clock
+  *tarunkapadia93 - .gitingore
+  *Pranav Vashi - msm: use of swp{b} is deprecated for ARMv6+ for msm8226
+  *tarunkapadia93 - defconfig update
+  *tarunkapadia93 - fix cpufreq_interactive.c
+  *tarunkapadia93 - msm: hotplug fix derps
+  *tarunkapadia93 - Revert "stop_machine: fix race when queue work to stopper thread"
+  *tarun93 - fix -Wmaybe-uninitialized errors
+  *tarunkapadia93 - compilation fixes
+  *Viresh Kumar - cpufreq: Manage only online cpus
+  *Viresh Kumar - cpufreq: Move get_cpu_idle_time() to cpufreq.c
+  *Pranav Vashi - msm: Add Bricked Hotplug driver
+  *Pranav Vashi - msm: msm_rq_stats: Add hotplug enable toggle
+  *myfluxi - msm: rq_stats: Calculate load based on current freq limit
+  *tarunkapadia93 - msm: Add Intelli Hotplug driver
+  *Pranav Vashi - msm: Add MSM hotplug driver
+  *Pranav Vashi - drivers: Add state notifier driver
+  *kairi_zeroblade - GPU Overclock for MSM8226
+  *Jason Hrycay - ARM: module: add text.unlikely section to unwind
+  *Colin Cross - ARM: unwind: enable dumping stacks for SMP && ARM_UNWIND
+  *Colin Cross - ARM: stacktrace: enable dumping stacks for SMP && FRAME_POINTER
+  *Will Deacon - ARM: 7663/1: perf: fix ARMv7 EVTYPE_MASK to include NSH bit
+  *Zhi-Ming Yuan - stop_machine: fix race when queue work to stopper thread
+  *Se Hun Kim - msm: mdss: Adding lcd notifier
+  *Hong-Mei Li - staging: android: lowmemorykiller: implement task's adj rbtree
+  *kairi_zeroblade - Update wireless regulatory domain database
+  *Behan Webster - ARM: 8158/1: LLVMLinux: use static inline in ARM ftrace.h
+  *Sasha Levin - kernel: add support for gcc 5
+  *Viresh Kumar - cpufreq: interactive: Remove unnecessary cpu_online() check
+  *myfluxi - msm: bam_dmux: Reduce debug logs to avoid watchdog bite
+  *zeroblade1984 - msm8226:dtsi:Increase MSM Watchdog pet time
+  *Taniya Das - msm: acpuclock-8226: Limit DDR to 200MHz for APSS frequency
+  *Ke Liu - msm: acpuclock-8226: update corner mapping for 1.2 and 1.4 GHz speedbins
+  *zeroblade1984 - cpufreq: Necessary updates to get ball rolling
+  *zeroblade1984 - CPUFREQ: Few minor stuff
+  *myfluxi - PM: devfreq: Fix simple_ondemand crashing on startup
+  *zeroblade1984 - mpm-of:Partially revert previous changes
+  *zeroblade1984 - Fix Vibration Control
+  *zeroblade1984 - Fix Goodix panel drivers as well
+  *zeroblade1984 - ft5x06:Fix notifier for suspend
+  *tarun93 - dts: msm8226 msm_thermal use tsens_tz_sensor5 for thermal throttling instead of tsens_tz_sensor0 (EXPERIMENTAL)
+  *Evisceration - msm: thermal: allow to configure poll interval from userspace
+  *franciscofranco - msm: thermal: add Franco's cleaned up in-kernel driver
+  *franciscofranco - msm: thermal: fix init with msm_thermal
+  *Chris Fries - ARM: Use -mtune=cortex-a7 for 8226/8610
+  *Pranav Vashi - msm: use of swp{b} is deprecated for ARMv6+
+  *H. Peter Anvin - kernel: Replace timeconst.pl with a bc script
+  *Dan Pasanen - timeconst.pl: fix perl warning
+  *Riley Andrews - android: drivers: workaround debugfs race in binder
+  *Ajay Dudani - Staging: android: binder: Add some tracepoints
+  *Tejun Heo - workqueue: make all workqueues non-reentrant
+  *Mike Snitzer - block: disable entropy contributions for nonrot devices
+  *Jann Horn - fs: take i_mutex during prepare_binprm for set[ug]id executables
+  *Kirill A. Shutemov - mm: Fix NULL pointer dereference in madvise(MADV_WILLNEED) support
+  *Sasha Levin - vfs: read file_handle only once in handle_to_path
+  *Rabin Vincent - tracing/syscalls: Ignore numbers outside NR_syscalls' range
+  *Will Deacon - tracing/syscalls: Fix perf syscall tracing when syscall_nr == -1
+  *fefifofum - armani: defconfig: Enable FIOPS IO scheduler
+  *Shaohua Li - block: fiops ioscheduler core
+
+Project name: android_bootable_recovery
+  *Tao Bao - updater: Hoist fsync() to outer loop.
+  *Jesse Zhao - Initialize stashbase even stash_max_blocks = 0
+  *Sami Tolvanen - Support resuming block based OTAs
+  *Elliott Hughes - Fix recovery image text rendering.
+  *Matt Mower - recovery: Separate blkid.tab for vold in recovery
+  *Steve Kondik - sr: Deep rainbow integration
+  *Steve Kondik - updater: Add LZMA support to blockimg
+  *James Sullins - improve Rainbow Mode
+  *CEnnis91 - RAINBOW MODE MOTHERFUCKERS
+  *Tom Marshall - recovery: bu: Support verity, incremental OTAs, and encrypted data
+  *Tom Marshall - recovery: bu: disable xcomp during backup/restore
+  *Michael Bestas - sr: Fix log text color
+
+Project name: android_art
+  *Jie Cheng - ART: Tuning compiler thread count for application runtime
+  *Chirayu Desai - Improve dalvik cache pruning
+  *Steve Kondik - Revert "Revert "AArch64: Fix incorrect use of preceding LIR.""
+  *Chirayu Desai - Allow skipping of dalvik cache pruning if boot marker is in place.
+
+Project name: android
+  *Ethan Chen - manifest: Remove separate paths for 8610/8226 HALs
+  *Myself5 - manifest: add CarbonWallpapers
+  *weldoncyngn - adding android-support-test for espresso test
+  *Arnav Gupta - manifest: move mips prebuilts into notdefault
+  *Myself5 - You are not a CM repo
+  *Myself5 - manifest: rewrite to be able to pick from CM gerrit
+  *Abhisek Devkota - Fixup Freetype project & revision
+  *Myself5 - update readme for lp5.1
+  *Joey Hewitt - CVE Fix, track higher rev of conscrypt
+  *PhaseBurn - Adding qcom sepolicy globally
+  *Ryan N. Norris - Fix cmsdk repo path.
+  *Patrick Campanale - Added our fork of cmsdk
+  *Brint E. Kriebel - manifest: Update to freetype 2.6.0
+  *Myself5 - Revert "Changed a few repos"
+  *Patrick Campanale - Changed a few repos that we are resetting a few weeks back to fix some bugs
+  *Myself5 - Fix Derp
+  *Brandon McAnsh - cm: Use fork of aarch64 gcc for darwin as well
+  *Steve Kondik - cm: Use fork of aarch64 gcc
+  *Ricardo Cerqueira - 5.1.1_r3 -> 5.1.1_r6
+  *José Adolfo Galdámez - manifest: remove final > extra
+  *Adnan Begovic - Add cmsdk prebuilts repo.
+  *Abhisek Devkota - Add Android Support Library prebuilts
+  *STELIX - Manifest - Fix another stupid derp
+  *Steve Kondik - Manifest - Switch to cm fork of external/lzma
+  *Sean Hoyt - Remove device specfic exynos repo
+  *STELIX - Manifest - Fix a stupid derp
+  *STELIX - Manifest - track our own...
+  *Myself5 - manifest: change the way to handle our repos
+  *Michael Bestas - Manifest - Remove external/srec
+  *STELIX - Manifest - use some our own telephony stuff
+
+Project name: android_libcore
+  *Christopher Ferris - Remove forced alignment code.
+  *Roman Birg - libcore: add a way to clear cached time zone strings
+
+Project name: android_packages_wallpapers_MusicVisualization
+  *Andreas Gampe - MusicVisualization: Force 32bit
+
+Project name: android_packages_wallpapers_Basic
+  *Tom Powell - Automatic translation import
+
+Project name: android_packages_wallpapers_HoloSpiral
+  *Andreas Gampe - HoloSpiral: Force 32bit
+
+Project name: android_packages_wallpapers_Galaxy4
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Andreas Gampe - Galaxy4: Force 32bit
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_wallpapers_PhotoPhase
+  *Abhisek Devkota - REAL_GET_TASKS > GET_TASKS
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_wallpapers_NoiseField
+  *Andreas Gampe - NoiseField: Force 32bit
+
+Project name: android_packages_wallpapers_PhaseBeam
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Andreas Gampe - PhaseBeam: Force 32bit
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_inputmethods_LatinIME
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Julien "_FrnchFrgg_" RIVAUD - Add support for Bépo keyboard layout
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_services_Mms
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_services_Telephony
+  *Roman Birg - Network Settings: default user mode to preferred mode
+  *Michael Bestas - Automatic translation import
+  *Roman Birg - Network Settings: don't crash on bad lookup
+  *Roman Birg - Network settings: re-enable network preference selection
+  *Chirayu Desai - For non-data SIMs, only set user configured mode, not preferred mode.
+  *Chirayu Desai - Remove network mode handling for other SIM
+  *Tom Powell - Automatic translation import
+  *Danesh M - Telephony : Null check cellInfo before calling addAll
+  *LuK1337 - Telephony: Allow com.android.phone to use CMHW
+  *Adnan Begovic - telephony: Don't bypass telephony stack when switching RAT.
+  *Amit Mahajan - DO NOT MERGE Change to make STK related intents protected.
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *jlask - Display the correct strings for network type summary
+  *Michael Bestas - Automatic translation import
+  *emancebo - telephony: fix APN msim issue where both sims show the same APNs
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Chirayu Desai - Rewrite network type summary handling
+  *Danesh M - Telephony : Add support for config_hardcodeDefaultMobileNetworks
+  *Michael Bestas - Automatic translation import
+  *dankoman - [2/3] Telephony: Proximity speaker
+  *Michael Bestas - Automatic translation import
+  *Lin Ma - Telephony: Add roaming mode options to mobile network settings
+  *garwedgess - [4/5] Telephony: Breathing missedcall/sms/voicemail
+  *Michael Bestas - Automatic translation import
+  *mengsun - Fix phone not initialized exception
+  *Danny Baumann - Style non-interactive dialog in the same way as interactive one.
+  *Michael Bestas - Automatic translation import
+  *Lin Ma - TeleService: pass sub ID to APN setting
+  *AragaoAnderson - Telephony: Bye bye Holo USSD dialog
+  *Andrew Lee - Restyle USSD AlertDialog.
+  *Danny Baumann - Update activity title if called in MSIM case.
+  *Michael Bestas - Automatic translation import
+  *Kryten2k35 - Call recording encoder/format choice 2/3
+  *Janson Kang - Fix National Roaming
+  *lichti1901 - National Data Roaming [2/3]
+
+Project name: android_packages_services_Telecomm
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Bruno Martins - Telecomm: Avoid NPE when invoking setAudioParameters
+  *Steve Kondik - telecom: Move CMHW to CMSDK
+  *Tom Powell - Automatic translation import
+  *Bruno Martins - Telecomm: Make phone_type switch generic
+  *Ethan Chen - Revert "Telecom: don't set incall state when call was disconnected"
+  *Michael Bestas - Automatic translation import
+  *ljzyal - Telecomm: Support Samsung Dual Sims Phone phone_type switch
+  *Michael Bestas - Automatic translation import
+  *Chris Sarbora - Update to latest api level
+  *Michael Bestas - Automatic translation import
+  *LuK1337 - msim: Fix saving default sim from select SIM dialog (2/2)
+  *Michael Bestas - Automatic translation import
+  *Danesh M - Telecom : Add callInfo provider abstraction
+  *Michael Bestas - Automatic translation import
+  *Danesh M - Telecom : Remove null check for blacklist
+  *Roman Birg - Telecom: don't set incall state when call was disconnected
+  *garwedgess - [5/5] Telecomm: Breathing missedcall/sms/voicemailcemail
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Allow system apps to query the voicemail number.
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Show multi-line notification if there's more than 1 missed call.
+
+Project name: android_packages_apps_Settings
+  *LorDClockaN - Settings: Toast icon switch (2/2)
+  *Jorge Ruesga - settings: remove contributors cloud margin/padding
+  *Diogo Ferreira - Settings: Only show multi-sim card configuration for owners
+  *James Hiew - Long press no longer copies to clipboard if there is nothing to copy
+  *d34d - APN: Filter MVNOs by SPN, GID1 and IMSI
+  *Myself5 - Revert "Settings - instant reboot action trigger (2/2)"
+  *James Hiew - Get a handle for UserManager at creation
+  *Roman Birg - Protected apps: fixup rotation states
+  *Jorge Ruesga - settings: fix fc for system apps with null applicationInfo
+  *Adnan Begovic - Settings: Avoid possible NPE if resolve infos return null.
+  *Lin Ma - Settings: Fix a crash caused by null pointer
+  *Adnan Begovic - Settings: Utilize cyanogenmod.permission.MODIFY_PROFILES.
+  *Jorge Ruesga - settings: check bt pan service before use it
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - settings: hide qs tiles with sensitive data
+  *Myself5 - [1/2] Settings: Add Button to Recents to open App as Floating
+  *lion0738 - [2/2] Settings: option to launch heads up in floating mode
+  *rogersb11 - Gesture anywhere floating switch 2/2
+  *Roman Birg - Settings: fix up advanced mode logic
+  *Gabriele M - Settings: Always enable the per-app pulse light settings
+  *stofstik - Added show volume to tile chooser
+  *AdrianDC - LEDs Brightness [1/2]: Lights notifications brightness support
+  *AdrianDC - Lights with Screen On [2/2]: Optional allowment of lights
+  *Michael Bestas - Add back high SMS limits
+  *Steve Kondik - settings: Animation scale seekbars
+  *HazouPH - [2/2] Camera button support
+  *Martin Brabham - Fix the improper string and increment database version to kick off a new indexing job.
+  *maxwen - [1/2] SystemUI: Add time-context headers to notification header
+  *Scott Mertz - Settings: obey prevent accidental wakeup default
+  *Steve Kondik - settings: LiveDisplay color profiles
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Roman Birg - Settings: add a way to reset quick settings tiles
+  *Steve Kondik - settings: Move CMHW to CMSDK
+  *Jorge Ruesga - settings: contributors cloud
+  *Roman Birg - Settings: update time zone strings on date change
+  *Michael Bestas - Automatic translation import
+  *Brandon McAnsh - Development: Add choices to 'Stay Awake' preference
+  *Roman Birg - Settings: add a way to not localize zone selections
+  *Matt Mower - Settings: Match pulse speed to frameworks default
+  *Brandon McAnsh - Device info: Remove IMEI info from SIM status
+  *emancebo - settings: add IMEI information to msim device status page
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Roman Birg - Settings: report stats upload immediately
+  *PhaseBurn - Adding new devs, changing a couple existing around... and some string changes.
+  *Patrick Campanale - Updated strings for About Carbon
+  *Myself5 - Rework the DevCard Layout
+  *Roman Birg - Settings: improved stats upload logic
+  *Michael Bestas - Cleanup SoundSettings
+  *Michael Bestas - Use correct icons for sound settings
+  *d34d - Show "Lock screen & fingerprint" when supported
+  *Dave Kover - Expose values for themes.
+  *Adnan Begovic - Settings: Refactor to point at Profiles in CMSDK.
+  *Myself5 - fix my Derp fixs Derp
+  *Myself5 - Fix Derp about missing </string-array>
+  *Michael Bestas - Automatic translation import
+  *Dave Kover - Update iconography to VectorDrawable and adjust coloring.
+  *Ricardo Cerqueira - ApnSettings: Exclude MVNO listings that are known not to match
+  *Myself5 - update me in about carbon
+  *d34d - Include subQuality when returning from EncryptionInterstitial
+  *Roman Birg - Settings: use new LockSettings
+  *Roman Birg - Settings: continue factory reset if user leaves activity
+  *Roman Birg - Settings: fix a few color picker inconsistentcies
+  *d34d - Don't allow deleting last remaining fingerprint
+  *Roman Birg - Settings: don't crash when dismissing FRP
+  *Roman Birg - Settings: make FRP wipe dialog not cancelable
+  *Ed Falk - Disable sim toggle switch if preference is disabled
+  *Roman Birg - Settings: display light pulse dialog settings conditionally
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - Settings: Long Term Orbits (LTO)
+  *Danesh M - Add data connection toggle for MSIM
+  *d34d - Remove use of "firmly" from fingerprint strings
+  *d34d - No purchase confirmations for fingerprints at this time
+  *d34d - Check for null activity before calling getSetupBar
+  *Danesh M - Revert "Settings : Add contributors word cloud"
+  *Ricardo Cerqueira - Don't include all resource densities
+  *Erica Chang - Settings: Hide radio band selection based on config Ticket: RENDANG-355
+  *Roman Birg - Settings: add fallback strings to device versioning for metrics
+  *Michael Bestas - Automatic translation import
+  *Abhisek Devkota - Fix Battery % display in saver threshold
+  *Roman Birg - Settings: add Kiev time zones to picker
+  *Asher Simonds - Settings: Update profiles settings dashboard icon.
+  *Adnan Begovic - Settings: Make sure we're getting the instance of ProfileManager.
+  *d34d - Setup: Call setUseFingerprint() when enrollment finished
+  *Roman Birg - Settings: fix reversed name/id fields in metrics
+  *Dave Kover - Remove hardcoded textAppearance for better theme support.
+  *APOPHIS9283 - Fix config_proximityCheckOnWake setting handling
+  *Roman Birg - MasterClear: fix FRP wipe crash
+  *STELIX - Slim : Stripped down performance profiles Settings from CM (Fix)
+  *STELIX - Settings - NotifManager: some missing import class
+  *Nicholas Flintham - Slim : Stripped down performance profiles Settings from CM
+  *Nicholas Flintham - Add a 2 sec timeout for heads up notifications
+  *Daniel Koman - Settings: "headsup" to "heads-up"
+  *Jean-Pierre Rasquin - [1/2] SlimHeadsUp: Add a global 3-way switch
+  *Lars Greiss - Settings: add headsup manifest permission
+  *Lars Greiss - Settings: Slim heads up customizations for LP (2/2)
+  *STELIX - Revert "Settings - HeadsUp options [2/2]"
+  *STELIX - Revert "Settings - HeadsUp: add timeout option (2/2)"
+  *STELIX - Revert "Settings - [Heads up Swipe] A more user friendly summary"
+  *STELIX - Revert "Settings - [Heads up] Touch to hide (2/2)"
+  *STELIX - Revert "Settings - Move Heads-Up settings to Notification Manager"
+  *STELIX - Revert "Settings - QS: Add Headsup tile [2/2]"
+  *STELIX - Revert "Settings - Add Feature: Heads Up custom text/background color, transparency"
+  *STELIX - Revert "[Settings] Improve HeadsUp [2/2]"
+  *STELIX - Revert "Settings: add HeadsUp button in status bar header (2/2)"
+  *STELIX - Revert "Settings: HeadsUp snooze function [2/2]"
+  *d34d - Keep screen on during fingerprint enrollment
+  *Stephen Bird - Protected Apps: Monitor unlock status
+  *Roman Birg - Settings: fix setting light FC
+  *Andy Mast - Fingerprint: Include "Fingerprint" in the unlock title
+  *d34d - Fix aliasing in FingerprintProgressBar
+  *d34d - Fix navigating fallback security via setup wizard
+  *Andy Mast - Fingerprint: Match Enrollment UI with SetupWizard
+  *Steve Kondik - settings: Fix livedisplay settings
+  *Andy Mast - Fingerprint: Cancel timeout if user leaves enrollment
+  *d34d - Use theme_accent for manage_fingerptins_primary_color
+  *d34d - Remove manage fingerprints from enrollment setup
+  *d34d - OOBE: Set next label when fingerprint enrollment done
+  *d34d - Add LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK to fallbackIntent
+  *Michael Bestas - Remove unused xml
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Set untranslatable
+  *d34d - Add fingerprint enrollment stats
+  *d34d - Add SetupManageFingerprints to setup wizard flow
+  *d34d - Cancel error timeout when enrollment finished
+  *Roman Birg - Settings: hide light pulse settings if not available
+  *Adnan Begovic - Settings: Point to classes within cmsdk.
+  *d34d - Enroll fingerprint via SetupWizard [1/2]
+  *d34d - Show error state when fingerprint read times out
+  *d34d - Only show fingerprint for primary user
+  *Andy Mast - Keyguard Fingerprint: Lock immediately when fp is used [2/2]
+  *Roman Birg - Settings: update community metrics
+  *d34d - Fingerprint: Fingerprint enrollment
+  *Andy Mast - Fingerprint: Add summary text to 'manage fingerprints'
+  *STELIX - Revert "Settings - Performance: Add Path for Fast Charge"
+  *Andy Mast - Add fingerprint permission [2/2]
+  *cretin45 - Settings: Add config for not allowing calls/sms being set to > slot 1
+  *Matt Garnes - Make preferred install location option configurable.
+  *Brandon McAnsh - Settings: Remove Performance Settings
+  *d34d - Fix patch derpage for fingerprint settings
+  *Michael Bestas - Automatic translation import
+  *Wilhelm Fitzpatrick - Settings: use WhisperPush v2 if it is installed in place of v1
+  *Andy Mast - Show dialog if max number of fingerprints has been reached
+  *Andy Mast - Rename/Delete UI in fingerprint list
+  *Andy Mast - Enable fingerprint option in Settings [3/3]
+  *Roman Birg - Settings: add wifi ap dialog 'show password' default overlay
+  *Christopher R. Palmer - settings: Fix developer options crash when mBackupManager is null
+  *NBruderman - Settings: Make the Wifi regions translatable
+  *STELIX - Settings - Super Slim PIE Fix [2/2]
+  *eyosen - fix slim shortcuts fc
+  *rogersb11 - Allow more slim action tile actions and add some
+  *rogersb11 - Add Restart SystemUI to slim actions 1/2
+  *Lars Greiss - Settings: SlimPie (2/2) - from BlissRom
+  *Daniel Koman - Settings - Re-order strings and arrays
+  *STELIX - Settings - Fix slim actions
+  *STELIX - Settings - Ooops! :-O
+  *Roman Birg - Settings: fix confirm pattern crash on rotate
+  *Utkarsh Gupta - Remove stray file
+  *Michael Bestas - Automatic translation import
+  *Andrew Dodd - wifi: Allow configuration of country code for wifi (3/3)
+  *Jorge Ruesga - settings: wifi priorities
+  *Jorge Ruesga - settings: dynamic tiles
+  *Hemanth kumar B - Avoid SElinux denial accessing SIM card lock
+  *Raju Yadav - Avoid SElinux denial accessing IMEI information
+  *Brandon McAnsh - SecuritySettings: Assert the instance of KeyStore before use
+  *Roman Birg - Settings: persist profile dialogs while rotationg screen
+  *cretin45 - Settings: Ensure fragment is visible before updating footer
+  *Adnan Begovic - Settings: Disable mobile network settings if sub is invalid/unusable.
+  *d34d - Don't clear cache on null UiDetailProvider
+  *d34d - BatteryLight: Reset all settings back to default
+  *STELIX - Revert "Settings - Navigation Bar Customization [2/2]"
+  *Stephen Bird - Settings: option to disable torch when the screen turns off: Fix 2
+  *Roman Birg - Settings - Enable Developer options by default
+  *tobitege - Settings - Fix default battery text color (1/2)
+  *STELIX - Add Europe/Rome
+  *Elliott Hughes - Add Europe/Madrid.
+  *Samuel Asteberg - Add Europe/Istanbul timezone
+  *Elliott Hughes - Add Pacific/Noumea.
+  *STELIX - Settings: option to disable torch when the screen turns off: Fix
+  *tobitege - Add Europe/Berlin
+  *Daniel Koman - Settings: vector support for action icons
+  *fusionjack - DSLV: Resize system icons to match vector drawable size
+  *Altaf-Mahdi - Settings: Double tap to sleep anywhere on the lock screen (2/2)
+  *Janson Kang - Task Manager: No longer requires SystemUI restart
+  *Alex Cruz - Settings - CAF Task Manager switch [2/2]
+  *Altaf-Mahdi - Settings: option to disable torch when the screen turns off (2/2)
+  *STELIX - Settings - Custom scrolling values: Change SeekBar
+  *Bajee11 - [3/5] Settings: Breathing missedcall/sms/voicemail
+  *AdrianDC - Settings: Fix HighTouchSensitivity & TouchscreenHovering
+  *Michael Bestas - Automatic translation import
+  *Roman Birg - MasterClear: update UI
+  *Janson Kang - Settings: Option to enable/disable scrolling cache
+  *scott - Settings - custom scrolling values [1/2]
+  *Stephen Bird - Protected Apps: Fix rotate FC
+  *Danny Baumann - Use framework name and icon for system UID.
+  *Michael Bestas - Automatic translation import
+  *Roman Birg - Settings: fix potential NPE
+  *yong.zou - Settings: Fix there is no sounds and delays 1s when pressing "Touch sounds" sometimes
+  *Gianmarco Reverberi - PrivacyGuard: restore ListView position on resume, for real
+  *Jinpyo-laptop - Over scroll effects [2/2]
+  *Lokesh Chamane - Settings: HeadsUp snooze function [2/2]
+  *Shaun Eaton - Settings - Update Slim Actions
+  *Altaf-Mahdi - Settings: add HeadsUp button in status bar header (2/2)
+  *BigBrother1984 - [Settings] Improve HeadsUp [2/2]
+  *tobitege - Avoid adding empty entries in list
+  *tobitege - Fix carrier label switch
+  *tobitege - DSLV: fix NPE in ActionListViewSettings with mActionConfigs
+  *Danny Baumann - Fix up increasing ring tone volume preview behaviour.
+  *Dan Pasanen - Settings: remove mobile networks menu if ro.radio.noril is set
+  *longyu.huang - the status of brightness not refresh in power control widget after manual adjustment of brightnes
+  *yong.zou - Settings: Fix preferred install location dialog will dismiss after rotating screen
+  *Brandon McAnsh - Profiles: Get Default profile with its UUID instead of name
+  *yong.zou - Settings: Fix setting app install location as "Removable SD card" without SD card inserted
+  *STELIX - Settings - Strings CleanUp
+  *Danny Baumann - Integrate mobile network settings into SIM settings for MSIM.
+  *tobitege - Fix custom date format entry and european styles
+  *Shareef Ali - Settings: fix an issue where text is not showing up on first instance.
+  *Michael Bestas - Cleanup SMS limits
+  *Michael Bestas - Automatic translation import
+  *longping.zou - Settings:Not responding In-app search function
+  *Jorge Ruesga - profiles: respect lockscreen policies
+  *Pavel Zhamaitsiak - Add button in "hidden" settings to flip "VoLTE Provisioned" flag
+  *Raj Yengisetty - Profiles: fix SeekBarVolumizer behavior
+  *Roman Birg - Settings: use WindowManager to set custom DPI
+  *STELIX - Settings - QS: NavBar Tile - redirect long-click
+  *tobitege - Fix NPE in slimshortcuts if no Icon is found
+  *Jubakuba - Settings: Slim Actions to Shortcuts
+  *tobitege - Settings - Add European-style date formats
+  *Kra1o5 - Settings - Add option to set default custom function to button recents (2/2)
+  *Ateek Ujjawal - Fix Network Traffic VS tab crash on msim devices
+  *Myself5 - Readd KK Carbon Easteregg
+  *Myself5 - Revert "Add our old Carbon KK EasterEgg"
+  *Myself5 - Add our old Carbon KK EasterEgg
+  *AlmightyMegadeth00 - Settings - Navigation Bar Customization [2/2]
+
+Project name: android_packages_apps_ThemeChooser
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Andreas - Show an AlertDialog when clicking Get More
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Dave Kover - Update iconography.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *dhacker29 - Add CleanSpec.mk to fix the build errors after UI update
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *d34d - Small UI refresh
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_PhoneCommon
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Rohit Yengisetty - AnimUtils : clear listeners when animation completes or is terminated
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Rohit Yengisetty - PhoneCommon : Add layouts to support hdpi devices
+
+Project name: android_packages_apps_Email
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Allow saving attachments even if there's no intent handling them.
+  *Danny Baumann - Allow download of compressed attachments.
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Don't cancel PendingIntents used for AlarmManager.
+  *Danny Baumann - Optimize connection loss and re-gain behaviour.
+  *Danny Baumann - Refine thread handling.
+  *Danny Baumann - Properly unregister alarm manager callbacks.
+  *Danny Baumann - Use AlarmManager to schedule an IDLE connection restart.
+  *Danny Baumann - Don't auto-register IDLE when gaining connection.
+  *Danny Baumann - Do less work on IDLE refresh.
+  *Danny Baumann - Improve debug logging.
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Use an inexact timer for the IDLE refresh.
+  *Danny Baumann - Don't throw a NPE when operating on a destroyed list.
+  *Danny Baumann - Fix some more argument order issues.
+  *Danny Baumann - Simplify logic.
+  *Danny Baumann - Fix some typos.
+  *Danny Baumann - Don't solely rely on the presence of RECENT for checking for new mail.
+  *Danny Baumann - Don't re-sync when refreshing the IDLE connection.
+  *Danny Baumann - Fix crash when attempting to view EML files.
+  *Danny Baumann - Reset idling flag when cancelling early due to being cancelled.
+  *Danny Baumann - Add some debug statements.
+  *Danny Baumann - Assign debug tags to IMAP communication output.
+  *Danny Baumann - Fix argument order.
+  *Danny Baumann - Simplify code.
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - email: catch the correct exception while closing the buffers
+  *Danny Baumann - Fix ArrayIndexOutOfBoundsException.
+  *Jorge Ruesga - email: fix NPE
+  *Michael Bestas - Automatic translation import
+  *Scott Mertz - EmailTests: fix api change
+  *Jorge Ruesga - email: fix tests
+
+Project name: android_packages_apps_PackageInstaller
+  *Michael Bestas - Automatic translation import
+  *emancebo - PackageInstaller: add hook to manage packages via PRE_BOOT_COMPLETED event
+
+Project name: android_packages_apps_BluetoothExt
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_ContactsCommon
+  *Michael Bestas - Automatic translation import
+  *emancebo - LookupProvider updates
+  *Tom Powell - Automatic translation import
+  *Rohit Yengisetty - SelectAccountActivity : Support local phone account
+  *chengzhi.hou - Fix:Shouln't display any contacts after clean all letters in dialer search view.
+  *cretin45 - ContactsCommon: Telephony expects sim_index
+  *Tom Powell - Automatic translation import
+  *Marcos Marado - string validation: check if the string is empty
+  *Stephen Bird - EmergencyContacts: Check if quickdial number is an emergency number
+  *Michael Bestas - Automatic translation import
+  *Danesh M - ContactsCommon : Add createStarredPhoneOnlyLoader
+  *Rohit Yengisetty - PhoneNumberLookup : have the mk file hold its absolute path for easy inclusion
+  *Rohit Yengisetty - Add generic hooks for contact info lookup based on phone number
+  *Rohit Yengisetty - ContactPhotoManager - Add ability to fetch contact bitmap based on photo id
+  *Rohit Yengisetty - CheckableFlipDrawable : Add getter for front drawable
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Matt Garnes - Add local phone account as a writable AccountTypes.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_CMFileManager
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Fix bookmark string
+  *Richard MacGregor - Regex metacharacters result in error post search
+  *Stephen Bird - Search: Fix race condition with results display
+  *Roman Birg - CMFM: don't apply search filter when search hasn't started
+  *Roman Birg - CMFM: fix search mime type filter not applying
+  *Stephen Bird - Bookmarks: check to see if a bookmark exists before adding it
+  *Tom Powell - Automatic translation import
+  *Richard MacGregor - FileManager: Fix shortcuts
+  *Stephen Bird - Fix MediaScan issue w/ Deleting
+  *Tom Powell - Automatic translation import
+  *herriojr - Fixed MediaScan Issue w/ Directories
+  *herriojr - Fix Navigation back from Search
+  *Stephen Bird - Refresh: stop refreshes in action
+  *Michael Bestas - Automatic translation import
+  *LuK1337 - NavigationActivity: Do not reload screen on rotation
+  *kai.cao - Fix FileSystemInfo's ImageView shows incorrect picture in BreadcrumbView .
+  *Matt Garnes - Fix improper exception handling during copy operation.
+  *Roman Birg - CMFM: improved search performance
+  *Matt Garnes - Improve copy/move performance with nio and reintroduce cancel.
+  *Tom Powell - Automatic translation import
+  *Stephen Bird - RTL: move buttons to proper spot in nav drawer
+  *Tom Powell - Automatic translation import
+  *kai.cao - Fix don't pop up "Actions" menu when long pressing on a file/folder after open and close "Use swipe gesture".
+  *herriojr - Fixed ANR & Memory Leak Associated with 3GP
+  *herriojr - Fixed search to actually open the clicked folder
+  *herriojr - Fixed ANR associated with SecureStorage
+  *herriojr - Revert "Made NavigationView reliant on FileObserver to keep up to date."
+  *Michael Bestas - Automatic translation import
+  *herriojr - Made NavigationView reliant on FileObserver to keep up to date.
+  *kai.cao - [CMFileManager] Fix can't copy after disconnect with pc.
+  *herriojr - ANR Caused by passes over Data Set on notifyDataSetChanged()
+  *Stephen Bird - Secure Move: Check to make sure libtruecrypt correctly errored
+  *herriojr - Fix Secure SD Card Entry to open folder.
+  *herriojr - Refactored the ImageLoader a bit, so that it doesn't have trouble loading images.
+  *Michael Bestas - Automatic translation import
+  *herriojr - Moved the sort of the data set off the UI Thread.
+  *Michael Bestas - Automatic translation import
+  *Dave Kover - Update launcher iconography.
+  *herriojr - Changed NavigationView.refresh() in onResume() of the activity to try to restore the original position.
+  *Stephen Bird - Preferences: Move huge paragraph description to own item
+  *Stephen Bird - ProgressDialog: Require user to explicitly use the cancel button.
+  *Stephen Bird - Editor: Handle content uri's in the editor
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - configurationChanged: Don't handle the orientation change in our main Activity
+  *Stephen Bird - Secure Storage: Fix unlock button
+  *Stephen Bird - Easy Mode: Fix exit on easy mode screen
+  *weldoncyngn - Android.mk don't build source components in tests/
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - ActionBar TextSelection: Prevent overlay of textfield
+  *Roman Birg - Shell console: fix bug in shell output stream
+  *Michael Bestas - Automatic translation import
+  *Roman Birg - Fix parsing of shell command output regardless of encoding
+  *Michael Bestas - Automatic translation import
+  *d34d - Properly validate fields when resetting password
+  *Stephen Bird - onResume: Refresh current view
+  *Stephen Bird - Sizes: Let disk usage show sizes as doubles
+  *Stephen Bird - MediaScanning: Update with calls to Mediascanner
+  *d34d - Delete destination file when copy fails
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Exchange
+  *Danny Baumann - Fix authentication error notification click handling.
+
+Project name: android_packages_apps_SoundRecorder
+  *Michael Bestas - Automatic translation import
+  *Ed Falk - SoundRecorder: Add support for 1-channel WAV files
+  *Adnan Begovic - SoundRecorder: Mark recorder as processed if we've saved the sample.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: OTAUpdates
+  *Kryten2k35 - Added Waffle.io data and issue tracking
+  *Kryten2k35 - Version 2.5.3
+  *Kryten2k35 - Trim whitespace in the URL, just in case the developers add it in (they shouldn't)
+  *Kryten2k35 - Fixed the ORS generation for the installafterflash files.
+  *Kryten2k35 - Addons error:
+  *Kryten2k35 - Enable debugging without having to use a device that is running a compatible ROM
+  *Kryten2k35 - Verion 2.5.2
+  *Kryten2k35 - Download location fix
+  *Kryten2k35 - Merge mistake
+  *Kryten2k35 - Changelog update 20150629
+  *Kryten2k35 - Version bump to v2.5.1
+  *Kryten2k35 - Fix for if theme isn't used in the build.prop
+  *Kryten2k35 - Fix for if theme isn't used in the build.prop
+  *Kryten2k35 - Added storage location in preferences
+  *Kryten2k35 - Addons: Fixing much fo the recent problems with the addons
+  *Kryten2k35 - Adds "Pro/Donate" preference to the settings menu
+  *Kryten2k35 - ORS: Fix the generation of the OpenRecoveryScript
+  *Kryten2k35 - Updated Addons seciton of the manual instructions
+  *Kryten2k35 - Use version name rather than filename for update available text
+  *Kryten2k35 - Fix IllegalStateExeption when downloading on some devices (hopefully)
+  *Kryten2k35 - Missed out this"About page" button for pre-LP devices.
+  *Kryten2k35 - Allow the AvailableActivity page to show the full version name without stripping spaces
+  *Kryten2k35 - Enabled developers to set the default theme for the app
+  *Kryten2k35 - Added Download location choosing by developers
+  *Kryten2k35 - Added build prop Constants
+  *Kryten2k35 - Fixed my own donation links always going to coinbase!
+  *Kryten2k35 - Parse the download link's host and display it in AvailableActivity.
+  *Kryten2k35 - Fixed using HTTP links instead of direct links. Now open properly if needed.
+  *Kryten2k35 - Some more ad code
+  *Kryten2k35 - Last few bits of the google services
+  *Kryten2k35 - Ads: Cleaning up the last remnants of the ads
+  *Kryten2k35 - Updated READMEs
+  *Kryten2k35 - Android.mk: No longer require Google Play Services for AOSP building
+  *Kryten2k35 - Cleaning up the master branch
+  *Kryten2k35 - Catch BadTokenException
+  *Kryten2k35 - Changelog alteration
+  *Kryten2k35 - Left debugging on by mistake!
+  *Kryten2k35 - Added some unnecessary files to gitignore
+  *Kryten2k35 - Removed unnecessary files for AOSP building
+  *Kryten2k35 - About moved to preferences
+  *Kryten2k35 - Made Constants easier to read.
+  *Kryten2k35 - Version bump
+  *Kryten2k35 - Global varible strings for themes too
+  *Kryten2k35 - Mobile Network detection global variable created
+  *Kryten2k35 - Cleaned up storage location handling
+  *Kryten2k35 - ORS information moved above the settings
+  *Kryten2k35 - Fixed download location from the download manager
+  *Kryten2k35 - Utils: Remove unused code
+  *Kryten2k35 - Added method for determining external path
+  *Kryten2k35 - ORS Script: Fixed InstallAfterFlash location
+  *Kryten2k35 - Version bump to 2.4.4
+  *Kryten2k35 - More NPE fixes
+  *Kryten2k35 - NPE in AppReceiver
+  *Kryten2k35 - Fix BitCoin ALWAYS showing for the developer donation options
+  *Kryten2k35 - Update changelog
+  *Kryten2k35 - Version 2.4.3
+  *Kryten2k35 - Version bump 2.4.2
+  *Kryten2k35 - Fix ORS generation failing on the download dir
+  *Kryten2k35 - Remove add category on AOSP
+
+Project name: android_packages_apps_Gallery2
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *cretin45 - Gallery2: Intents for image/video directory viewing/picking
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - Photo Gallery widget: fix NPE in getViewAt
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *root - Gallery2: Fix crash when Bluetooth service is disabled
+  *Scott Warner - Add Storage preference (2/2)
+
+Project name: android_packages_apps_Camera2
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *NBruderman - Camera2: Fix Undo button behaviour
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Fix storage location NPE
+  *Michael Bestas - Automatic translation import
+  *dcalandria - Add Storage preference (1/2)
+
+Project name: android_packages_apps_Nfc
+  *Jorge Ruesga - nfc: create a bootstrap service
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Mms-caf
+  *Adnan Begovic - Mms: Don't try to send an SMS to a null destination.
+  *Susheel nyamala - Fix mms failures due to invalid mmsc url
+  *Roman Birg - Mms: show default app icon for unresolved links
+  *Abhisek Devkota - REAL_GET_TASKS > GET_TASKS
+  *Michael Bestas - Automatic translation import
+  *Richard MacGregor - Fix "To" label hide/show when adding/removing subject
+  *Stephen Bird - MMS: Change subject logic
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Improve QuickMessage string
+  *Ethan Chen - Mms: Check whether data is enabled on current subscription
+  *Ethan Chen - Mms: Use system API for setDataEnabled
+  *Stephen Bird - QuickMessage: Make useful on lockscreen
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Martin Brabham - Fix keyboard hiding and scrolling
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - Mms: fix keyboard hiding
+  *Abhisek Devkota - Unbreak Mms
+  *Brandon McAnsh - Mms: Close keyboard if scrolling in conversation history
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Abhisek Devkota - Temp Fix: Localize Smilies in Russian
+  *Danesh M - Mms : Replace  REQUEST_CODE_PICK with REQUEST_CODE_ADD_RECIPIENTS
+  *Danesh M - Revert "Drafts: Prevent duplicate drafts from being added"
+  *Danesh M - Revert "Drafts: Fix instance where body of the message is lost."
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Drafts: Fix instance where body of the message is lost.
+  *d34d - Delete vcard mms on error
+  *Stephen Bird - Add Subject: Fix subject crash
+  *Stephen Bird - ComposeMessage: Improve performance with large groups
+  *herriojr - Fixed KeyGuard not being disabled on second quickmessage
+  *Michael Bestas - Automatic translation import
+  *Danesh M - Mms :  Don't load slideshow details for draft
+  *Shlomy Reinstein - Fix detection of RTL language in 'from' field
+  *Danesh Mondegarian - Calendar Attachment: decode URI for file name
+  *Michael Bestas - Automatic translation import
+  *Danesh M - Mms : Ensure text mode supports multiple content-types
+  *Stephen Bird - Drafts: Prevent duplicate drafts from being added
+  *Stephen Bird - Compose:  Hiding the "To" label when editing the subject
+  *Rohit Yengisetty - Show Calendar Event attachment only if an activity can respond to the intent
+  *Brandon McAnsh - QuickMessage: Add shortMessage to inputType
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Quick Message: Fix dual sim picker
+  *razorloves - Enable heads-up style notifications on Mms app
+  *Stephen Bird - Contact vCard: Dont crash if contact that is sent
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Nicholas Chum - Expose message link text color
+  *Bajee11 - Mms: Breathing missedcall/sms/voicemail
+  *Nicholas Chum - Expose message link text color
+  *Michael Bestas - Automatic translation import
+  *d34d - Don't filter share intent
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Compose Message: Fix visual glitch.
+  *Sultanxda - Add UAProf URL to carrier-specific configs
+  *Danny Baumann - Create the contact photo manager as service.
+  *Michael Bestas - Automatic translation import
+  *Ricardo Cerqueira - Carrier-specific MMS limits
+  *Danesh Mondegarian - Mms : Add users permission to prevent crash
+
+Project name: android_packages_apps_Eleven
+  *Abhisek Devkota - REAL_GET_TASKS > GET_TASKS
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Linus Lee - Eleven: Visualizer: Add back landscape mode
+  *Linus Lee - Add ability to seek through track with circular motion
+  *Tom Powell - Automatic translation import
+  *Utkarsh Gupta - Visualizer tweaks
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Utkarsh Gupta - Upgrade visualizer
+  *Michael Bestas - Automatic translation import
+  *Jorge Ruesga - eleven: fix invalid srt formats
+  *Michael Bestas - Automatic translation import
+  *Utkarsh Gupta - Dynamically generate visualizer color
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Martin Brabham - AudioPreviewActivity: Better external audio previewing
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Linus Lee - Eleven: Add playlist cover art to search results
+  *Linus Lee - Eleven: remove an unnecessary check when playing music to improve perf
+  *Linus Lee - Eleven: Add a play Album option on songs
+  *Linus Lee - Eleven: Remove inset from top tracks circle
+
+Project name: android_packages_apps_InCallUI
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - InCallUI: Unbreak heads-up disabled incoming call.
+  *Michael Bestas - Automatic translation import
+  *dankoman - [3/3] InCallUI: Proximity speaker
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Show waiting state in call title also for MSIM.
+  *Adnan Begovic - InCallUi: Mitigate redial/recent call double tap state loss.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - [1/2] InCallUI: SmartMute
+  *Chengzhi.Hou - Fix: The EndCallButton overlaps the digital key 0 after switch system language during an active call
+  *Michael Bestas - Automatic translation import
+  *tobitege - Fix proximity sensor with proximity wake option
+
+Project name: android_packages_apps_Dialer
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *LuK1337 - Fix Dialer FC on guest user with phone calls allowed
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *jrizzoli - dialer: better smart call string
+  *Danny Baumann - Ensure the smart dial name matcher is initialized in onStart().
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Fix up call log search UX.
+  *Danny Baumann - Improve performance of call log.
+  *Michael Bestas - Automatic translation import
+  *BadDaemon - Improve SmartDialer
+  *Kryten2k35 - Enable Call Recording for the United Kingdom
+  *Danny Baumann - Remove some dead code.
+  *linuxxxxx - [2/2] Dialer: SmartMute
+  *Danesh M - Dialer: Ensure device ids not null
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Update blacklist strings
+  *Kryten2k35 - Call recording encoder/format choice 1/3
+  *BlackDragon - Enable Call recording.
+
+Project name: android_packages_apps_CellBroadcastReceiver
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Remove per-SIM CB configuration.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Calculator
+  *Yvonne Wong - Calculator: fix localization for the widget
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Raj Yengisetty - Calculator: do not allow multiple decimal points in a number
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Floating Calculator: Fix Hidden row of buttons
+  *Stephen Bird - Cursor: Keep visible for long numbers
+  *Michael Bestas - Automatic translation import
+  *Dave Kover - Remove duplicate color.
+  *Raj Yengisetty - Calculator: allow for deletion when selector is next to a separator
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Floating Calculator: Reposition to fit landscape devices
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Calculator: Fix issue with overflowing text
+
+Project name: android_packages_apps_AudioFX
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Nicholas Chum - Expose text color and background colors for Theming
+  *Nicholas Chum - Expose actionbar background for Theming
+
+Project name: android_packages_apps_Contacts
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Elike24 - Contacts: Fixed "%s" appearing in contact options in some languages
+  *Michael Bestas - Automatic translation import
+  *Matt Garnes - Fix local account name display for groups.
+  *Rohit Yengisetty - Contacts : Change 'up' actionbar indicator to a check mark in add/edit contacts
+  *Martin Brabham - Remove arbitrary set visibility call
+  *Michael Bestas - Automatic translation import
+  *Matt Garnes - Keep a local instance of mContactData when copying to SIM card.
+  *Michael Bestas - Automatic translation import
+  *naman14 - Contacts:remove memory status from overflow in search mode
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Bluetooth
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Roman Birg - Bluetooth: request audio focus on incoming call
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Profiles
+  *Roman Birg - ProfileTrustAgent: remove onStart override
+  *Roman Birg - Profiles Trust: respect DPM; use new LockSettings
+  *Adnan Begovic - Profiles: Refactor to point at Profiles in CMSDK.
+
+Project name: android_packages_apps_CMUpdater
+  *Jorge Ruesga - cmupdater: dont assume actionbar is present
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Brandon McAnsh - CMUpdater: Improve Android Wear notifications
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_TvSettings
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_CMWallpapers
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Terminal
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Calendar
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - prepareForSave: Dont set time in allday events
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - Calendar: when sharing calendar events use File.createTempFile
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Trebuchet
+  *emancebo - Trebuchet: fix potential NPE when info is null
+  *Ricardo Cerqueira - Support STK app rename on MSIM
+  *Pragnya Paramita - Trebuchet: STK app rename customization for latam region.
+  *Michael Bestas - Automatic translation import
+  *Richard MacGregor - Reset default view camera distance
+  *Richard MacGregor - Fix wallpaperpreview for default wallpaper
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Linus Lee - Trebuchet: Make focus animate and move faster
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - Do not collapse Settings panel when reseting overview mode
+  *Matt Garnes - Update default workspace to reference latest browser.
+  *Michael Bestas - Automatic translation import
+  *d34d - Show apps as unavailable when on unmounted storage
+  *Michael Bestas - Automatic translation import
+  *Stephen Bird - Trebuchet: fix voice button proxy
+  *Raj Yengisetty - Loader: use INVALID_RESTORE_PAGE to avoid unnecessarily synchronizing
+  *d34d - Wallpaper: Allow multiple partners to be loaded
+  *Brandon McAnsh - Launcher: Close OverviewMode when transitioning back to Workspace.State.NORMAL
+  *Brandon McAnsh - Launcher: Close open folder when transitioning back to Workspace.State.NORMAL
+  *Hayden Schoen - Folder Layout Revision
+  *Stephen Bird - Protected Folders: Prevent the folder name from covering the toggle
+  *Raj Yengisetty - Fade Adjacent Screens: disable this feature for App Drawer (paged)
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - Transition Effects: stack transition effect
+  *Raj Yengisetty - FocusHelper: handle NPE with when getting workspace child
+  *Roman Birg - Trebuchet: display search widget search box if available
+  *Stephen Bird - Badge: Check count on bind
+  *Michael Bestas - Automatic translation import
+  *Matt Garnes - Update default workspace configuration.
+  *Matt Garnes - Hide workspace shortcuts during binding when AllApps is shown.
+  *Michael Bestas - Automatic translation import
+  *Matt Garnes - Fix unintended dynamic grid resize side effects.
+  *Raj Yengisetty - Trebuchet: Fix popupMenu behavior and clean up old code.
+  *d34d - Don't load title from intent if title loaded from DB
+  *Stephen Bird - Scrolling: Fix fade in workspaces from ignoring us
+  *Elektroschmock - Trebuchet: FloatMath is deprecated in API22
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - Trebuchet: Fix bug with removing items from folders
+  *Steve Kondik - trebuchet: Externalize backup API key string
+  *Stephen Bird - Rotation: fix icons disappearing
+  *Michael Bestas - Automatic translation import
+  *Martin Brabham - Stop unnecessary exception posting to logcat.
+  *Stephen Bird - RTL: fix app drawer layout
+  *Brandon McAnsh - Launcher: Check if componentName is null prior to getPackageName()
+  *Matt Garnes - Update default workspace.
+  *Stephen Bird - Move icons to fit within Dynamic grid upon resize.
+  *Roman Birg - Trebuchet: send metrics values as strings
+  *Linus Lee - Fix power save mode broken ui/animations
+  *Linus Lee - Trebuchet: fix excessive drawing with folders
+  *Sam Mortimer - Move tablet preference ahead of the default
+  *Steve Kondik - trebuchet: Don't use new hotness on tablets
+  *Steve Kondik - trebuchet: Enable the new hotness by default.
+  *Martin Brabham - Trebuchet Statistics:  - Add plumbing for sending events.  - Add aggregation service that runs on some interval  - Hook send events into respective UX interactions
+  *xuke.yin - Fix the hint text of rename folder can't change with system language
+  *Raj Yengisetty - Trebuchet: fix NPE during touch events
+
+Project name: android_packages_apps_UnifiedEmail
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Marcos Marado - Don't assume that a string isn't empty
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danny Baumann - Remove obsolete theme.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_LockClock
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Zach Prezkuta - Allow user to change background color/transparency for the widget, for greater compatibility with various wallpapers
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Brandon McAnsh - LockClock: Only show timestamp if it can fit
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_Browser
+  *Mrcl1450 - Browser: add duckduckgo search engine to DE locale
+
+Project name: android_packages_apps_Stk
+  *Abhisek Devkota - REAL_GET_TASKS > GET_TASKS
+  *Ricardo Cerqueira - Indicate which sub-activity the app name broadcast applies to
+  *Paramananda Pradhan - Add intent to send STK app name
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Amit Mahajan - DO NOT MERGE Change to add STK_PERMISSION for stk related commands.
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Amit Mahajan - DO NOT MERGE Change to add STK_PERMISSION for stk related commands.
+  *Michael Bestas - Automatic translation import
+  *Chirayu Desai - Fix the SIM1 launcher
+  *Michael Bestas - Automatic translation import
+  *Ricardo Cerqueira - Revert "STK: use single icon as per latest AOSP 5.1"
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_apps_DeskClock
+  *Adnan Begovic - DeskClock: Externalize permissions to CMSDK.
+  *Adnan Begovic - DeskClock: Utilize cyanogenmod.permission.MODIFY_PROFILES.
+  *Michael Bestas - Automatic translation import
+  *Dave Kover - Expose FAB elevation value for themes.
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Improve & fix alarm permission strings
+  *Matt Garnes - Allow alarms to be modified by 3rd parties.
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Yadrishnikov Yaroslav - Allow theming numpad
+  *Michael Bestas - Automatic translation import
+  *d34d - Fix rescheduling of alarms that are snoozed
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Adnan Begovic - DeskClock: Refactor to point at Profiles in CMSDK.
+  *Michael Bestas - Automatic translation import
+  *Raj Yengisetty - DeskClock: fix behavior with alarms when device is off
+  *Michael Bestas - Automatic translation import
+  *Annie Chin - DeskClock: Correctly reschedule alarms on system time change
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_providers_DownloadProvider
+  *Tom Powell - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Danesh Mondegarian - DownloadManager : Only remove stale id if download is not deleted
+  *Roman Birg - DownloadManager: allow ACCESS_ALL_DOWNLOADS to be granted via whitelist
+  *Michael Bestas - Automatic translation import
+
+Project name: android_packages_providers_ContactsProvider
+  *Raj Yengisetty - Add URI matcher entry for CONTACTS_GROUP
+  *Rohit Yengisetty - ContactsProvider : Retain SIM account during account clean up
+
+Project name: android_packages_providers_MediaProvider
+  *Maunik Shah - Screenshots info is not updated when device is plugged in MTP mode
+  *Michael Bestas - Fix mounting of non-FAT formatted SD cards (2/2)
+
+Project name: android_packages_providers_TelephonyProvider
+  *Roman Birg - TelephonyProvider: change default user nw mode to invalid
+  *Danesh M - Revert "MmsProvider : Add ability to get thread information in search"
+  *Chirayu Desai - Add the user set network mode to the siminfo table
+  *Martin Brabham - [MMS-55]: Add new column when creating a new database and table or upgrade existing table.
+  *Michael Bestas - Automatic translation import
+  *Danesh M - MmsProvider : Add ability to get thread information in search
+  *Rohit Yengisetty - TelephonyProvider : Add sub_id to ICC columns
+
+Project name: android_packages_providers_ThemesProvider
+  *d34d - Specify locale when using String.format()
+  *Tom Powell - Automatic translation import
+  *d34d - Properly account for lock wallpaper previews
+  *Michael Bestas - Automatic translation import
+  *d34d - Avoid OOME when generating many wallpaper previews
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Michael Bestas - Automatic translation import
+  *Richard MacGregor - Delete preview table rows on theme update
+  *Richard MacGregor - Handle null parameters when creating query strings
+
+Project name: android_bionic
+  *Men_in_black007 - cortex-a53: Use cortex-a7/bionic/memset.S instead of cortex-a15/bionic/memset.S
+  *Christopher Ferris - Remove pushes from memsets (krait/cortex-a9).
+  *Christopher Ferris - Replace bx lr with update of pc from the stack.
+  *Chih-Hung Hsieh - Use unified syntax to compile with both llvm and gcc.
+  *Christopher Ferris - Add optimized cortex-a7/cortex-a53 memset/memcpy.
+  *Steve Kondik - Revert "Replace memcpy with the cortex-strings implementation"
+  *Steve Kondik - Revert "Add optimized cortex-a7/cortex-a53 memset/memcpy."
+  *Jake Weinstein - libc: remove bcopy from memmove on 64-bit architectures
+  *Elliott Hughes - Fix lgamma_r/lgammaf_r/lgammal_r for -0.
+  *Kyle Repinski - libc: Fix strict-aliasing violations.
+  *LuK1337 - cortex-a7: Fix build
+  *LuK1337 - cortex-a7: set proper memcmp.S path
+  *Christopher Ferris - Add optimized cortex-a7/cortex-a53 memset/memcpy.
+  *Steve Kondik - libm: Fix makefiles
+  *Amaury Le Leyzour - Add aarch64 instructions wherever possible
+  *Shu Zhang - libm: arm: Add arm specific floor() optimization
+  *Elliott Hughes - Fix our <complex.h> support.
+  *Elliott Hughes - Get new coshl, sinhl, and tanhl implementations from upstream.
+  *Elliott Hughes - Sync libm with upstream.
+  *Varun Chitre - libc : memcpy : allow to disable opt for some targets
+
+Project name: android_device_xiaomi_armani
+  *tarun93 - Custom Tweaks, Script & Clean(WARNING!!NOOB COMMIT PLS IGNORE THIS COMMIT xD)
+  *tarun93 - init.armani.rc : permission fix
+  *tarun93 - thermal:loosen thermals a bit
+  *kairi_zeroblade - Switch to per-core swapping
+  *Kra1o5 - Revert "Add overlay for non-roaming operator"
+  *fefifofum - Update fingerprint from latest official release
+  *fefifofum - Show app install location option
+  *fefifofum - Update fingerprint from latest official release
+  *Kra1o5 - Add overlay for non-roaming operator
+  *fefifofum - Use prebuilt libOmxVdecHevc
+  *Ricardo Cerqueira - media: Switch to lower-end codecs
+  *tarun93 - Adapt to carbon 5.1
+  *fefifofum - overlay: Enable proximity check on screen wake
+  *fefifofum - Enable FIOPS IO scheduler by default
+  *fefifofum - sepolicy: Address mediaserver denial
+  *fefifofum - Nothing to see here
+  *fefifofum - Remove unused mms overlay
+  *fefifofum - Set fingerprint and other device props
+  *fefifofum - Enable drm prop
+  *fefifofum - Don't symlink firmware files
+  *fefifofum - Reorganize makefiles
+  *fefifofum - sepolicy: Address wcnss_service denial
+  *fefifofum - Don't need to copy FFMPEG config anymore
+  *fefifofum - overlay: Mms: Show smsc and configure enter key
+  *fefifofum - sepolicy: Address bootanim denial
+
+Project name: android_device_qcom_common
+  *Steve Kondik - power: Boost improvements
+  *Steve Kondik - power: Update boost parameters
+  *Steve Kondik - power: Updates for msm8916/msm8939
+  *Marcos Marado - Adding init for msm8909
+  *Dilip Gudlur - power: Enable 4+0 core config for display off cases
+  *Steve Kondik - power: Use default video encode/decode hints on 8916
+  *Marcos Marado - Guard variable expansion: string between quotes
+  *Steve Kondik - power: More tunings
+  *Steve Kondik - power: Additional changes for 8994
+  *Steve Kondik - power: Send 8994 perf commands ourselves
+  *Steve Kondik - power: Add features to the 8994 PowerHAL
+  *Chirayu Desai - power-8916: Enable the perf options for performance mode
+
+Project name: android_device_qcom_sepolicy
+  *Howard M. Harte - sepolicy: perfd to have access to mediaserver
+  *Stephen Boyd - sepolicy: Add thermal and irqbalancer sockets
+  *Tatenda Chipeperekwa - sepolicy: Add policy for SurfaceFlinger access to rotator device
+  *Arun Kumar K.R - SEAndroid: Allow SurfaceFlinger to access dynamic_fps node
+  *Sungjun Park - Bluetooth: Update Bluetooth security rules
+  *Krishna Chaitanya Parimi - sepolicy: allow mm-pp-daemon to set debug property
+  *Krishna Chaitanya Parimi - sepolicy: allow mm-pp-daemon to have access to sysfs_graphics
+  *Krishna Chaitanya Parimi - sepolicy: allow mm-pp-daemon to use binders in user variant
+  *Sravan Kumar D.V.N - sepolicy: Add SELinux policy rule for pp daemon socket calls
+  *Nitesh Gupta - sepolicy: Add sepolicy rules for display clients
+  *Nitesh Gupta - sepolicy: Add context label for '/persist/display/*'
+  *Alexy Joseph - Seandroid: Add policy for dts configurator and notifier nodes
+  *Dinesh K Garg - sepolicy: add permissions to set system property
+  *Susheel Yadagiri - sepolicy: add rule to support tcm write on dpmwrapper socket
+  *Susheel Yadagiri - sepolicy: allow dpmd to create self socket and netlink socket.
+  *Susheel Yadagiri - sepolicy: allow dpmd to connect to system_server
+  *Susheel Yadagiri - sepolicy: Allow iptable rule addition when WQE is enabled
+  *Sanket Khidkikar - cnd: Allow nims to be removed
+  *Boxiang Pan - Sepolicy: add rule to support ATP feature
+  *Steve Kondik - sepolicy: Allow time_daemon to use POSIX clocks
+  *dcashman - Label factory reset protection partition.
+  *Ameya Thakur - selinux: Peripheral manager: Allow system server to talk to per_mgr
+  *Ameya Thakur - sepolicy: Update policy for peripheral manager
+  *Krishna Konda - sepolicy: Update sepolicy for qseecom rpmb component
+  *Ameya Thakur - sepolicy: Add support for pm-proxy executable
+  *Naseer Ahmed - sepolicy: Allow write to S3D node
+  *Tatenda Chipeperekwa - SEAndroid: Add access to res_info sysfs node
+  *Avijit Kanti Das - Seandroid: Add policy for energy-awareness.
+  *Ricardo Cerqueira - common: Fixup healthd's ability to deal with poweroff alarms
+  *Manu Prasad - WFD: Revert SELinux changes for wfd running in its own service/domain
+  *Mukund Mittal - sepolicy:Allow mm-qcamerad to access sensormanager service access.
+  *Shiju Mathew - sepolicy: Update BCL sysfs nodes in file context
+
+Project name: android_build
+  *Łukasz Domeradzki - JustArchi's ArchiDroid Optimizations V4.1
+  *Tao Bao - releasetools: Fix the bug when deleting files.
+  *Tao Bao - releasetools: Fix the bug in symlink deletion.
+  *luca020400 - build: allow using host flex binary
+  *Anthony King - build: Allow QC platforms to share/customize HAL variants
+  *Ethan Chen - Revert "msm8909 uses the same branches as msm8916"
+  *Marcos Marado - msm8909 uses the same branches as msm8916
+  *Tom Powell - repopick: open changes are either NEW or OPEN, not just OPEN
+  *Tom Powell - Fix custom URL error. Merged from cm_build_config
+  *Anthony King - repopick: handle hardware_ril/ril-caf
+  *jrior001 - repopick: skip abandoned commits
+  *Marcos Marado - Adding msm8909 as a QCOM board platform
+  *Scott Mertz - build: Kernel: arm64 uses Image.gz as the target
+  *Tao Bao - Change the cache partition size check into warnings.
+  *Tao Bao - Revise stash for BBOTAs when needed.
+  *Tao Bao - Free the stash after its use in BBOTA v2.
+  *Tao Bao - Assert the stash size when generating OTAs.
+  *Sami Tolvanen - Check partition hash before resorting to block_image_verify
+  *Sami Tolvanen - Calculate max_stashed_blocks correctly for block OTA v3
+  *Tao Bao - Restrict the verification in block-based incremental OTAs
+  *Michael Runge - Do not use block_verify on target-files where feature is missing.
+  *Jesse Zhao - Fix the error that free_string is not defined.
+  *Ricardo Cerqueira - product: Let a device customize its own locales
+  *Sami Tolvanen - Change transfer list format to include block hashes
+  *Tom Powell - Support custom gerrit servers via HTTP or SSH
+  *Rashed Abdel-Tawab - build: Enable A53 errata workarounds on targets that need it
+  *Andreas Blaesius - Force bsdiff for recovery_from_boot.p if not using GZIP
+  *Bernhard Rosenkränzer - Don't use -Wl,--fix-cortex-a8 for Cortex A7, A9, A15, Krait or Denver
+  *Bernhard Rosenkränzer - Allow -mcpu=cortex-a15 for clang
+  *Ian Rogers - Move definition of -D__ARM_FEATURE_LPAE=1 cflag to top-level.
+  *arter97 - Apply correct, optimized mfpu compiler flag for ARMv7-A Cortex CPUs
+  *Matt Mower - build: Enable custom ccache cache dir for Android
+  *Adnan Begovic - build/core: Allow EXTERNAL_CLEAN_TARGETS to dump vars.
+  *Brint E. Kriebel - roomservice: use force-sync when adding projects with roomservice
+  *Brint E. Kriebel - build: Fix extra userdata generation some more
+  *Brint E. Kriebel - build: Fix extra userdata generation
+  *Andrew Sutherland - build: add cmremote function
+  *Andrew Sutherland - build: add crremote function
+  *Rabih Salamey - build: cut out crrebase, crremote and crgerrit functions
+  *Brint E. Kriebel - otatools: Only build f2fs tools on Linux
+  *Brint E. Kriebel - otatools: Add f2fs tools to otatools builds
+  *Brint E. Kriebel - build: Allow packaging of factory image files into target files
+  *Brint E. Kriebel - misc_info: Add factory script location to misc_info when available
+  *Chirayu Desai - Allow setting the recovery density separately from the aapt config
+  *David Ng - arm64: Enable Cortex A53 Errata 843419, 835769 ldflags
+  *Wei Wang - AArch64: Addressing Cortex-A53 erratum 835769
+  *Steve Kondik - Revert "Disable -mcpu=cortex-a15 flag for krait"
+  *Ameya Thakur - tools:releasetools:Use timestamp from build.prop while building system.img
+  *Steve Kondik - build: Fix device detection for a few of the envsetup commands
+  *Steve Kondik - build: Fix image creation for F2FS-only configuration
+  *Steve Kondik - releasetools: Add support for LZMA in blockimgdiff
+  *Myself5 - Revert "Build: Add Custom Toolchain Support"
+  *Myself5 - Revert "Introduce Custom Compiler Flags"
+  *Edward Wang - Revert "build: use common factory script and input more parameters"
+  *The Android Automerger - "LMY48G"
+  *The Android Automerger - "LMY48F"
+  *The Android Automerger - "LMY48E"
+  *The Android Automerger - "LMY48D"
+  *The Android Automerger - "LMY48C"
+  *Andrew Boie - definitions.mk: look for definitions.mk in device/*/build also
+  *Ying Wang - Really include drawables for all densities.
+  *Edward Wang - build: use common factory script and input more parameters
+  *Howard M. Harte - minnow_max: search for cm.mk in additional directories
+  *Matt Mower - envsetup: repolastsync
+  *Chirayu Desai - otasigcheck: Extract the key
+  *Chirayu Desai - otasigcheck: Extract the key
+  *Diogo Ferreira - build: Add the factorypackage target
+  *Adnan Begovic - build/core: Inherit vendor/* makefiles for check-api.
+  *Chris Sarbora - Allow dopush to load binaries onto the "wrong" device
+  *STELIX - Revert "Build - RoomService: Set "default_team_rem" to "gh" for now"
+  *Myself5 - repopick: link to carbon gerrit
+  *Myself5 - update envsetup with our KK code for crremote
+  *Myself5 - Introduce Custom Compiler Flags
+  *Anthony King - envsetup: cleanup the full list
+  *Anthony King - lunch: sort the choices
+  *Hashcode - build: avoid recovery patch if device setup can't do it correctly
+  *Anthony King - envsetup: add mk_timer
+
+Project name: android_system_core
+  *Diogo Ferreira - fs_mgr: When formating ext4 volumes, respect the length parameter
+  *Sultan Qasim Khan - fs_mgr: zram: allow specifying stream count
+  *Keith Mok - Fix build break for multiple definition
+  *Steve Kondik - init: Fire a trigger when a class is started/stopped
+  *Krzysztof Adamski - sdcard: Properly handle deleted nodes
+  *Johan Redestig - sdcard: Turn on noatime for fuse mounted sdcard
+  *Jaegeuk Kim - Revert "fs_mgr: let fsck.f2fs actually attempt a fix"
+  *Thomas Wendt - libcutils/liblog: Add functions required by Huawei g620_a2 binaries
+  *Adam Lesinski - Prevent integer overflow when allocating native_handle_t
+  *Chris Fries - init: Add support for gzipped firmware files
+  *Mrcl1450 - healthd: Add secondary backlight path support
+  *Steve Kondik - init: Add a "starting" state for services
+  *Chao Chen - healthd: Support QC2.0 type charger
+  *Tony Layher - Added umount to init
+  *Steve Kondik - libutils: Improve support for POSIX timers
+  *Jorge Ruesga - healthd: dock battery
+  *Chao Chen - Charger: Add font to show real battery capacity in charger mode.
+  *Ethan Chen - Add Wileyfox VID part 2
+  *Ethan Chen - Add Wileyfox VID
+  *Scott Mertz - healthd: allow custom charger
+  *Jesse Hall - Mutex: add timedLock() method
+  *Pete Delaney - Provide better advice on using gdb with debuggerd on crashed applications.
+  *Arne Coucheron - audio: fix incall music ifdefs (1/3)
+  *cpasjuste - liblog: add Amazon logging functions for prebuilt compatibility
+
+Project name: android_system_extras_su
+  *Pawit Pornkitprasan - su: allow init to automatically restart daemon
+
+Project name: android_system_extras
+  *Edward Wang - f2fs_utils: fix block alignment calculation
+  *Keith Mok - Add darwin support for the host tools
+  *Mihai Serban - make_ext4fs: workaround for a glibc scandir bug
+  *Andrew Boie - fix keystore_signer
+  *Tom Marshall - make_ext4fs: Fix mac build
+  *Tom Marshall - make_ext4fs: Support kernel transparent compression v2
+
 </Changelog>
 </ROM>

@@ -2,42 +2,81 @@
 <ROM>
   <!-- Your ROM Name -->
   <RomName>CarbonROM</RomName>
-  <VersionName>R3</VersionName>
+  
+  <VersionName>CARBON-5.1.1-UNOFFICIAL-20150911-0022-armani-R3</VersionName>
+  
   <!-- Your ROM version. MUST be incrementally larger than previous versions -->
   <!-- Do NOT use letters in your version number. Integers only -->
   <!-- Previous version will be read from the build.prop -->
-  <VersionNumber type="integer">20150910</VersionNumber>
+  <VersionNumber type="integer">20150911</VersionNumber>
+  
   <!-- Linking to your files -->
     <!-- <DirectUrl><![CDATA[http://www.example.com?file=file.zip?somethingelse&anotherthing]]></DirectUrl> -->
     <!-- Use the above format if your URL has special characters in then, like an (&) ampersand -->
     <!-- Enter <DirectUrl nil="true /> or <HttpUrl nil="true /> to indicate you won't be using a type of URL -->
     <!-- HTTP link will open a web page -->
     <!-- Direct Link overrides HTTP link -->
-  <DirectUrl><![CDATA[ ]]></DirectUrl>
-  <HttpUrl><![CDATA[ ]]></HttpUrl>
+  <DirectUrl>https://d1.usercdn.com/d/xal2csvwt74knvqjndrm7bs6a2tenphm53qdm5ahv7jpcgpcqkvpzuw3/CARBON-5.1.1-UNOFFICIAL-20150911-1517-armani.zip</DirectUrl>
+  
+  <HttpUrl>https://userscloud.com/1gil6g0nicn9</HttpUrl>
+  
+  
   <!-- What version are you issuing? -->
   <Android>5.1.1</Android>
+  
   <!-- Providing File Checking for direct downloads. You SHOULD offer this for your users whether using HTTP or Direct -->
   <!-- OPTIONAL: Enter <CheckMD5 nil="true" /> offer MD5 checking -->
-  <!--<CheckMD5>MD5 HERE</CheckMD5> -->
-  <CheckMD5 nil="true" /> 
+  <CheckMD5>06ed2496eb71133e806bc67d8ee04c82</CheckMD5>
+  
   <!-- The filesize of your ROM -->
   <!-- Please enter this in BYTES only. Otherwise an incorrect value will be shown -->
-  <FileSize type="integer">282105453</FileSize>
+  <FileSize type="integer">282114681</FileSize>
+  
   <!-- Developer or Team name. You can put anything here, even a couple of names -->
   <!-- OPTIONAL: Enter <Developer nil="true" /> to hide this -->
   <Developer>Tarun93</Developer>
+  
   <!-- Your ROM or Developer Website. Can be a personal site or your XDA/forum thread -->
   <!-- OPTIONAL: Enter <Website nil="true" /> to hide this -->
   <WebsiteURL><![CDATA[http://forum.xda-developers.com/redmi-1s/development/rom-carbon-rom-r1-beta-t3104330]]></WebsiteURL>
+  
   <!-- Your Donate URL -->
   <!-- OPTIONAL: Enter <DonateURL nil="true" /> to hide this -->
-  <DonateURL><![CDATA[tarunmyid@gmail.com]]></DonateURL>
+  <!--DonateURL><![CDATA[]]></DonateURL-->
+  <DonateURL nil="true" />
+  
+  
   <!-- Put the changelog here... Use Markdown to format it -->
   <!-- Again, surround special characters with the CDATA tags or your XML will NOT parse -->
-  <Changelog>### Changelog 20150910
-  - Updated sources 
-  - alucard hotplug
-  - overall stability
-</Changelog>
+  <Changelog>### Changelog 20150911
+  
+  - Added OTA support (Thanx to Matt Booth for the Awesome OTA UPDATES APP)
+  
+  - Upstream Updates
+  
+  - Fix Lockscreen Touch issues
+  
+  - Removed Bricked_hotplug
+  
+  - AluCard Hotplug Reworked n adapted to Armani
+  
+  - Reworked Thermals
+  
+  - Used UBERTC 4.9 for Kernel and ROM
+  
+  - -O3 Optimizations (Thanx to JustArchi and this Optimizations)
+  
+  
+   ###NOTE
+   
+  - addons tab will give you FC as its WIP pls wait till its solved
+  
+  - Pls Use kernel adiutor app to tweak with the stock kernel
+   
+  </Changelog>
+
+  <!--Number of addons and the target addons xml. Remove both if no addons available! -->
+  <AddonCount>2</AddonCount>
+  <AddonsURL>http://downloads.blissroms.com/Add-ons/addons.xml</AddonsURL>
 </ROM>
+

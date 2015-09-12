@@ -78,6 +78,6 @@
 
   <!--Number of addons and the target addons xml. Remove both if no addons available! -->
   <AddonCount>5</AddonCount>
-  <AddonsURL>http://downloads.blissroms.com/Add-ons/addons.xml</AddonsURL>
+  <AddonsURL>https://raw.githubusercontent.com/tarunkapadia93/extras/carbon5.1/addons.xml</AddonsURL>
 </ROM>
 

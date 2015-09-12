@@ -1,47 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hash>
-	<addons>
+	<addons type="array">
 		<addon>
-		  <id>1</id>
+		  <id type="integer">1</id>
 		  <name>BaNkS Dynamic Google Apps for 5.1</name>
-		  <description>This flashable installs a working Gapps </description>
-		  <updated-at>2015-06-21</updated-at>
+		  <slug>BaNkS-dynamic-gapps-L-6-21-15</slug>
+		  <description>This flashable installs a working Gapps into your</description>
+		  <updated-at type="dateTime">2015-06-21T00:00:00Z</updated-at>
+		  <created-at type="dateTime">2015-06-21T00:00:00Z</created-at>
+		  <downloads type="integer">1</downloads>
+		  <md5>d9458ccf3f7f4b709d8ca1217eef7361</md5>
 		  <size>268500000</size>
 		  <download-link>http://fitsnugly.euroskank.com/dl.php?file=banks/gapps/BaNkS-dynamic-gapps-L-6-21-15.zip</download-link>
 		</addon>
 		<addon>
-		  <id>2</id>
+		  <id type="integer">2</id>
 		  <name>SuperSU v2.46 - Flashable Zip</name>
+		  <slug>UPDATE-SuperSU-v2.46</slug>
 		  <description>This flashable installs the latest stable SuperSU on your device.</description>
-		  <updated-at>2015-02-13</updated-at>
+		  <updated-at type="dateTime">2015-02-13T12:11:00Z</updated-at>
+		  <created-at type="dateTime">2015-02-13T12:11:00Z</created-at>
+		  <downloads type="integer">1</downloads>
+		  <md5>332DE336AEE7337954202475EEAEA453</md5>
 		  <size>4017098</size>
 		  <download-link>http://downloads.blissroms.com/Add-ons/UPDATE-SuperSU-v2.46.zip</download-link>
 		</addon>
 		<addon>
-		  <id>3</id>
+		  <id type="integer">3</id>
 		  <name>Viper4Android - Lollipop Flashable</name>
+		  <slug>V4A-LP_flashable</slug>
 		  <description>This flashable uninstalls all other music mods and installs Viper4Android on your device.</description>
-		  <updated-at>2015-03-06</updated-at>
+		  <updated-at type="dateTime">2015-03-06T20:03:00Z</updated-at>
+		  <created-at type="dateTime">2015-03-06T20:03:00Z</created-at>
+		  <downloads type="integer">1</downloads>
+		  <md5>4C37A6F038C9D2642DAE661E6DCACFAC</md5>
 		  <size>6899007</size>
 		  <download-link>http://downloads.blissroms.com/Add-ons/V4A-LP_flashable.zip</download-link>
 		</addon>
 		<addon>
-		  <id>4</id>
+		  <id type="integer">4</id>
 		  <name>Xposed Framework for 5.1.1 (ALPHA) [arm]</name>
-		  <description>
-		  This flashable installs Xposed Framework on your device. Make sure you install the correct version depending on your CPU. NO SUPPORT IS GIVEN AFTER FLASHING XPOSED!
-		  </description>
-		  <updated-at>2015-05-14</updated-at>
+		  <slug>xposed-sdk22-arm-20150514</slug>
+		  <description>This flashable installs Xposed Framework on your device. Make sure you install the correct version depending on your CPU. NO SUPPORT IS GIVEN AFTER FLASHING XPOSED!</description>
+		  <updated-at type="dateTime">2015-05-14T00:00:00Z</updated-at>
+		  <created-at type="dateTime">2015-05-14T00:00:00Z</created-at>
+		  <downloads type="integer">1</downloads>
+		  <md5>08206F96136339A93512F01E55E6A2F5</md5>
 		  <size>3221307</size>
 		  <download-link>http://goo.gl/R33JJt</download-link>
 		</addon>
 		<addon>
-		  <id>5</id>
+		  <id type="integer">5</id>
 		  <name>Xposed Framework for 5.1.1 (ALPHA) [arm64]</name>
+		  <slug>xposed-sdk22-arm64-20150514</slug>
 		  <description>This flashable installs Xposed Framework on your device. Make sure you install the correct version depending on your CPU. NO SUPPORT IS GIVEN AFTER FLASHING XPOSED!</description>
-		  <updated-at>2015-05-14</updated-at>
+		  <updated-at type="dateTime">2015-05-14T00:00:00Z</updated-at>
+		  <created-at type="dateTime">2015-05-14T00:00:00Z</created-at>
+		  <downloads type="integer">1</downloads>
+		  <md5>60CC7DF61FDE9C293271DD4AF39AAAE7</md5>
 		  <size>5620691</size>
 		  <download-link>http://goo.gl/cDjtmt</download-link>
 		</addon>
 	</addons>
+	<count type="integer">5</count>
 </hash>

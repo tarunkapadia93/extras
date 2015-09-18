@@ -1,43 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ROM>
   <!-- Your ROM Name -->
-  <RomName>CarbonROM</RomName>
-  <VersionName>R3</VersionName>
+  <RomName>NamelessROM</RomName>
+  
+  <VersionName>NAMELESS-5.1.1-20150919-armani-R5</VersionName>
+  
   <!-- Your ROM version. MUST be incrementally larger than previous versions -->
   <!-- Do NOT use letters in your version number. Integers only -->
   <!-- Previous version will be read from the build.prop -->
-  <VersionNumber type="integer">20150910</VersionNumber>
+  <VersionNumber type="integer">20150919</VersionNumber>
+  
   <!-- Linking to your files -->
     <!-- <DirectUrl><![CDATA[http://www.example.com?file=file.zip?somethingelse&anotherthing]]></DirectUrl> -->
     <!-- Use the above format if your URL has special characters in then, like an (&) ampersand -->
-    <!-- Enter <DirectUrl nil="true /> or <HttpUrl nil="true /> to indicate you won't be using a type of URL -->
+    <!-- Enter or <HttpUrl nil="true /> to indicate you won't be using a type of URL -->
     <!-- HTTP link will open a web page -->
     <!-- Direct Link overrides HTTP link -->
-  <DirectUrl><![CDATA[ ]]></DirectUrl>
-  <HttpUrl><![CDATA[ ]]></HttpUrl>
+    <!--<DirectUrl>DIRECT URL HERE</DirectUrl>-->
+  
+  <HttpUrl>https://userscloud.com/x6xb5nzecrhs</HttpUrl>
+  
+  
   <!-- What version are you issuing? -->
   <Android>5.1.1</Android>
+  
   <!-- Providing File Checking for direct downloads. You SHOULD offer this for your users whether using HTTP or Direct -->
   <!-- OPTIONAL: Enter <CheckMD5 nil="true" /> offer MD5 checking -->
-  <!--<CheckMD5>MD5 HERE</CheckMD5> -->
-  <CheckMD5 nil="true" /> 
+  <CheckMD5>f83a585154348395bb759ceb1834bbc0</CheckMD5>
+  
   <!-- The filesize of your ROM -->
   <!-- Please enter this in BYTES only. Otherwise an incorrect value will be shown -->
-  <FileSize type="integer">282105453</FileSize>
+  <FileSize type="integer">311000193</FileSize>
+  
   <!-- Developer or Team name. You can put anything here, even a couple of names -->
   <!-- OPTIONAL: Enter <Developer nil="true" /> to hide this -->
   <Developer>Tarun93</Developer>
+  
   <!-- Your ROM or Developer Website. Can be a personal site or your XDA/forum thread -->
   <!-- OPTIONAL: Enter <Website nil="true" /> to hide this -->
-  <WebsiteURL><![CDATA[http://forum.xda-developers.com/redmi-1s/development/rom-carbon-rom-r1-beta-t3104330]]></WebsiteURL>
+  <WebsiteURL>http://forum.xda-developers.com/redmi-1s/development/5-0-2-namelessrom-r1-t3062760</WebsiteURL>
+  
   <!-- Your Donate URL -->
   <!-- OPTIONAL: Enter <DonateURL nil="true" /> to hide this -->
-  <DonateURL><![CDATA[tarunmyid@gmail.com]]></DonateURL>
+  <!--DonateURL><![CDATA[]]></DonateURL-->
+  <DonateURL nil="true" />
+  
+  
   <!-- Put the changelog here... Use Markdown to format it -->
   <!-- Again, surround special characters with the CDATA tags or your XML will NOT parse -->
-  <Changelog>### Changelog 20150910
-  - Updated sources 
-  - alucard hotplug
-  - overall stability
-</Changelog>
+  <Changelog>### Changelog 20150919
+
+Project name: android_device_xiaomi_armani
+  -tarun93 - init.armani.rc: add thermal limits as per cm performance profiles
+  -tarun93 - audio: Change mixer control to set correct BTSCO Sample rate
+  -fefifofum - Update fingerprint to latest release
+  -Krishna Vanka - CPUFreq: Set optimal frequency for msm8226
+  -fefifofum - sepolicy: Use correct permissions for CMHW
+  -fefifofum - sepolicy: Remove display policy items
+  -fefifofum - sepolicy: Cleanup system_server
+  -tarun93 - add OTA support
+  -tarun93 - TCP Optimizations from CAF
+  -tarun93 - Custom Tweaks, Script n Clean(WARNING!!NOOB COMMIT PLS IGNORE THIS COMMIT xD)
+  -fefifofum - Enable dex-preoptimization
+  -fefifofum - Enable BFQ IO scheduler by default
+  -tarun93 - init.armani.rc : permission fix
+  -tarun93 - thermal:loosen thermals a bit
+  -kairi_zeroblade - Switch to per-core swapping
+  -Kra1o5 - Revert "Add overlay for non-roaming operator"
+  -fefifofum - Update fingerprint from latest official release
+  -tarun93 - tune things my way
+  -tarun93 - adapt to n-2.1
+  -fefifofum - Show app install location option
+  -fefifofum - Update fingerprint from latest official release
+  -Kra1o5 - Add overlay for non-roaming operator
+  -fefifofum - Use prebuilt libOmxVdecHevc
+  -Ricardo Cerqueira - media: Switch to lower-end codecs
+  -fefifofum - overlay: Enable proximity check on screen wake
+  -fefifofum - Enable FIOPS IO scheduler by default
+  -fefifofum - sepolicy: Address mediaserver denial
+  -fefifofum - Nothing to see here
+  -fefifofum - Remove unused mms overlay
+  -fefifofum - Set fingerprint and other device props
+  -fefifofum - Enable drm prop
+  -fefifofum - Dont symlink firmware files
+  -fefifofum - Reorganize makefiles
+  -fefifofum - sepolicy: Address wcnss_service denial
+  -fefifofum - Dont need to copy FFMPEG config anymore
+
+
+
+Project name: android_kernel_xiaomi_armani
+  -tarun93 - [PATCH] Implement kexec-hardboot
+  -tarun93 - .gitignore
+  -tarun93 - cleanup
+  -faux123 - sched/fair: improve fairness efficiency
+  -tarun93 - Sched: Enable Arch Power and Disable Runtime Sharing
+  -tarun93 - defconfig update
+  -Steven Rostedt (Red Hat) - ftrace: Clean up function probe methods
+  -Steven Rostedt - ftrace: Make ftrace_location() a nop on !DYNAMIC_FTRACE
+  -Masami Hiramatsu - ftrace: add ftrace_set_filter_ip() for address based filter
+  -Steven Rostedt - ftrace: Make ftrace_modify_all_code() global for archs to use
+  -Minho Ban - tracing: Prevent wasting time evaluating parameters in trace_preempt_on/off
+  -Steven Rostedt - ftrace/x86: Have arch x86_64 use breakpoints instead of stop machine
+  -Behan Webster - ARM: 8158/1: LLVMLinux: use static inline in ARM ftrace.h
+  -Steven Rostedt - arm/ftrace: fix ftrace_return_addr() to ftrace_return_address()
+  -AKASHI Takahiro - ftrace: Make CALLER_ADDRx macros more generic
+  -Alin - security: force SELinux permissive mode
+  -tarun93 - toolchain: gcc: squashed fixes related to optimized toolchain
+  -zeroblade1984 - Fix Goodix panel drivers as well
+  -zeroblade1984 - ft5x06:Fix notifier for suspend
+  -Pranav Vashi - msm: Use ammended interruptible threads
+  -Ricardo Cerqueira - leds: At disable, set the trigger to default instead of wiping it
+  -yank555-lu - kernel/power/powersuspend: new PM kernel driver for Android w/o early_suspend v1.5 (faux123/Yank555.lu)
+  -tarunkapadia93 - fix cpufreq_interactive.c
+  -Viresh Kumar - cpufreq: Move get_cpu_idle_time() to cpufreq.c
+  -tarun93 - fix: msm: use of swp{b} is deprecated for ARMv6+
+  -Taniya Das - msm: acpuclock-8226: Limit DDR to 200MHz for APSS frequency
+  -Ke Liu - msm: acpuclock-8226: update corner mapping for 1.2 and 1.4 GHz speedbins
+  -tarunkapadia93 - mmc: disable crc check for 30% extra performance in IO
+  -tarunkapadia93 - compilation fixes
+  -tarun93 - .gitignore
+  -tarun93 - Alucard_Hotplug by Alucard24
+  -franciscofranco - Remove + symbol from kernel version string
+  -tarun93 - drop unwanted things
+  -fefifofum - f2fs: bring up to date with Jaegeuk s branch
+  -fefifofum - armani: defconfig: Enable BFQ IO scheduler
+  -Mauro Andreolini - block, bfq: add Early Queue Merge (EQM) to BFQ-v7r8 for 3.4.0
+  -Paolo Valente - block: introduce the BFQ-v7r8 I/O sched for 3.4
+  -Arianna Avanzini - block: cgroups, kconfig, build bits for BFQ-v7r8-3.4
+  -tarun93 - dts: msm8226 msm_thermal use tsens_tz_sensor5 for thermal throttling instead of tsens_tz_sensor0 (EXPERIMENTAL)
+  -Evisceration - msm: thermal: allow to configure poll interval from userspace
+  -franciscofranco - msm: thermal: add Franco s cleaned up in-kernel driver
+  -franciscofranco - msm: thermal: fix init with msm_thermal
+  -Chris Fries - ARM: Use -mtune=cortex-a7 for 8226/8610
+  -Pranav Vashi - msm: use of swp{b} is deprecated for ARMv6+
+  -H. Peter Anvin - kernel: Replace timeconst.pl with a bc script
+  -Dan Pasanen - timeconst.pl: fix perl warning
+  -Riley Andrews - android: drivers: workaround debugfs race in binder
+  -Ajay Dudani - Staging: android: binder: Add some tracepoints
+  -Tejun Heo - workqueue: make all workqueues non-reentrant
+  -Mike Snitzer - block: disable entropy contributions for nonrot devices
+  -Jann Horn - fs: take i_mutex during prepare_binprm for set[ug]id executables
+  -Kirill A. Shutemov - mm: Fix NULL pointer dereference in madvise(MADV_WILLNEED) support
+  -Sasha Levin - vfs: read file_handle only once in handle_to_path
+  -Rabin Vincent - tracing/syscalls: Ignore numbers outside NR_syscalls range
+  -Will Deacon - tracing/syscalls: Fix perf syscall tracing when syscall_nr == -1
+  -fefifofum - armani: defconfig: Enable FIOPS IO scheduler
+  -Shaohua Li - block: fiops ioscheduler core
+
+  
+   ## NOTE ##
+
+   
+  - addons tab will give you FC as its WIP pls wait till its solved
+  
+  - Pls Use kernel adiutor app to tweak with the stock kernel
+   
+  </Changelog>
+  
 </ROM>

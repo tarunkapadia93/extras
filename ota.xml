@@ -44,48 +44,94 @@
    
    * OTA Support
    
+   
+   
    Project name: android_kernel_xiaomi_armani
+  
   *TheStrix - [PATCH] Implement kexec-hardboot
+  
   *klozz - cpufreq: interactive: fix compiling warnings The gcc warns like:
+  
   *franciscofranco - msm: thermal: add a module param to change the thermal throttle temperature point to userspace
+  
   *Ruchi Kandoi - Power: Changes the permission to read only for sysfs file /sys/kernel/wakeup_reasons/last_resume_reason
+  
   *Ruchi Kandoi - Power: Add guard condition for maximum wakeup reasons
+  
   *Ruchi Kandoi - POWER: fix compile warnings in log_wakeup_reason
+  
   *Ruchi Kandoi - Power: add an API to log wakeup reasons
+  
   *fefifofum - ARM: dts: msm8226: Raise msm-thermal limit temp
+  
   *Taniya Das - msm: acpuclock-8226: Limit DDR to 200MHz for APSS frequency
+  
   *Ke Liu - msm: acpuclock-8226: update corner mapping for 1.2 and 1.4 GHz speedbins
+  
   *Se Hun Kim - msm: mdss: Adding lcd notifier
+  
   *fefifofum - f2fs: bring up to date with Jaegeuk's branch
+  
   *fefifofum - armani: defconfig: Enable BFQ IO scheduler
+  
   *Mauro Andreolini - block, bfq: add Early Queue Merge (EQM) to BFQ-v7r8 for 3.4.0
+  
   *Paolo Valente - block: introduce the BFQ-v7r8 I/O sched for 3.4
+  
   *Arianna Avanzini - block: cgroups, kconfig, build bits for BFQ-v7r8-3.4
   
+  
+  
+  
   Project name: android_device_xiaomi_armani
+  
   *tarun93 - add OTA support
+  
   *tarun93 - update power profile from the latest miui7
+  
   *tarun93 - audio: Change mixer control to set correct BTSCO Sample rate
+  
   *tarun93 - init.armani.power.rc: Enable performance profiles and update power nodes
+  
   *tarun93 - add my own optimizations entries to Boardconfig
+  
   *tarun93 - adapt to EOS-5.1
+  
   *fefifofum - cpufreq: Disable io_is_busy
+  
   *fefifofum - sepolicy: Address mpdecision and thermal denials
+  
   *fefifofum - sepolicy: Address mpdecision denials
+  
   *fefifofum - sepolicy: Address more denials
+  
   *fefifofum - sepolicy: Address mediaserver denial
+  
   *fefifofum - Update fingerprint to latest release
+  
   *Krishna Vanka - CPUFreq: Set optimal frequency for msm8226
+  
   *fefifofum - sepolicy: Use correct permissions for CMHW
+  
   *fefifofum - sepolicy: Remove display policy items
+  
   *fefifofum - sepolicy: Cleanup system_server
+  
   *fefifofum - Enable dex-preoptimization
+  
   *fefifofum - Enable BFQ IO scheduler by default
+  
   *fefifofum - Update fingerprint from latest official release
+  
   *fefifofum - Show app install location option
+  
   *fefifofum - Update fingerprint from latest official release
+  
   *Kra1o5 - Add overlay for non-roaming operator
+  
   *fefifofum - Use prebuilt libOmxVdecHevc
+  
   *Ricardo Cerqueira - media: Switch to lower-end codecs
+  
   </Changelog>
 </ROM>
